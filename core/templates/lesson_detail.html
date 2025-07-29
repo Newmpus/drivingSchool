@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block title %}Lesson Details - Driving School Management{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+        <!-- Lesson Header -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h1 class="h3 fw-bold mb-2">Lesson Details</h1>
+                        <p class="text-muted mb-0">
+                            <i class="fas fa-calendar me-1"></i>{{ lesson.date }}
+                            <i class="fas fa-clock ms-3 me-1"></i>{{ lesson.start_time }} - {{ lesson.end_time }}
+                        </p>
+                    </div>
+                    <span class="badge bg-{% if lesson.is_past %}secondary{% else %}primary{% endif %} fs-6">
+                        {% if lesson.is_past %}Completed{% else %}Upcoming{% endif %}
+                    </span>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Student</h6>
+                                <p class="mb-0">{{ lesson.student.user.get_full_name|default:lesson.student.user.username }}</p>
+                                {% if lesson.student.phone %}
+                                <small class="text-muted">
+                                    <i class="fas fa-phone me-1"></i>{{ lesson.student.phone }}
+                                </small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Instructor</h6>
+                                <p class="mb-0">{{ lesson.tutor.user.get_full_name|default:lesson.tutor.user.username }}</p>
+                                {% if lesson.tutor.phone %}
+                                <small class="text-muted">
+                                    <i class="fas fa-phone me-1"></i>{{ lesson.tutor.phone }}
+                                </small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lesson Information -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-info-circle text-info me-2"></i>Lesson Information
+                        </h5>
+                        <div class="mb-3">
+                            <strong>Duration:</strong>
+                            <span class="ms-2">{{ lesson.get_duration }} minutes</span>
+                        </div>
+                        <div class="mb-3">
+                            <strong>Location:</strong>
+                            <span class="ms-2">
+                                <i class="fas fa-map-marker-alt text-danger me-1"></i>
+                                {{ lesson.location }}
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <strong>Created:</strong>
+                            <span class="ms-2">{{ lesson.created_at|date:"M d, Y" }}</span>
+                        </div>
+                        {% if lesson.updated_at != lesson.created_at %}
+                        <div>
+                            <strong>Last Updated:</strong>
+                            <span class="ms-2">{{ lesson.updated_at|date:"M d, Y" }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-cog text-warning me-2"></i>Actions
+                        </h5>
+                        
+                        {% if not lesson.is_past %}
+                            <div class="d-grid gap-2">
+                                <a href="/lesson/{{ lesson.id }}/reschedule/" class="btn btn-outline-primary">
+                                    <i class="fas fa-calendar-alt me-2"></i>Reschedule Lesson
+                                </a>
+                                <a href="/lesson/{{ lesson.id }}/cancel/" class="btn btn-outline-danger">
+                                    <i class="fas fa-times me-2"></i>Cancel Lesson
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-secondary mb-0">
+                                <i class="fas fa-check-circle me-2"></i>
+                                This lesson has been completed.
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                    </a>
+                    
+                    {% if user.profile.role == 'student' and not lesson.is_past %}
+                    <a href="{% url 'book_lesson' %}" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Book Another Lesson
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Information for Different Roles -->
+        {% if user.profile.role == 'admin' %}
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-user-shield text-danger me-2"></i>Admin Information
+                </h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <strong>Lesson ID:</strong> {{ lesson.id }}
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Student Email:</strong> {{ lesson.student.user.email }}
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Tutor Email:</strong> {{ lesson.tutor.user.email }}
+                    </div>
+                    <div class="col-md-6">
+                        <a href="/admin/core/lesson/{{ lesson.id }}/change/" class="btn btn-sm btn-outline-primary">
+                            <i class="fas fa-edit me-1"></i>Edit in Admin
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

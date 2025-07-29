@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+
+{% block title %}Reschedule Lesson - Driving School Management{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+        <div class="text-center mb-4">
+            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                <i class="fas fa-calendar-alt fa-2x"></i>
+            </div>
+            <h1 class="h3 mb-3 fw-bold">Reschedule Lesson</h1>
+            <p class="text-muted">Update your lesson date and time</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Current Lesson Details -->
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-clock text-warning me-2"></i>Current Lesson
+                        </h5>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-calendar text-muted me-2"></i>
+                                <strong>Date:</strong>
+                            </div>
+                            <div class="ms-4">{{ lesson.date }}</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-clock text-muted me-2"></i>
+                                <strong>Time:</strong>
+                            </div>
+                            <div class="ms-4">{{ lesson.start_time }} - {{ lesson.end_time }}</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-chalkboard-teacher text-muted me-2"></i>
+                                <strong>Instructor:</strong>
+                            </div>
+                            <div class="ms-4">{{ lesson.tutor.user.get_full_name|default:lesson.tutor.user.username }}</div>
+                        </div>
+                        
+                        <div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                <strong>Location:</strong>
+                            </div>
+                            <div class="ms-4">{{ lesson.location }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reschedule Form -->
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-edit text-success me-2"></i>New Schedule
+                        </h5>
+                        
+                        <form method="post" class="needs-validation" novalidate>
+                            {% csrf_token %}
+                            
+                            <div class="mb-3">
+                                <label for="id_tutor" class="form-label">Instructor</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="fas fa-user-graduate text-muted"></i>
+                                    </span>
+                                    {{ form.tutor }}
+                                </div>
+                                {% if form.tutor.errors %}
+                                    <div class="text-danger small mt-1">
+                                        {% for error in form.tutor.errors %}
+                                            <div>{{ error }}</div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="id_date" class="form-label">New Date</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="fas fa-calendar text-muted"></i>
+                                    </span>
+                                    {{ form.date }}
+                                </div>
+                                {% if form.date.errors %}
+                                    <div class="text-danger small mt-1">
+                                        {% for error in form.date.errors %}
+                                            <div>{{ error }}</div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label for="id_start_time" class="form-label">Start Time</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0">
+                                            <i class="fas fa-clock text-muted"></i>
+                                        </span>
+                                        {{ form.start_time }}
+                                    </div>
+                                    {% if form.start_time.errors %}
+                                        <div class="text-danger small mt-1">
+                                            {% for error in form.start_time.errors %}
+                                                <div>{{ error }}</div>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="col-6 mb-3">
+                                    <label for="id_end_time" class="form-label">End Time</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0">
+                                            <i class="fas fa-clock text-muted"></i>
+                                        </span>
+                                        {{ form.end_time }}
+                                    </div>
+                                    {% if form.end_time.errors %}
+                                        <div class="text-danger small mt-1">
+                                            {% for error in form.end_time.errors %}
+                                                <div>{{ error }}</div>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="id_location" class="form-label">Location</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="fas fa-map-marker-alt text-muted"></i>
+                                    </span>
+                                    {{ form.location }}
+                                </div>
+                                {% if form.location.errors %}
+                                    <div class="text-danger small mt-1">
+                                        {% for error in form.location.errors %}
+                                            <div>{{ error }}</div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-calendar-check me-2"></i>Reschedule Lesson
+                                </button>
+                                <a href="/lesson/{{ lesson.id }}/" class="btn btn-outline-secondary">
+                                    <i class="fas fa-arrow-left me-2"></i>Cancel Changes
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Reschedule Guidelines -->
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-info-circle text-info me-2"></i>Reschedule Guidelines
+                </h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Time Constraints</h6>
+                                <p class="text-muted small mb-0">Lessons must be between 8:00 AM and 6:00 PM, minimum 30 minutes duration</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Advance Booking</h6>
+                                <p class="text-muted small mb-0">Reschedule up to 90 days in advance, at least 24 hours notice preferred</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Instructor Availability</h6>
+                                <p class="text-muted small mb-0">You can change instructors if needed, subject to availability</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Notifications</h6>
+                                <p class="text-muted small mb-0">Both you and your instructor will be notified of the changes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

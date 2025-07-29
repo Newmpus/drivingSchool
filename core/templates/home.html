@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Smart Driving School Management System {% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section text-center text-white py-5 mb-5" style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); border-radius: 1rem;">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4 fade-in">Welcome to Our Smart Driving School</h1>
+                <p class="lead mb-5 fade-in">Learn to drive safely and confidently with our experienced instructors and modern management system</p>
+                {% if not user.is_authenticated %}
+                    <div class="d-flex justify-content-center gap-3 fade-in">
+                        <a href="{% url 'register' %}" class="btn btn-light btn-lg px-4">
+                            <i class="fas fa-user-plus me-2"></i>Get Started
+                        </a>
+                        <a href="{% url 'login' %}" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login
+                        </a>
+                    </div>
+                {% else %}
+                    <a href="{% url 'dashboard' %}" class="btn btn-light btn-lg px-4 fade-in">
+                        <i class="fas fa-tachometer-alt me-2"></i>Go to Dashboard
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-4">Why Choose Our Smart Driving School?</h2>
+                <p class="lead text-muted">We provide comprehensive driving education with modern tools and experienced instructors</p>
+            </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                            <i class="fas fa-calendar-alt fa-lg"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Easy Scheduling</h5>
+                        <p class="card-text text-muted">Book and manage your driving lessons with our intuitive scheduling system. Real-time availability and instant confirmations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                            <i class="fas fa-user-graduate fa-lg"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Expert Instructors</h5>
+                        <p class="card-text text-muted">Learn from certified and experienced driving instructors with proven track records and modern teaching methods.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                            <i class="fas fa-bell fa-lg"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Smart Notifications</h5>
+                        <p class="card-text text-muted">Stay updated with lesson reminders, important announcements, and progress tracking through our notification system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Features -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h5 class="card-title mb-0 fw-bold">Safety First</h5>
+                        </div>
+                        <p class="card-text text-muted">Our comprehensive safety protocols and modern vehicles ensure a secure learning environment for all students.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="card-title mb-0 fw-bold">Progress Tracking</h5>
+                        </div>
+                        <p class="card-text text-muted">Monitor your learning progress with detailed reports and personalized feedback from your instructors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="stats-card">
+                    <h3>Students Trained</h3>
+                    <div class="number stats-number">1250</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stats-card">
+                    <h3>Expert Instructors</h3>
+                    <div class="number stats-number">25</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stats-card">
+                    <h3>Success Rate</h3>
+                    <div class="number stats-number">95</div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stats-card">
+                    <h3>Years Experience</h3>
+                    <div class="number stats-number">15</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h3 class="display-6 fw-bold mb-4">Ready to Start Your Driving Journey?</h3>
+                <p class="lead text-muted mb-4">Join thousands of successful drivers who learned with us</p>
+                {% if not user.is_authenticated %}
+                    <a href="{% url 'register' %}" class="btn btn-primary btn-lg px-5">
+                        <i class="fas fa-rocket me-2"></i>Register Now
+                    </a>
+                {% else %}
+                    <a href="{% url 'book_lesson' %}" class="btn btn-primary btn-lg px-5">
+                        <i class="fas fa-calendar-plus me-2"></i>Book a Lesson
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+
+{% block title %}Pending Payments{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>Pending Payments</h1>
+            
+            {% if pending_payments %}
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Email</th>
+                                <th>Submitted</th>
+                                <th>Status</th>
+                                <th>Payment Proof</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for student in pending_payments %}
+                                <tr>
+                                    <td>{{ student.username }}</td>
+                                    <td>{{ student.email }}</td>
+                                    <td>{{ student.payment_submitted_at|date:"F d, Y H:i" }}</td>
+                                    <td>
+                                        {% if student.payment_status == 'pending' %}
+                                            <span class="badge badge-warning">Pending</span>
+                                        {% elif student.payment_status == 'rejected' %}
+                                            <span class="badge badge-danger">Rejected</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if student.payment_proof %}
+                                            <a href="{{ student.payment_proof.url }}" target="_blank" class="btn btn-sm btn-info">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                        {% else %}
+                                            <span class="text-muted">No file</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <form method="post" action="{% url 'admin_approve_payment' student.id %}" style="display: inline;">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="action" value="approve">
+                                            <button type="submit" class="btn btn-sm btn-success" onclick="return confirm('Approve this payment?')">
+                                                <i class="fas fa-check"></i> Approve
+                                            </button>
+                                        </form>
+                                        <form method="post" action="{% url 'admin_approve_payment' student.id %}" style="display: inline;">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="action" value="reject">
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Reject this payment?')">
+                                                <i class="fas fa-times"></i> Reject
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i> No pending payments to review.
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

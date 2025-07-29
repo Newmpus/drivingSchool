@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block title %}Book a Lesson - Driving School Management{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="text-center mb-4">
+            <h1 class="h3 mb-3 fw-bold">Book a Driving Lesson</h1>
+            <p class="text-muted">Schedule your next driving lesson with one of our expert instructors</p>
+        </div>
+        
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <form method="post" id="lesson-booking-form" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="id_tutor" class="form-label">Select Instructor</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0">
+                                <i class="fas fa-user-graduate text-muted"></i>
+                            </span>
+                            {{ form.tutor }}
+                        </div>
+                        {% if form.tutor.errors %}
+                            <div class="text-danger small mt-1">
+                                {% for error in form.tutor.errors %}
+                                    <div>{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        <div class="form-text">Choose from our certified driving instructors</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="id_date" class="form-label">Lesson Date</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="fas fa-calendar text-muted"></i>
+                                </span>
+                                {{ form.date }}
+                            </div>
+                            {% if form.date.errors %}
+                                <div class="text-danger small mt-1">
+                                    {% for error in form.date.errors %}
+                                        <div>{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="id_location" class="form-label">Location</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="fas fa-map-marker-alt text-muted"></i>
+                                </span>
+                                {{ form.location }}
+                            </div>
+                            {% if form.location.errors %}
+                                <div class="text-danger small mt-1">
+                                    {% for error in form.location.errors %}
+                                        <div>{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="id_start_time" class="form-label">Start Time</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="fas fa-clock text-muted"></i>
+                                </span>
+                                {{ form.start_time }}
+                            </div>
+                            {% if form.start_time.errors %}
+                                <div class="text-danger small mt-1">
+                                    {% for error in form.start_time.errors %}
+                                        <div>{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <label for="id_end_time" class="form-label">End Time</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="fas fa-clock text-muted"></i>
+                                </span>
+                                {{ form.end_time }}
+                            </div>
+                            {% if form.end_time.errors %}
+                                <div class="text-danger small mt-1">
+                                    {% for error in form.end_time.errors %}
+                                        <div>{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <!-- Lesson Guidelines -->
+                    <div class="alert alert-info mb-4">
+                        <h6 class="alert-heading">
+                            <i class="fas fa-info-circle me-2"></i>Booking Guidelines
+                        </h6>
+                        <ul class="mb-0 small">
+                            <li>Lessons must be between 8:00 AM and 6:00 PM</li>
+                            <li>Minimum lesson duration: 30 minutes</li>
+                            <li>Maximum lesson duration: 3 hours</li>
+                            <li>Bookings can be made up to 90 days in advance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-plus me-2"></i>Book Lesson
+                        </button>
+                        <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Additional Information -->
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-lightbulb text-warning me-2"></i>What to Expect
+                </h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Modern Vehicles</h6>
+                                <p class="text-muted small mb-0">Learn in well-maintained, modern cars with safety features</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Certified Instructors</h6>
+                                <p class="text-muted small mb-0">All our instructors are certified and experienced</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

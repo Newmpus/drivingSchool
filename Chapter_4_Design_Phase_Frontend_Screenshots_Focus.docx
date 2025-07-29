@@ -1,0 +1,138 @@
+# CHAPTER 4: PROTOTYPING AND SYSTEM DESIGN
+
+---
+
+## 4.1 INTRODUCTION
+
+This chapter outlines the prototyping and system design for the proposed Driving School Management System. The system aims to address the inefficiencies of manual driving school management by automating student management, lesson scheduling, payment processing, and administrative oversight, enhancing data integrity, security, and user experience.
+
+---
+
+## 4.2 SYSTEM INPUTS
+
+The key inputs to the Driving School Management System include:
+
+- Student Information: Details such as full name, email, phone number, date of birth, and profile picture.
+- Lesson Booking Data: Preferred date and time slots, lesson type (theory/practical), instructor preference, and special notes.
+- Payment Information: Payment proof uploads, payment method selection, transaction references, and payment amount verification.
+- Administrative Inputs: User approval/rejection decisions, payment verification status, lesson scheduling parameters, and system configuration settings.
+
+> **Files to open for screenshots:**  
+> - `core/templates/registration/register.html` (or registration form UI)  
+> - `core/templates/dashboard.html` (payment upload section)  
+> - `core/templates/book_lesson.html` (lesson booking form)  
+> - `core/templates/admin/` (admin panel pages)
+
+---
+
+## 4.3 SYSTEM PROCESSES
+
+The key processes within the Driving School Management System include:
+
+- User Registration Workflow: Submission, validation, account creation, and admin notification.
+- Lesson Management: Booking, rescheduling, cancellation, and calendar integration.
+- Payment Processing: Submission, verification, status updates, and account activation.
+- Notification System: Email notifications, real-time dashboard alerts, and message center integration.
+
+> **Files to open for screenshots:**  
+> - `core/views/auth_views.py` (registration, login, profile edit views)  
+> - `core/templates/edit_profile.html`  
+> - `core/templates/dashboard.html` (lessons and notifications sections)
+
+---
+
+## 4.4 SYSTEM OUTPUTS
+
+The key outputs of the system include:
+
+- Confirmation pages for registration, lesson booking, and payment submission.
+- Dashboards displaying upcoming lessons, notifications, and user statistics.
+- Reports and analytics for administrative users.
+
+> **Files to open for screenshots:**  
+> - `core/templates/dashboard.html`  
+> - `core/templates/admin/` (reports and analytics pages)
+
+---
+
+## 4.5 ARCHITECTURE DESIGN
+
+The Driving School Management System is designed using a three-tier architecture:
+
+- Presentation Tier: User interface built with Django templates, HTML5, CSS3, and JavaScript.
+- Business Tier: Server-side logic implemented in Django views and services.
+- Data Tier: Data storage managed by Django ORM with SQLite (development) or PostgreSQL (production).
+
+Communication between tiers is secured and optimized for performance.
+
+> **Files to open for screenshots:**  
+> - `drivingschool/settings.py` (environment and database config)  
+> - `drivingschool/urls.py` (URL routing)  
+> - Project folder structure in IDE
+
+---
+
+## 4.6 PHYSICAL DESIGN
+
+The physical design includes:
+
+- Web Server: Django development server for local development; Nginx and Gunicorn for production.
+- Database Server: SQLite for development; PostgreSQL for production.
+- Cache Server: Redis for Celery task queue.
+- Storage: Local media storage for development; cloud storage for production.
+
+> **Files to open for screenshots:**  
+> - `drivingschool/settings.py` (server and database settings)  
+> - Deployment configuration files if any
+
+---
+
+## 4.7 DATABASE DESIGN
+
+Database design requires the designer to determine the data to be stored and how its elements interrelate. This means that database design is basically the organization of data according to database model. The logical design involves the Entity relationships and physical involves the tables’ columns and keys.
+
+The Driving School Management System uses SQLite for development and PostgreSQL for production. The database will keep every data admin, student, lesson, payment, and all user details.
+
+> **Files to open for screenshots:**  
+> - `core/models.py`  
+> - ER diagrams if available
+
+---
+
+## 4.8 INTERFACE DESIGN
+
+The user interface is designed for responsiveness, accessibility, and usability:
+
+- Dashboard: Role-based views with statistics, lessons, and notifications.
+- Forms: Registration, lesson booking, payment upload, and profile editing.
+- Navigation: Consistent menus and user profile access.
+- Tables: Responsive data display with sorting and filtering.
+
+> **Files to open for screenshots:**  
+> - `core/templates/dashboard.html`  
+> - `core/templates/edit_profile.html`  
+> - Other relevant UI templates
+
+---
+
+## 4.9 SUMMARY
+
+This chapter has outlined the prototyping and system design for the Driving School Management System, detailing inputs, processes, outputs, architecture, physical design, database design, and interface design. The system is designed to improve operational efficiency, data integrity, and user experience.
+
+---
+
+# Testing Recommendations
+
+Before finalizing, consider testing these critical areas:
+
+- User registration, login, and profile editing forms  
+- Lesson booking, rescheduling, and cancellation flows  
+- Payment proof upload and admin verification  
+- Dashboard views and notifications for all user roles  
+- Admin panel functionalities  
+
+Would you prefer **critical-path testing** (key features only) or **thorough testing** (complete coverage)? Also, confirm if testing should focus on affected UI pages or the entire application.
+
+---
+
+*End of Document*

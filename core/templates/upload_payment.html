@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Upload Payment Proof{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Upload Payment Proof</h3>
+                </div>
+                <div class="card-body">
+                    {% if payment_status == 'pending' %}
+                        <div class="alert alert-warning">
+                            <i class="fas fa-clock"></i> Your previous payment is pending approval. You can upload a new payment proof if needed.
+                        </div>
+                    {% elif payment_status == 'rejected' %}
+                        <div class="alert alert-danger">
+                            <i class="fas fa-times-circle"></i> Your previous payment was rejected. Please upload a new payment proof.
+                        </div>
+                    {% endif %}
+                    
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="form-group">
+                            <label for="{{ form.payment_proof.id_for_label }}">Payment Proof</label>
+                            {{ form.payment_proof }}
+                            <small class="form-text text-muted">
+                                Accepted formats: JPG, JPEG, PNG, PDF, DOC, DOCX, TXT
+                            </small>
+                            {% if form.payment_proof.errors %}
+                                <div class="text-danger">
+                                    {{ form.payment_proof.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-upload"></i> Upload Payment Proof
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="mt-3">
+                        <a href="{% url 'dashboard' %}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

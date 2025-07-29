@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Driving School Management{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- User Profile Summary -->
+    <div class="col-lg-4 mb-4">
+        <div class="card border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                    <i class="fas fa-user fa-2x"></i>
+                </div>
+                <h4 class="fw-bold mb-1">{{ user.get_full_name|default:user.username }}</h4>
+                <p class="text-muted mb-3"><strong>Role:</strong> {{ user_profile.get_role_display }}</p>
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="{% url 'edit_profile' %}" class="btn btn-outline-primary">
+                        <i class="fas fa-user-edit me-2"></i>Edit Profile
+                    </a>
+                    <a href="{% url 'logout' %}" class="btn btn-outline-danger">
+                        <i class="fas fa-sign-out-alt me-2"></i>Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">Contact Information</h5>
+                <div class="mb-2">
+                    <i class="fas fa-envelope text-muted me-2"></i>
+                    {{ user.email }}
+                </div>
+                {% if user_profile.phone %}
+                <div class="mb-2">
+                    <i class="fas fa-phone text-muted me-2"></i>
+                    {{ user_profile.phone }}
+                </div>
+                {% endif %}
+                {% if user_profile.address %}
+                <div>
+                    <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                    {{ user_profile.address }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-8">
+        <!-- Notifications -->
+        {% if notifications %}
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">
+                        <i class="fas fa-bell text-warning me-2"></i>Notifications
+                    </h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    {% for notification in notifications %}
+                    <div class="list-group-item border-0 px-0 py-3 notification-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="me-3">
+                                <p class="mb-1">{{ notification.message }}</p>
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>
+                                    {{ notification.created_at|timesince }} ago
+                                </small>
+                            </div>
+                            <a href="/notification/read/{{ notification.id }}/" 
+                               class="btn btn-sm btn-outline-primary mark-notification-read"
+                               data-notification-id="{{ notification.id }}">
+                                Mark as read
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Role-specific Content -->
+        {% if user_profile %}
+            {% if user_profile.role == 'student' %}
+                <!-- Student Dashboard -->
+
+                {% if not user_profile.payment_verified %}
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3">Payment Required</h5>
+                        <p>Please upload your proof of payment to access our services.</p>
+<form method="post" enctype="multipart/form-data" action="{{ upload_payment_proof_url }}">
+                            {% csrf_token %}
+                            {{ payment_form.payment_proof.label_tag }}
+                            {{ payment_form.payment_proof }}
+                            <button type="submit" class="btn btn-primary mt-3">Upload Payment Proof</button>
+                        </form>
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-calendar-alt text-primary me-2"></i>Your Upcoming Lessons
+                            </h5>
+                            <a href="{% url 'book_lesson' %}" class="btn btn-primary">
+                                <i class="fas fa-plus me-2"></i>Book New Lesson
+                            </a>
+                        </div>
+                        
+                        {% if lessons %}
+                            <div class="list-group list-group-flush">
+                                {% for lesson in lessons %}
+                                <a href="/lesson/{{ lesson.id }}/" class="list-group-item list-group-item-action border-0 px-0 py-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Lesson with {{ lesson.tutor.get_full_name|default:lesson.tutor.username }}</h6>
+                                            <p class="text-muted mb-0">
+                                                <i class="fas fa-clock me-1"></i>{{ lesson.start_time }} - {{ lesson.end_time }}
+                                                <i class="fas fa-map-marker-alt ms-3 me-1"></i>{{ lesson.location }}
+                                            </p>
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">{{ lesson.date }}</span>
+                                    </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="text-center py-4">
+                                <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@1.68.0/icons/calendar-off.svg" 
+                                     class="mb-3" width="48" height="48" alt="No lessons">
+                                <h6>No Upcoming Lessons</h6>
+                                <p class="text-muted">Book your first lesson to get started!</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+            {% elif user_profile.role == 'tutor' %}
+                <!-- Tutor Dashboard -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-4">
+                            <i class="fas fa-calendar-alt text-primary me-2"></i>Your Schedule
+                        </h5>
+                        
+                        {% if lessons %}
+                            <div class="list-group list-group-flush">
+                                {% for lesson in lessons %}
+                                <a href="/lesson/{{ lesson.id }}/" class="list-group-item list-group-item-action border-0 px-0 py-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">Lesson with {{ lesson.student.get_full_name|default:lesson.student.username }}</h6>
+                                            <p class="text-muted mb-0">
+                                                <i class="fas fa-clock me-1"></i>{{ lesson.start_time }} - {{ lesson.end_time }}
+                                                <i class="fas fa-map-marker-alt ms-3 me-1"></i>{{ lesson.location }}
+                                            </p>
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">{{ lesson.date }}</span>
+                                    </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="text-center py-4">
+                                <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@1.68.0/icons/calendar-off.svg" 
+                                     class="mb-3" width="48" height="48" alt="No lessons">
+                                <h6>No Upcoming Lessons</h6>
+                                <p class="text-muted">Your schedule is clear for now.</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Students List -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-4">
+                            <i class="fas fa-users text-success me-2"></i>Your Students
+                        </h5>
+                        
+                        {% if students %}
+                            <div class="list-group list-group-flush">
+                                {% for student in students %}
+                                <div class="list-group-item border-0 px-0 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                            <i class="fas fa-user text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1">{{ student.get_full_name|default:student.username }}</h6>
+                                            {% if student.phone %}
+                                            <p class="text-muted mb-0"><i class="fas fa-phone me-1"></i>{{ student.phone }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="text-center py-4">
+                                <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@1.68.0/icons/users-off.svg" 
+                                     class="mb-3" width="48" height="48" alt="No students">
+                                <h6>No Students Yet</h6>
+                                <p class="text-muted">Students will appear here once assigned.</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+            {% elif user_profile.role == 'admin' %}
+                <!-- Admin Dashboard -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="stats-card">
+                            <h3>Total Users</h3>
+                            <div class="number stats-number">{{ user_count }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-card">
+                            <h3>Students</h3>
+                            <div class="number stats-number">{{ student_count }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-card">
+                            <h3>Tutors</h3>
+                            <div class="number stats-number">{{ tutor_count }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stats-card">
+                            <h3>Total Lessons</h3>
+                            <div class="number stats-number">{{ lesson_count }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Lessons -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-history text-info me-2"></i>Recent Lessons
+                            </h5>
+                            <a href="/admin/" class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-cog me-2"></i>Admin Panel
+                            </a>
+                        </div>
+                        
+                        {% if recent_lessons %}
+                            <div class="list-group list-group-flush">
+                                {% for lesson in recent_lessons %}
+                                <a href="/lesson/{{ lesson.id }}/" class="list-group-item list-group-item-action border-0 px-0 py-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-1">
+                                                {{ lesson.student.get_full_name|default:lesson.student.username }} with 
+                                                {{ lesson.tutor.get_full_name|default:lesson.tutor.username }}
+                                            </h6>
+                                            <p class="text-muted mb-0">
+                                                <i class="fas fa-clock me-1"></i>{{ lesson.start_time }} - {{ lesson.end_time }}
+                                                <i class="fas fa-map-marker-alt ms-3 me-1"></i>{{ lesson.location }}
+                                            </p>
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">{{ lesson.date }}</span>
+                                    </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="text-center py-4">
+                                <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@1.68.0/icons/calendar-off.svg" 
+                                     class="mb-3" width="48" height="48" alt="No lessons">
+                                <h6>No Recent Lessons</h6>
+                                <p class="text-muted">Lessons will appear here once scheduled.</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Timetable Generation -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-4">
+                            <i class="fas fa-calendar-week text-warning me-2"></i>Timetable Management
+                        </h5>
+                        <form method="post" action="/generate-timetable/" class="d-grid gap-2">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-sync-alt me-2"></i>Generate Timetable for This Week
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+<!-- Small car icon added above footer and below header -->
+<div class="text-center my-4">
+    <i class="fas fa-car fa-3x text-primary"></i>
+</div>
+
+{% endblock %}

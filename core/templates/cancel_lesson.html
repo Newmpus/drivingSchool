@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block title %}Cancel Lesson - Driving School Management{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="text-center mb-4">
+            <div class="bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                <i class="fas fa-exclamation-triangle fa-2x"></i>
+            </div>
+            <h1 class="h3 mb-3 fw-bold text-danger">Cancel Lesson</h1>
+            <p class="text-muted">Are you sure you want to cancel this lesson?</p>
+        </div>
+        
+        <!-- Lesson Details Card -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-calendar-times text-danger me-2"></i>Lesson to Cancel
+                </h5>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-calendar text-muted me-2"></i>
+                            <div>
+                                <small class="text-muted">Date</small>
+                                <div class="fw-bold">{{ lesson.date }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-clock text-muted me-2"></i>
+                            <div>
+                                <small class="text-muted">Time</small>
+                                <div class="fw-bold">{{ lesson.start_time }} - {{ lesson.end_time }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-user-graduate text-muted me-2"></i>
+                            <div>
+                                <small class="text-muted">Student</small>
+                                <div class="fw-bold">{{ lesson.student.user.get_full_name|default:lesson.student.user.username }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-chalkboard-teacher text-muted me-2"></i>
+                            <div>
+                                <small class="text-muted">Instructor</small>
+                                <div class="fw-bold">{{ lesson.tutor.user.get_full_name|default:lesson.tutor.user.username }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                            <div>
+                                <small class="text-muted">Location</small>
+                                <div class="fw-bold">{{ lesson.location }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Warning Message -->
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong>Important:</strong> This action cannot be undone. The lesson will be permanently removed from your schedule.
+                </div>
+                
+                <!-- Cancellation Form -->
+                <form method="post" class="d-grid gap-2">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-lg">
+                        <i class="fas fa-trash-alt me-2"></i>Yes, Cancel This Lesson
+                    </button>
+                    <a href="/lesson/{{ lesson.id }}/" class="btn btn-outline-secondary btn-lg">
+                        <i class="fas fa-arrow-left me-2"></i>No, Keep This Lesson
+                    </a>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Cancellation Policy -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-info-circle text-info me-2"></i>Cancellation Policy
+                </h5>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        Free cancellation up to 24 hours before the lesson
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-clock text-warning me-2"></i>
+                        Cancellations within 24 hours may incur charges
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-redo text-primary me-2"></i>
+                        You can reschedule instead of canceling
+                    </li>
+                    <li>
+                        <i class="fas fa-phone text-info me-2"></i>
+                        Contact us for emergency cancellations
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
