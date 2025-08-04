@@ -29,10 +29,10 @@
                             </div>
                             <div>
                                 <h6 class="mb-1">Student</h6>
-                                <p class="mb-0">{{ lesson.student.user.get_full_name|default:lesson.student.user.username }}</p>
-                                {% if lesson.student.phone %}
+                                <p class="mb-0">{{ lesson.student.get_full_name|default:lesson.student.username }}</p>
+                                {% if lesson.student.profile.phone %}
                                 <small class="text-muted">
-                                    <i class="fas fa-phone me-1"></i>{{ lesson.student.phone }}
+                                    <i class="fas fa-phone me-1"></i>{{ lesson.student.profile.phone }}
                                 </small>
                                 {% endif %}
                             </div>
@@ -46,10 +46,10 @@
                             </div>
                             <div>
                                 <h6 class="mb-1">Instructor</h6>
-                                <p class="mb-0">{{ lesson.tutor.user.get_full_name|default:lesson.tutor.user.username }}</p>
-                                {% if lesson.tutor.phone %}
+                                <p class="mb-0">{{ lesson.tutor.get_full_name|default:lesson.tutor.username }}</p>
+                                {% if lesson.tutor.profile.phone %}
                                 <small class="text-muted">
-                                    <i class="fas fa-phone me-1"></i>{{ lesson.tutor.phone }}
+                                    <i class="fas fa-phone me-1"></i>{{ lesson.tutor.profile.phone }}
                                 </small>
                                 {% endif %}
                             </div>

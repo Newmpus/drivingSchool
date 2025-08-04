@@ -7,16 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 
-    // Auto-hide alerts after 5 seconds
+    // Completely disable auto-hide for all alerts to ensure role info remains visible
+    // This prevents any role information from disappearing after 5 seconds
     const alerts = document.querySelectorAll('.alert');
-    alerts.forEach(function(alert) {
-        setTimeout(function() {
-            if (alert) {
-                const bsAlert = new bootstrap.Alert(alert);
-                bsAlert.close();
-            }
-        }, 5000);
-    });
+    // No auto-hide logic - all alerts will remain visible until manually dismissed
 
     // Add fade-in animation to cards
     const cards = document.querySelectorAll('.card');

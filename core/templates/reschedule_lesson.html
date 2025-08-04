@@ -43,7 +43,7 @@
                                 <i class="fas fa-chalkboard-teacher text-muted me-2"></i>
                                 <strong>Instructor:</strong>
                             </div>
-                            <div class="ms-4">{{ lesson.tutor.user.get_full_name|default:lesson.tutor.user.username }}</div>
+                            <div class="ms-4">{{ lesson.tutor.get_full_name|default:lesson.tutor.username }}</div>
                         </div>
                         
                         <div>
