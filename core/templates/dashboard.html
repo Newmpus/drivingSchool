@@ -97,6 +97,11 @@
                             {{ payment_form.payment_proof.label_tag }}
                             {{ payment_form.payment_proof }}
                             <button type="submit" class="btn btn-primary mt-3">Upload Payment Proof</button>
+                            <div class="text-danger small mt-1">
+                                {% for error in payment_form.payment_proof.errors %}
+                                    <div>{{ error }}</div>
+                                {% endfor %}
+                            </div>
                         </form>
                     </div>
                 </div>

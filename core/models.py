@@ -62,3 +62,58 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"Notification for {self.user.username}: {self.message[:20]}"
+
+class Vehicle(models.Model):
+    VEHICLE_CLASS_CHOICES = (
+        ('class1', 'Class 1 - Light Vehicles'),
+        ('class2', 'Class 2 - Medium Vehicles'),
+        ('class3', 'Class 3 - Heavy Vehicles'),
+        ('class4', 'Class 4 - Public Service Vehicles'),
+        ('class5', 'Class 5 - Special Vehicles'),
+    )
+    
+    VEHICLE_TYPE_CHOICES = (
+        ('sedan', 'Sedan'),
+        ('hatchback', 'Hatchback'),
+        ('suv', 'SUV'),
+        ('truck', 'Truck'),
+        ('bus', 'Bus'),
+        ('motorcycle', 'Motorcycle'),
+    )
+    
+    registration_number = models.CharField(max_length=20, unique=True)
+    make = models.CharField(max_length=50)
+    model = models.CharField(max_length=50)
+    year = models.IntegerField()
+    vehicle_class = models.CharField(max_length=10, choices=VEHICLE_CLASS_CHOICES)
+    vehicle_type = models.CharField(max_length=20, choices=VEHICLE_TYPE_CHOICES)
+    is_available = models.BooleanField(default=True)
+    notes = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.registration_number} - {self.make} {self.model} ({self.get_vehicle_class_display()})"
+
+    class Meta:
+        ordering = ['vehicle_class', 'registration_number']
+
+class VehicleAllocation(models.Model):
+    lesson = models.OneToOneField(Lesson, on_delete=models.CASCADE, related_name='vehicle_allocation')
+    vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
+    allocated_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.vehicle} allocated to {self.lesson}"
+
+class StudentProgress(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='progress_records')
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    progress_notes = models.TextField()
+    skills_covered = models.TextField()
+    next_lesson_focus = models.TextField()
+    instructor_feedback = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"Progress for {self.student.username} - {self.lesson.date}"

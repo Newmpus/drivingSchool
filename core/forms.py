@@ -156,12 +156,8 @@ class UserProfileEditForm(forms.ModelForm):
         }
 
 class PaymentProofUploadForm(forms.ModelForm):
-    """Form for uploading payment proof."""
-
-    class Meta:
-        model = User
-        fields = ['payment_proof']
-
+    """Form for uploading payment proof with validation."""
+    
     payment_proof = forms.FileField(
         required=True,
         widget=forms.ClearableFileInput(attrs={
@@ -170,11 +166,105 @@ class PaymentProofUploadForm(forms.ModelForm):
         })
     )
 
+    class Meta:
+        model = User
+        fields = ['payment_proof']
+
     def __init__(self, *args, **kwargs):
         user_instance = kwargs.pop('user', None)
         if user_instance and 'instance' not in kwargs:
             kwargs['instance'] = user_instance
         super().__init__(*args, **kwargs)
+
+    def clean_payment_proof(self):
+        """Validate the uploaded payment proof file with enhanced validation."""
+        file = self.cleaned_data.get('payment_proof')
+        
+        if not file:
+            raise ValidationError('Please select a file to upload.')
+        
+        try:
+            # Get file size with multiple fallback methods
+            file_size = None
+            if hasattr(file, 'size') and file.size is not None:
+                file_size = file.size
+            elif hasattr(file, '_size') and file._size is not None:
+                file_size = file._size
+            else:
+                try:
+                    file.seek(0, 2)
+                    file_size = file.tell()
+                    file.seek(0)
+                except (AttributeError, IOError):
+                    # If we can't determine size, skip size check but log it
+                    import logging
+                    logger = logging.getLogger(__name__)
+                    logger.warning(f"Could not determine file size for {getattr(file, 'name', 'unknown')}")
+            
+            if file_size and file_size > 5 * 1024 * 1024:
+                raise ValidationError('File size must be under 5MB.')
+            
+            # Enhanced file extension validation
+            filename = str(getattr(file, 'name', '')).strip()
+            if not filename:
+                raise ValidationError('Invalid file name.')
+            
+            # Extract extension safely
+            if '.' not in filename:
+                raise ValidationError('File must have an extension.')
+            
+            ext = filename.rsplit('.', 1)[-1].lower()
+            valid_extensions = {'jpg', 'jpeg', 'png', 'gif', 'bmp', 'pdf', 'doc', 'docx', 'txt'}
+            if ext not in valid_extensions:
+                raise ValidationError(
+                    f'Invalid file type (.{ext}). Allowed types: {", ".join(sorted(valid_extensions))}'
+                )
+            
+            # Enhanced MIME type validation
+            content_type = str(getattr(file, 'content_type', '')).lower()
+            if content_type:
+                allowed_content_types = {
+                    'image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/bmp',
+                    'application/pdf', 'application/msword',
+                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                    'text/plain', 'application/octet-stream'
+                }
+                
+                # Check if content type is valid for the extension
+                extension_to_mime = {
+                    'jpg': 'image/jpeg', 'jpeg': 'image/jpeg', 'png': 'image/png',
+                    'gif': 'image/gif', 'bmp': 'image/bmp', 'pdf': 'application/pdf',
+                    'doc': 'application/msword', 'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                    'txt': 'text/plain'
+                }
+                
+                expected_mime = extension_to_mime.get(ext)
+                if expected_mime and content_type not in {expected_mime, 'application/octet-stream'}:
+                    # Allow octet-stream as fallback for unknown uploads
+                    if content_type != 'application/octet-stream':
+                        logger = logging.getLogger(__name__)
+                        logger.warning(f"MIME type mismatch: expected {expected_mime}, got {content_type}")
+            
+            # Basic file content validation - check if file is readable
+            try:
+                chunk = file.read(1024)  # Read first 1KB
+                if not chunk or len(chunk) == 0:
+                    raise ValidationError('File appears to be empty.')
+                file.seek(0)  # Reset position
+            except Exception as e:
+                raise ValidationError(f'Cannot read file: {str(e)}')
+                
+        except ValidationError:
+            # Re-raise Django validation errors
+            raise
+        except Exception as e:
+            # Log unexpected errors
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Unexpected error validating payment proof: {str(e)}", exc_info=True)
+            raise ValidationError('Error processing file. Please try uploading again.')
+        
+        return file
 
     def save(self, commit=True):
         """Save the payment proof and update status."""
@@ -218,10 +308,21 @@ class LessonBookingForm(forms.ModelForm):
             'placeholder': 'Enter lesson location'
         })
     )
+    student_class = forms.ChoiceField(
+        choices=[
+            ('class1', 'Class 1 - Light Vehicles'),
+            ('class2', 'Class 2 - Medium Vehicles'),
+            ('class3', 'Class 3 - Heavy Vehicles'),
+            ('class4', 'Class 4 - Public Service Vehicles'),
+            ('class5', 'Class 5 - Special Vehicles'),
+        ],
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Learner Class'
+    )
 
     class Meta:
         model = Lesson
-        fields = ['tutor', 'date', 'start_time', 'end_time', 'location']
+        fields = ['tutor', 'date', 'start_time', 'end_time', 'location', 'student_class']
 
     def clean_date(self):
         """Validate lesson date."""

@@ -15,7 +15,7 @@ from django.urls import reverse
 from django.utils import timezone
 
 from ..forms import LessonBookingForm
-from ..models import User, Lesson, Notification
+from ..models import User, Lesson, Notification, Vehicle, VehicleAllocation, StudentProgress
 from .auth_views import get_user_profile
 
 logger = logging.getLogger(__name__)
@@ -41,6 +41,115 @@ def send_notification(user, message: str) -> None:
             logger.info(f"Email notification sent to {user.email}")
         except Exception as e:
             logger.error(f"Failed to send email to {user.email}: {e}")
+
+def allocate_vehicle_to_lesson(lesson: Lesson, student_class: str = 'class1') -> VehicleAllocation:
+    """
+    Automatically allocate an appropriate vehicle to a lesson based on student class.
+    
+    Args:
+        lesson (Lesson): The lesson to allocate a vehicle for.
+        student_class (str): The driving class of the student.
+    
+    Returns:
+        VehicleAllocation: The created vehicle allocation.
+    """
+    # Get available vehicles for the student's class
+    available_vehicles = Vehicle.objects.filter(
+        vehicle_class=student_class,
+        is_available=True
+    ).exclude(
+        vehicleallocation__lesson__date=lesson.date,
+        vehicleallocation__lesson__start_time__lt=lesson.end_time,
+        vehicleallocation__lesson__end_time__gt=lesson.start_time
+    )
+    
+    if available_vehicles.exists():
+        vehicle = available_vehicles.first()
+        allocation = VehicleAllocation.objects.create(
+            lesson=lesson,
+            vehicle=vehicle
+        )
+        logger.info(f"Vehicle {vehicle.registration_number} allocated to lesson {lesson.id}")
+        return allocation
+    
+    # If no specific class vehicle available, try any available vehicle
+    any_available = Vehicle.objects.filter(
+        is_available=True
+    ).exclude(
+        vehicleallocation__lesson__date=lesson.date,
+        vehicleallocation__lesson__start_time__lt=lesson.end_time,
+        vehicleallocation__lesson__end_time__gt=lesson.start_time
+    )
+    
+    if any_available.exists():
+        vehicle = any_available.first()
+        allocation = VehicleAllocation.objects.create(
+            lesson=lesson,
+            vehicle=vehicle
+        )
+        logger.info(f"Fallback vehicle {vehicle.registration_number} allocated to lesson {lesson.id}")
+        return allocation
+    
+    logger.warning(f"No vehicle available for lesson {lesson.id}")
+    return None
+
+def send_progress_email(student: User, lesson: Lesson, progress_data: dict) -> None:
+    """
+    Send progress email to student after lesson completion.
+    
+    Args:
+        student (User): The student to send the email to.
+        lesson (Lesson): The completed lesson.
+        progress_data (dict): Progress information including skills covered and feedback.
+    """
+    if not student.email:
+        logger.warning(f"Student {student.username} has no email address")
+        return
+    
+    subject = f"Lesson Progress Update - {lesson.date}"
+    
+    # Create email content
+    message = f"""
+    Dear {student.first_name or student.username},
+    
+    Great job on your driving lesson today! Here are the details:
+    
+    Lesson Date: {lesson.date}
+    Time: {lesson.start_time} - {lesson.end_time}
+    Instructor: {lesson.tutor.get_full_name() or lesson.tutor.username}
+    
+    Skills Covered:
+    {progress_data.get('skills_covered', 'Basic driving techniques')}
+    
+    Progress Notes:
+    {progress_data.get('progress_notes', 'Good progress made today')}
+    
+    Instructor Feedback:
+    {progress_data.get('instructor_feedback', 'Keep up the good work!')}
+    
+    Next Lesson Focus:
+    {progress_data.get('next_lesson_focus', 'Continue practicing current skills')}
+    
+    Vehicle Used:
+    {lesson.vehicle_allocation.vehicle.registration_number if hasattr(lesson, 'vehicle_allocation') else 'Not specified'}
+    
+    Keep practicing and stay safe on the roads!
+    
+    Best regards,
+    Smart Driving School Team
+    """
+    
+    try:
+        send_mail(
+            subject=subject,
+            message=message,
+            from_email=None,
+            recipient_list=[student.email],
+            fail_silently=False,
+        )
+        logger.info(f"Progress email sent to {student.email}")
+    except Exception as e:
+        logger.error(f"Failed to send progress email to {student.email}: {e}")
 
 @login_required
 def book_lesson(request: HttpRequest) -> HttpResponse:
@@ -87,19 +196,28 @@ def book_lesson(request: HttpRequest) -> HttpResponse:
                 lesson.student = user_profile
                 lesson.save()
                 
+                # Allocate vehicle based on student class
+                student_class = request.POST.get('student_class', 'class1')
+                vehicle_allocation = allocate_vehicle_to_lesson(lesson, student_class)
+                
+                if vehicle_allocation:
+                    vehicle_message = f"Vehicle {vehicle_allocation.vehicle.registration_number} allocated."
+                else:
+                    vehicle_message = "No vehicle available for this time slot."
+                
                 # Send notifications
                 send_notification(
                     lesson.tutor,
                     f'New lesson booked by {request.user.username} '
-                    f'on {lesson.date} at {lesson.start_time}.'
+                    f'on {lesson.date} at {lesson.start_time}. {vehicle_message}'
                 )
                 send_notification(
                     request.user,
                     f'Lesson booked with {lesson.tutor.username} '
-                    f'on {lesson.date} at {lesson.start_time}.'
+                    f'on {lesson.date} at {lesson.start_time}. {vehicle_message}'
                 )
                 
-                messages.success(request, 'Lesson booked successfully!')
+                messages.success(request, f'Lesson booked successfully! {vehicle_message}')
                 logger.info(
                     f"Lesson booked: {lesson.student.username} "
                     f"with {lesson.tutor.username} on {lesson.date}"
