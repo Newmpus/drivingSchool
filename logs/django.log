@@ -5772,3 +5772,57 @@ INFO 2025-08-22 19:07:14,468 basehttp 1740 6904 "GET /media/payment_proofs/welco
 INFO 2025-08-22 19:07:25,039 basehttp 1740 6904 "GET /media/payment_proofs/welcomePage_PlMjTCF.png HTTP/1.1" 304 0
 INFO 2025-08-22 19:07:26,027 basehttp 1740 6904 "GET /media/payment_proofs/welcomePage_PlMjTCF.png HTTP/1.1" 304 0
 INFO 2025-08-22 19:18:44,572 autoreload 3092 12164 Watching for file changes with StatReloader
+INFO 2025-08-22 19:19:21,196 basehttp 3092 11932 "GET / HTTP/1.1" 200 20321
+WARNING 2025-08-22 19:19:21,708 log 3092 11932 Not Found: /favicon.ico
+WARNING 2025-08-22 19:19:21,709 basehttp 3092 11932 "GET /favicon.ico HTTP/1.1" 404 16995
+INFO 2025-08-22 19:19:24,421 basehttp 3092 11932 "GET /admin/core/user/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:19:24,613 basehttp 3092 11932 "GET /admin/login/?next=/admin/core/user/ HTTP/1.1" 200 13231
+INFO 2025-08-22 19:19:25,719 basehttp 3092 11932 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 19:19:27,411 basehttp 3092 11932 "GET /student/5/progress-detail/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:19:27,462 basehttp 3092 11932 "GET /accounts/login/?next=/student/5/progress-detail/ HTTP/1.1" 200 15386
+INFO 2025-08-22 19:19:31,011 basehttp 3092 11932 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:19:31,504 basehttp 3092 11932 "GET /dashboard/ HTTP/1.1" 200 29719
+INFO 2025-08-22 19:19:37,606 basehttp 3092 11932 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:19:37,683 basehttp 3092 11932 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 19:19:39,956 basehttp 3092 11932 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 19:19:45,563 basehttp 3092 11932 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:19:45,897 basehttp 3092 11932 "GET /dashboard/ HTTP/1.1" 200 25732
+INFO 2025-08-22 19:19:52,747 basehttp 3092 11932 "GET /student/5/progress-detail/ HTTP/1.1" 200 23188
+INFO 2025-08-22 19:20:00,301 basehttp 3092 11932 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:20:00,359 basehttp 3092 11932 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 19:20:03,076 basehttp 3092 11932 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 19:20:09,850 basehttp 3092 11932 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:20:10,057 basehttp 3092 11932 "GET /dashboard/ HTTP/1.1" 200 49790
+INFO 2025-08-22 19:20:33,818 notification_views 3092 11932 Notification 60 marked as read by Cleo
+INFO 2025-08-22 19:20:33,885 basehttp 3092 11932 "POST /notification/read/60/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:20:34,005 basehttp 3092 11932 "GET /dashboard/ HTTP/1.1" 200 48764
+INFO 2025-08-22 19:20:34,260 basehttp 3092 11932 "GET /__debug__/history_sidebar/?store_id=182139c93d3e4e9c9fe96803364204de HTTP/1.1" 200 9089
+INFO 2025-08-22 19:20:41,026 basehttp 3092 11932 "GET /dashboard/ HTTP/1.1" 200 48764
+INFO 2025-08-22 19:20:52,208 basehttp 3092 11932 "GET /lesson/29/ HTTP/1.1" 200 21658
+INFO 2025-08-22 19:24:53,957 basehttp 3092 11932 "GET /lesson/29/quick-progress/ HTTP/1.1" 200 20725
+INFO 2025-08-22 19:25:18,359 basehttp 3092 11932 "GET /lesson/29/add-progress/ HTTP/1.1" 200 21934
+ERROR 2025-08-22 19:26:43,087 lesson_views 3092 11932 Failed to send progress email to tinex@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-45b5744e9b1sm6289395e9.11 - gsmtp')
+INFO 2025-08-22 19:26:47,217 lesson_views 3092 11932 Email notification sent to tinex@gmail.com
+INFO 2025-08-22 19:26:47,218 lesson_views 3092 11932 Progress comment added for lesson 29 by Cleo
+INFO 2025-08-22 19:26:47,294 basehttp 3092 11932 "POST /lesson/29/add-progress/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:26:47,445 basehttp 3092 11932 "GET /lesson/29/ HTTP/1.1" 200 22257
+INFO 2025-08-22 19:26:57,671 basehttp 3092 11932 "GET /lesson/29/quick-progress/ HTTP/1.1" 200 20725
+ERROR 2025-08-22 19:27:11,863 lesson_views 3092 11932 Failed to send progress email to tinex@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-3c70ef55aabsm267455f8f.23 - gsmtp')
+INFO 2025-08-22 19:27:15,992 lesson_views 3092 11932 Email notification sent to tinex@gmail.com
+INFO 2025-08-22 19:27:15,993 lesson_views 3092 11932 Quick progress comment added for lesson 29 by Cleo
+INFO 2025-08-22 19:27:16,091 basehttp 3092 11932 "POST /lesson/29/quick-progress/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:27:16,211 basehttp 3092 11932 "GET /lesson/29/ HTTP/1.1" 200 22259
+INFO 2025-08-22 19:27:27,586 basehttp 3092 11932 "GET /lesson/29/quick-progress/ HTTP/1.1" 200 20725
+ERROR 2025-08-22 19:27:40,365 lesson_views 3092 11932 Failed to send progress email to tinex@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-3c7116e1478sm247796f8f.46 - gsmtp')
+INFO 2025-08-22 19:27:44,467 lesson_views 3092 11932 Email notification sent to tinex@gmail.com
+INFO 2025-08-22 19:27:44,468 lesson_views 3092 11932 Quick progress comment added for lesson 29 by Cleo
+INFO 2025-08-22 19:27:44,534 basehttp 3092 11932 "POST /lesson/29/quick-progress/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:27:44,659 basehttp 3092 11932 "GET /lesson/29/ HTTP/1.1" 200 22259
+INFO 2025-08-22 19:28:01,804 basehttp 3092 11932 "GET /dashboard/ HTTP/1.1" 200 48764
+INFO 2025-08-22 19:28:11,632 basehttp 3092 11932 "GET /lesson/28/ HTTP/1.1" 200 21258
+INFO 2025-08-22 19:28:23,141 basehttp 3092 11932 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:28:23,214 basehttp 3092 11932 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 19:28:24,573 basehttp 3092 11932 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 19:28:30,200 basehttp 3092 11932 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:28:30,472 basehttp 3092 11932 "GET /dashboard/ HTTP/1.1" 200 31900
+INFO 2025-08-22 19:28:57,514 basehttp 3092 11932 "GET /student/5/progress-detail/ HTTP/1.1" 200 25863
