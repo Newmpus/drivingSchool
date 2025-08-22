@@ -5240,3 +5240,535 @@ INFO 2025-08-16 20:01:58,229 basehttp 17864 14920 "GET /admin/core/user/ HTTP/1.
 INFO 2025-08-16 20:01:58,294 basehttp 17864 14920 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 INFO 2025-08-16 20:02:08,640 basehttp 17864 14920 "GET /media/payment_proofs/getStarted2.png HTTP/1.1" 200 241224
 INFO 2025-08-16 20:02:42,878 basehttp 17864 14920 "GET /admin/ HTTP/1.1" 200 20311
+INFO 2025-08-21 15:53:49,973 autoreload 11376 6336 Watching for file changes with StatReloader
+INFO 2025-08-21 15:53:56,311 basehttp 11376 17944 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 15:53:56,361 basehttp 11376 8308 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-08-21 15:53:56,362 basehttp 11376 17944 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-08-21 15:53:56,492 basehttp 11376 17944 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-08-21 15:53:56,510 basehttp 11376 17944 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2025-08-21 15:53:56,553 log 11376 17944 Not Found: /favicon.ico
+WARNING 2025-08-21 15:53:56,554 basehttp 11376 17944 "GET /favicon.ico HTTP/1.1" 404 14998
+INFO 2025-08-21 15:53:58,308 basehttp 11376 17944 "GET /accounts/login/ HTTP/1.1" 200 15352
+INFO 2025-08-21 15:54:05,882 basehttp 11376 17944 "POST /accounts/login/ HTTP/1.1" 200 15991
+INFO 2025-08-21 15:54:09,609 basehttp 11376 17944 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 15:54:09,799 basehttp 11376 17944 "GET /dashboard/ HTTP/1.1" 200 29696
+INFO 2025-08-21 15:54:23,352 basehttp 11376 17944 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 15:54:23,382 basehttp 11376 17944 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 15:54:24,757 basehttp 11376 17944 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 15:54:29,465 basehttp 11376 17944 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 15:54:29,558 basehttp 11376 17944 "GET /dashboard/ HTTP/1.1" 200 20381
+INFO 2025-08-21 16:06:15,410 basehttp 11376 4864 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:06:15,451 basehttp 11376 4864 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 16:06:17,144 basehttp 11376 4864 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 16:06:22,908 basehttp 11376 4864 "POST /accounts/login/ HTTP/1.1" 200 15990
+INFO 2025-08-21 16:06:29,105 basehttp 11376 4864 "GET /register/ HTTP/1.1" 200 19250
+INFO 2025-08-21 16:06:38,833 basehttp 11376 4864 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 16:06:44,681 basehttp 11376 4864 "GET /register/ HTTP/1.1" 200 19249
+INFO 2025-08-21 16:06:47,453 basehttp 11376 4864 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 16:06:52,392 basehttp 11376 4864 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:06:52,501 basehttp 11376 4864 "GET /dashboard/ HTTP/1.1" 200 41420
+INFO 2025-08-21 16:20:10,065 autoreload 11376 6336 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-21 16:20:11,725 autoreload 7148 11300 Watching for file changes with StatReloader
+INFO 2025-08-21 16:20:46,879 autoreload 7148 11300 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-21 16:20:47,363 autoreload 16752 15904 Watching for file changes with StatReloader
+INFO 2025-08-21 16:24:43,020 autoreload 16752 15904 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 16:24:43,465 autoreload 17056 10140 Watching for file changes with StatReloader
+INFO 2025-08-21 16:25:10,443 autoreload 17056 10140 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 16:25:10,832 autoreload 7080 12768 Watching for file changes with StatReloader
+INFO 2025-08-21 16:32:32,198 basehttp 7080 1768 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:32:32,243 basehttp 7080 1768 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 16:32:33,949 basehttp 7080 1768 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 16:32:39,475 basehttp 7080 1768 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:32:39,612 basehttp 7080 1768 "GET /dashboard/ HTTP/1.1" 200 21180
+INFO 2025-08-21 16:32:57,709 basehttp 7080 1768 "POST /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:32:57,795 basehttp 7080 1768 "GET /dashboard/ HTTP/1.1" 200 21775
+INFO 2025-08-21 16:33:00,999 basehttp 7080 1768 "POST /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:33:01,084 basehttp 7080 1768 "GET /dashboard/ HTTP/1.1" 200 21775
+INFO 2025-08-21 16:33:10,901 basehttp 7080 1768 "POST /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:33:11,020 basehttp 7080 1768 "GET /dashboard/ HTTP/1.1" 200 21775
+INFO 2025-08-21 16:33:16,369 basehttp 7080 1768 "GET /media/payment_proofs/welcomePage.png HTTP/1.1" 200 519349
+INFO 2025-08-21 16:33:20,059 basehttp 7080 1768 "GET /dashboard/ HTTP/1.1" 200 21179
+INFO 2025-08-21 16:33:25,075 basehttp 7080 1768 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 16:33:55,733 basehttp 7080 1768 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:34:05,127 basehttp 7080 1768 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:34:09,245 basehttp 7080 1768 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:34:14,135 basehttp 7080 1768 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:34:17,176 basehttp 7080 1768 "GET /dashboard/ HTTP/1.1" 200 21179
+INFO 2025-08-21 16:34:38,499 notification_views 7080 1768 Notification 4 marked as read by Tinex
+INFO 2025-08-21 16:34:38,532 basehttp 7080 1768 "POST /notification/read/4/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:34:38,591 basehttp 7080 1768 "GET /dashboard/ HTTP/1.1" 200 20234
+INFO 2025-08-21 16:34:38,836 basehttp 7080 1768 "GET /__debug__/history_sidebar/?store_id=c80f6adb9cae45cab4d02ac84f5bb163 HTTP/1.1" 200 9089
+INFO 2025-08-21 16:34:39,861 notification_views 7080 1768 Notification 14 marked as read by Tinex
+INFO 2025-08-21 16:34:39,896 basehttp 7080 1768 "POST /notification/read/14/ HTTP/1.1" 302 0
+INFO 2025-08-21 16:34:39,959 basehttp 7080 1768 "GET /dashboard/ HTTP/1.1" 200 18783
+INFO 2025-08-21 16:34:40,198 basehttp 7080 1768 "GET /__debug__/history_sidebar/?store_id=78a7fbc517b04c41a7be1767ba197ae5 HTTP/1.1" 200 9089
+INFO 2025-08-21 16:34:51,511 basehttp 7080 1768 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 16:44:32,291 autoreload 7080 12768 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 16:44:33,493 autoreload 2412 11228 Watching for file changes with StatReloader
+INFO 2025-08-21 16:44:59,197 basehttp 2412 8768 "GET /dashboard/ HTTP/1.1" 200 18784
+INFO 2025-08-21 16:45:10,186 basehttp 2412 8768 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 16:45:51,385 basehttp 2412 8768 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:45:59,897 basehttp 2412 8768 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:46:06,051 basehttp 2412 8768 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:46:10,660 basehttp 2412 8768 "GET /dashboard/ HTTP/1.1" 200 18783
+INFO 2025-08-21 16:47:31,100 autoreload 2412 11228 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-08-21 16:47:32,383 autoreload 15060 14260 Watching for file changes with StatReloader
+INFO 2025-08-21 16:47:53,200 autoreload 15060 14260 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-08-21 16:47:53,716 autoreload 7176 17644 Watching for file changes with StatReloader
+INFO 2025-08-21 16:48:13,417 autoreload 7176 17644 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-08-21 16:48:13,859 autoreload 16392 13188 Watching for file changes with StatReloader
+INFO 2025-08-21 16:48:41,863 autoreload 16392 13188 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-08-21 16:48:42,350 autoreload 11268 16672 Watching for file changes with StatReloader
+INFO 2025-08-21 16:50:36,356 autoreload 11268 16672 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-08-21 16:50:36,849 autoreload 8284 6656 Watching for file changes with StatReloader
+INFO 2025-08-21 16:51:06,805 basehttp 8284 10696 "GET /book-lesson/ HTTP/1.1" 200 22089
+INFO 2025-08-21 16:51:33,288 basehttp 8284 10696 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:51:39,425 basehttp 8284 10696 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:51:43,036 basehttp 8284 10696 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 16:52:23,087 basehttp 8284 10696 "GET /dashboard/ HTTP/1.1" 200 18783
+INFO 2025-08-21 16:53:46,422 autoreload 9928 9636 Watching for file changes with StatReloader
+INFO 2025-08-21 16:54:36,413 basehttp 8284 10696 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 16:54:52,876 basehttp 8284 10696 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 17:06:31,492 autoreload 8284 6656 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:06:32,721 autoreload 9928 9636 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:06:33,088 autoreload 11268 6012 Watching for file changes with StatReloader
+INFO 2025-08-21 17:06:33,168 autoreload 12084 10084 Watching for file changes with StatReloader
+INFO 2025-08-21 17:16:45,653 autoreload 12084 10084 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:16:45,686 autoreload 11268 6012 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:16:46,405 autoreload 11132 15560 Watching for file changes with StatReloader
+INFO 2025-08-21 17:16:46,410 autoreload 5888 8976 Watching for file changes with StatReloader
+INFO 2025-08-21 17:17:10,513 autoreload 5888 8976 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:17:10,523 autoreload 11132 15560 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:17:10,991 autoreload 17604 17784 Watching for file changes with StatReloader
+INFO 2025-08-21 17:17:11,002 autoreload 16572 3108 Watching for file changes with StatReloader
+INFO 2025-08-21 17:17:24,664 autoreload 17604 17784 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:17:24,677 autoreload 16572 3108 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:17:25,195 autoreload 6424 10812 Watching for file changes with StatReloader
+INFO 2025-08-21 17:17:25,199 autoreload 18228 18024 Watching for file changes with StatReloader
+INFO 2025-08-21 17:17:44,989 autoreload 6424 10812 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-08-21 17:17:44,996 autoreload 18228 18024 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-08-21 17:17:45,496 autoreload 10800 13256 Watching for file changes with StatReloader
+INFO 2025-08-21 17:17:45,510 autoreload 7236 4896 Watching for file changes with StatReloader
+INFO 2025-08-21 17:20:34,203 autoreload 16936 9028 Watching for file changes with StatReloader
+INFO 2025-08-21 17:35:44,663 autoreload 7236 4896 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\__init__.py changed, reloading.
+INFO 2025-08-21 17:35:44,668 autoreload 16936 9028 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\__init__.py changed, reloading.
+INFO 2025-08-21 17:35:44,672 autoreload 10800 13256 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\__init__.py changed, reloading.
+INFO 2025-08-21 17:35:46,272 autoreload 5832 16312 Watching for file changes with StatReloader
+INFO 2025-08-21 17:35:46,280 autoreload 9896 15928 Watching for file changes with StatReloader
+INFO 2025-08-21 17:35:46,311 autoreload 8840 5376 Watching for file changes with StatReloader
+INFO 2025-08-21 17:36:21,940 basehttp 9896 17804 "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:36:21,972 basehttp 9896 17804 "GET /accounts/login/?next=/dashboard/ HTTP/1.1" 200 15370
+INFO 2025-08-21 17:36:25,689 basehttp 9896 17804 "POST /accounts/login/?next=/dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:36:25,804 basehttp 9896 17804 "GET /dashboard/ HTTP/1.1" 200 18783
+INFO 2025-08-21 17:36:30,586 basehttp 9896 17804 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 17:36:49,559 basehttp 9896 17804 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 17:36:53,234 basehttp 9896 17804 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 17:36:58,987 basehttp 9896 17804 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 17:38:03,540 autoreload 9360 3652 Watching for file changes with StatReloader
+INFO 2025-08-21 17:38:09,047 basehttp 9896 17804 "GET / HTTP/1.1" 200 21113
+INFO 2025-08-21 17:38:11,409 basehttp 9896 17804 "GET /dashboard/ HTTP/1.1" 200 18783
+INFO 2025-08-21 17:38:23,514 basehttp 9896 17804 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 17:39:01,044 basehttp 9896 17804 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 17:39:05,954 basehttp 9896 17804 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:39:05,985 basehttp 9896 17804 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 17:39:07,884 basehttp 9896 17804 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 17:39:11,690 basehttp 9896 17804 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:39:11,799 basehttp 9896 17804 "GET /dashboard/ HTTP/1.1" 200 41420
+INFO 2025-08-21 17:42:13,900 autoreload 4180 10164 Watching for file changes with StatReloader
+INFO 2025-08-21 17:45:16,938 autoreload 9360 3652 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:45:16,959 autoreload 8840 5376 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:45:17,335 autoreload 4180 10164 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:45:17,349 autoreload 9896 15928 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 17:45:17,474 autoreload 17604 10192 Watching for file changes with StatReloader
+INFO 2025-08-21 17:45:17,504 autoreload 10060 11620 Watching for file changes with StatReloader
+INFO 2025-08-21 17:45:17,827 autoreload 18132 2060 Watching for file changes with StatReloader
+INFO 2025-08-21 17:45:17,873 autoreload 7428 17828 Watching for file changes with StatReloader
+INFO 2025-08-21 17:52:19,527 autoreload 13168 348 Watching for file changes with StatReloader
+INFO 2025-08-21 17:52:25,289 basehttp 17604 4476 "GET / HTTP/1.1" 200 21113
+INFO 2025-08-21 17:52:28,833 basehttp 17604 4476 "GET /dashboard/ HTTP/1.1" 200 41420
+INFO 2025-08-21 17:52:42,152 basehttp 17604 4476 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:52:42,184 basehttp 17604 4476 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 17:52:44,053 basehttp 17604 4476 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 17:52:47,925 basehttp 17604 4476 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:52:47,940 basehttp 17604 4476 - Broken pipe from ('127.0.0.1', 52559)
+INFO 2025-08-21 17:52:48,860 basehttp 17604 5260 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:52:48,979 basehttp 17604 5260 "GET /dashboard/ HTTP/1.1" 200 18783
+INFO 2025-08-21 17:52:54,973 basehttp 17604 5260 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 17:53:13,162 basehttp 17604 5260 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 17:53:21,128 basehttp 17604 5260 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:53:21,155 basehttp 17604 5260 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 17:53:22,651 basehttp 17604 5260 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 17:53:27,458 basehttp 17604 5260 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:53:27,573 basehttp 17604 5260 "GET /dashboard/ HTTP/1.1" 200 29695
+INFO 2025-08-21 17:53:34,557 lesson_views 17604 5260 Email notification sent to tinex@gmail.com
+INFO 2025-08-21 17:53:38,661 lesson_views 17604 5260 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-08-21 17:53:42,753 lesson_views 17604 5260 Email notification sent to tinex@gmail.com
+INFO 2025-08-21 17:53:46,708 lesson_views 17604 5260 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-08-21 17:53:49,903 lesson_views 17604 5260 Email notification sent to tinex@gmail.com
+INFO 2025-08-21 17:53:52,799 lesson_views 17604 5260 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-08-21 17:53:52,815 lesson_views 17604 5260 Generated 3 lessons for the week
+INFO 2025-08-21 17:53:52,983 basehttp 17604 5260 "POST /generate-timetable/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:53:53,058 basehttp 17604 5260 "GET /dashboard/ HTTP/1.1" 200 30275
+INFO 2025-08-21 17:54:27,835 basehttp 17604 5260 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:54:27,862 basehttp 17604 5260 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 17:54:29,967 basehttp 17604 5260 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 17:54:33,921 basehttp 17604 5260 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:54:34,013 basehttp 17604 5260 "GET /dashboard/ HTTP/1.1" 200 24665
+INFO 2025-08-21 17:54:49,472 notification_views 17604 5260 Notification 56 marked as read by Tinex
+INFO 2025-08-21 17:54:49,503 basehttp 17604 5260 "POST /notification/read/56/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:54:49,558 basehttp 17604 5260 "GET /dashboard/ HTTP/1.1" 200 23710
+INFO 2025-08-21 17:54:49,792 basehttp 17604 5260 "GET /__debug__/history_sidebar/?store_id=9a1a580284314e0e836e64aa94ed3c34 HTTP/1.1" 200 9089
+INFO 2025-08-21 17:54:50,444 notification_views 17604 5260 Notification 54 marked as read by Tinex
+INFO 2025-08-21 17:54:50,521 basehttp 17604 5260 "POST /notification/read/54/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:54:50,575 basehttp 17604 5260 "GET /dashboard/ HTTP/1.1" 200 22757
+INFO 2025-08-21 17:54:50,808 basehttp 17604 5260 "GET /__debug__/history_sidebar/?store_id=393a957fc21a4ce99ca89f099d8dbeb1 HTTP/1.1" 200 9089
+INFO 2025-08-21 17:54:51,524 notification_views 17604 5260 Notification 52 marked as read by Tinex
+INFO 2025-08-21 17:54:51,552 basehttp 17604 5260 "POST /notification/read/52/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:54:51,603 basehttp 17604 5260 "GET /dashboard/ HTTP/1.1" 200 21305
+INFO 2025-08-21 17:54:51,848 basehttp 17604 5260 "GET /__debug__/history_sidebar/?store_id=e32dce2c8de4423a8194e7a7e2c1650b HTTP/1.1" 200 9089
+INFO 2025-08-21 17:55:00,209 basehttp 17604 5260 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:55:00,247 basehttp 17604 5260 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 17:55:01,584 basehttp 17604 5260 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 17:55:05,776 basehttp 17604 5260 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:55:05,884 basehttp 17604 5260 "GET /dashboard/ HTTP/1.1" 200 46814
+INFO 2025-08-21 17:58:26,527 basehttp 17604 13464 "POST /api/book-lesson/ HTTP/1.1" 302 0
+INFO 2025-08-21 17:58:26,553 basehttp 17604 13464 "GET /accounts/login/?next=/api/book-lesson/ HTTP/1.1" 200 15375
+INFO 2025-08-21 18:01:27,079 basehttp 17604 12332 "POST /api/book-lesson/ HTTP/1.1" 302 0
+INFO 2025-08-21 18:01:27,099 basehttp 17604 12332 "GET /accounts/login/?next=/api/book-lesson/ HTTP/1.1" 200 15375
+INFO 2025-08-21 18:02:20,966 basehttp 17604 5104 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 18:02:20,999 basehttp 17604 5104 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 18:02:23,109 basehttp 17604 5104 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 18:02:27,874 basehttp 17604 5104 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 18:02:27,937 basehttp 17604 5104 "GET /dashboard/ HTTP/1.1" 200 21305
+INFO 2025-08-21 18:02:41,705 basehttp 17604 5104 "GET /dashboard/ HTTP/1.1" 200 21305
+INFO 2025-08-21 18:02:46,022 basehttp 17604 5104 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 18:03:25,937 basehttp 17604 5104 "POST /book-lesson/ HTTP/1.1" 200 22157
+INFO 2025-08-21 18:11:20,585 autoreload 7428 17828 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 18:11:20,594 autoreload 17604 10192 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 18:11:21,098 autoreload 18132 2060 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 18:11:21,170 autoreload 10060 11620 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 18:11:21,523 autoreload 18024 14988 Watching for file changes with StatReloader
+INFO 2025-08-21 18:11:21,547 autoreload 16020 17296 Watching for file changes with StatReloader
+INFO 2025-08-21 18:11:21,598 autoreload 17516 784 Watching for file changes with StatReloader
+INFO 2025-08-21 18:11:21,741 autoreload 16760 9792 Watching for file changes with StatReloader
+INFO 2025-08-21 18:41:31,252 autoreload 17900 10840 Watching for file changes with StatReloader
+WARNING 2025-08-21 18:45:29,627 log 18024 13500 Forbidden (CSRF token from POST incorrect.): /book-lesson/
+WARNING 2025-08-21 18:45:29,680 basehttp 18024 13500 "POST /book-lesson/ HTTP/1.1" 403 11473
+INFO 2025-08-21 18:45:53,465 basehttp 18024 13500 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 18:45:53,510 basehttp 18024 13500 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 18:45:56,601 basehttp 18024 13500 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 18:46:02,791 basehttp 18024 13500 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 18:46:02,900 basehttp 18024 13500 "GET /dashboard/ HTTP/1.1" 200 21305
+INFO 2025-08-21 18:46:15,166 basehttp 18024 13500 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 18:47:11,824 basehttp 18024 13500 "POST /book-lesson/ HTTP/1.1" 200 22179
+INFO 2025-08-21 18:47:32,562 basehttp 18024 13500 "POST /book-lesson/ HTTP/1.1" 200 22178
+INFO 2025-08-21 18:47:38,411 basehttp 18024 13500 "POST /book-lesson/ HTTP/1.1" 200 22178
+INFO 2025-08-21 18:47:45,798 basehttp 18024 13500 "POST /book-lesson/ HTTP/1.1" 200 22178
+INFO 2025-08-21 18:47:58,157 basehttp 18024 13500 "POST /book-lesson/ HTTP/1.1" 200 22178
+INFO 2025-08-21 18:48:11,723 basehttp 18024 13500 "POST /book-lesson/ HTTP/1.1" 200 22178
+INFO 2025-08-21 19:28:06,402 basehttp 18024 11652 "POST /book-lesson/ HTTP/1.1" 200 22178
+INFO 2025-08-21 19:53:10,911 autoreload 17516 784 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-21 19:53:10,944 autoreload 16020 17296 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-21 19:53:10,956 autoreload 18024 14988 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-21 19:53:10,959 autoreload 16760 9792 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-21 19:53:12,119 autoreload 3928 8460 Watching for file changes with StatReloader
+INFO 2025-08-21 19:53:12,152 autoreload 10032 14300 Watching for file changes with StatReloader
+INFO 2025-08-21 19:53:12,160 autoreload 3048 13092 Watching for file changes with StatReloader
+INFO 2025-08-21 19:53:12,180 autoreload 184 16996 Watching for file changes with StatReloader
+INFO 2025-08-21 19:54:29,243 basehttp 3928 15372 "POST /book-lesson/ HTTP/1.1" 302 0
+INFO 2025-08-21 19:54:29,275 basehttp 3928 15372 "GET /accounts/login/?next=/book-lesson/ HTTP/1.1" 200 15371
+INFO 2025-08-21 19:54:33,932 basehttp 3928 15372 "POST /accounts/login/?next=/book-lesson/ HTTP/1.1" 302 0
+INFO 2025-08-21 19:54:34,037 basehttp 3928 15372 "GET /book-lesson/ HTTP/1.1" 200 22088
+WARNING 2025-08-21 19:55:20,692 lesson_views 3928 15372 No vehicle available for lesson 28
+INFO 2025-08-21 19:55:24,803 lesson_views 3928 15372 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-08-21 19:55:28,695 lesson_views 3928 15372 Email notification sent to tinex@gmail.com
+INFO 2025-08-21 19:55:28,696 lesson_views 3928 15372 Lesson booked: Tinex with Cleo on 2025-08-23
+INFO 2025-08-21 19:55:28,794 basehttp 3928 15372 "POST /book-lesson/ HTTP/1.1" 302 0
+INFO 2025-08-21 19:55:28,892 basehttp 3928 15372 "GET /dashboard/ HTTP/1.1" 200 24342
+INFO 2025-08-21 20:13:12,996 autoreload 184 16996 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:13,032 autoreload 10032 14300 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:13,159 autoreload 3048 13092 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:13,303 autoreload 3928 8460 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:14,208 autoreload 5504 18080 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:14,234 autoreload 9452 4012 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:14,276 autoreload 13036 10184 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:14,277 autoreload 8740 17776 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:23,799 autoreload 5504 18080 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:23,808 autoreload 13036 10184 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:23,816 autoreload 8740 17776 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:23,835 autoreload 9452 4012 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:24,391 autoreload 15416 17508 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:24,398 autoreload 3224 4832 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:24,444 autoreload 12340 3512 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:24,469 autoreload 2416 15800 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:35,099 autoreload 3224 4832 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:35,131 autoreload 15416 17508 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:35,138 autoreload 12340 3512 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:35,139 autoreload 2416 15800 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:35,863 autoreload 8976 10520 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:35,864 autoreload 7832 14040 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:35,896 autoreload 2284 8460 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:35,901 autoreload 16780 10064 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:45,711 autoreload 2284 8460 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:45,739 autoreload 7832 14040 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:45,771 autoreload 16780 10064 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:45,813 autoreload 8976 10520 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:13:46,430 autoreload 11848 13120 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:46,452 autoreload 4148 5372 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:46,536 autoreload 18092 17848 Watching for file changes with StatReloader
+INFO 2025-08-21 20:13:46,554 autoreload 17540 2852 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:24,679 autoreload 17540 2852 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-21 20:14:24,684 autoreload 11848 13120 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-21 20:14:24,687 autoreload 18092 17848 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-21 20:14:24,694 autoreload 4148 5372 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-21 20:14:25,410 autoreload 17732 16876 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:25,414 autoreload 324 7248 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:25,421 autoreload 11664 15560 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:25,424 autoreload 6920 2216 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:35,021 autoreload 11664 15560 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-21 20:14:35,030 autoreload 6920 2216 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-21 20:14:35,035 autoreload 17732 16876 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-21 20:14:35,040 autoreload 324 7248 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-21 20:14:35,635 autoreload 6952 16288 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:35,641 autoreload 7320 18272 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:35,653 autoreload 15724 4056 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:35,657 autoreload 17468 10664 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:46,325 autoreload 7320 18272 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:14:46,354 autoreload 17468 10664 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:14:46,376 autoreload 6952 16288 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:14:46,379 autoreload 15724 4056 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:14:46,971 autoreload 2456 6252 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:46,987 autoreload 10256 7508 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:46,991 autoreload 10484 3028 Watching for file changes with StatReloader
+INFO 2025-08-21 20:14:47,013 autoreload 12472 18236 Watching for file changes with StatReloader
+INFO 2025-08-21 20:15:17,333 autoreload 10256 7508 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:15:17,388 autoreload 10484 3028 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:15:17,411 autoreload 2456 6252 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:15:17,414 autoreload 12472 18236 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:15:18,074 autoreload 16420 4592 Watching for file changes with StatReloader
+INFO 2025-08-21 20:15:18,076 autoreload 8012 11220 Watching for file changes with StatReloader
+INFO 2025-08-21 20:15:18,086 autoreload 17804 332 Watching for file changes with StatReloader
+INFO 2025-08-21 20:15:18,089 autoreload 17980 8440 Watching for file changes with StatReloader
+INFO 2025-08-21 20:15:30,848 autoreload 17804 332 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 20:15:30,851 autoreload 16420 4592 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 20:15:30,851 autoreload 17980 8440 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 20:15:30,867 autoreload 8012 11220 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 20:15:31,489 autoreload 1688 16300 Watching for file changes with StatReloader
+INFO 2025-08-21 20:15:31,498 autoreload 8840 4916 Watching for file changes with StatReloader
+INFO 2025-08-21 20:15:31,505 autoreload 9256 7864 Watching for file changes with StatReloader
+INFO 2025-08-21 20:15:31,515 autoreload 7508 7868 Watching for file changes with StatReloader
+INFO 2025-08-21 20:19:53,731 autoreload 1688 16300 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:19:53,731 autoreload 8840 4916 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:19:53,733 autoreload 7508 7868 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:19:53,793 autoreload 9256 7864 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:19:54,404 autoreload 13456 15792 Watching for file changes with StatReloader
+INFO 2025-08-21 20:19:54,407 autoreload 17796 13096 Watching for file changes with StatReloader
+INFO 2025-08-21 20:19:54,459 autoreload 10832 16056 Watching for file changes with StatReloader
+INFO 2025-08-21 20:19:54,463 autoreload 17204 3888 Watching for file changes with StatReloader
+INFO 2025-08-21 20:20:05,129 autoreload 10832 16056 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:20:05,139 autoreload 13456 15792 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:20:05,146 autoreload 17796 13096 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:20:05,167 autoreload 17204 3888 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:20:05,704 autoreload 15092 10016 Watching for file changes with StatReloader
+INFO 2025-08-21 20:20:05,714 autoreload 13948 5920 Watching for file changes with StatReloader
+INFO 2025-08-21 20:20:05,743 autoreload 5744 5304 Watching for file changes with StatReloader
+INFO 2025-08-21 20:20:05,756 autoreload 16380 16532 Watching for file changes with StatReloader
+INFO 2025-08-21 20:22:21,687 autoreload 9812 17420 Watching for file changes with StatReloader
+INFO 2025-08-21 20:24:12,980 basehttp 13948 10136 "GET /dashboard/ HTTP/1.1" 200 23739
+INFO 2025-08-21 20:24:17,003 basehttp 13948 10136 "GET /dashboard/ HTTP/1.1" 200 23738
+INFO 2025-08-21 20:24:32,156 basehttp 13948 10136 "POST /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:24:32,266 basehttp 13948 10136 "GET /dashboard/ HTTP/1.1" 200 24354
+INFO 2025-08-21 20:25:00,827 basehttp 13948 10136 "GET /book-lesson/ HTTP/1.1" 200 22088
+INFO 2025-08-21 20:25:34,777 ai_helper 13948 10136 Found 6 vehicle suggestions for 2025-08-22 08:25:00-09:25:00
+INFO 2025-08-21 20:25:34,783 lesson_views 13948 10136 AI-suggested vehicle DS001 allocated to lesson 29 (confidence: 75%)
+INFO 2025-08-21 20:25:37,552 lesson_views 13948 10136 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-08-21 20:25:41,534 lesson_views 13948 10136 Email notification sent to tinex@gmail.com
+INFO 2025-08-21 20:25:41,535 lesson_views 13948 10136 Lesson booked: Tinex with Cleo on 2025-08-22
+INFO 2025-08-21 20:25:41,656 basehttp 13948 10136 "POST /book-lesson/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:25:41,722 basehttp 13948 10136 "GET /dashboard/ HTTP/1.1" 200 26330
+INFO 2025-08-21 20:25:54,245 basehttp 13948 10136 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:25:54,277 basehttp 13948 10136 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 20:25:56,513 basehttp 13948 10136 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 20:26:01,098 basehttp 13948 10136 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:26:01,209 basehttp 13948 10136 "GET /dashboard/ HTTP/1.1" 200 50686
+INFO 2025-08-21 20:37:22,143 autoreload 13948 5920 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\ai_helper.py changed, reloading.
+INFO 2025-08-21 20:37:23,013 autoreload 4968 13436 Watching for file changes with StatReloader
+INFO 2025-08-21 20:38:19,968 autoreload 16380 16532 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:38:19,985 autoreload 4968 13436 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:38:20,036 autoreload 5744 5304 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:38:20,045 autoreload 15092 10016 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-08-21 20:38:20,690 autoreload 16492 11220 Watching for file changes with StatReloader
+INFO 2025-08-21 20:38:20,740 autoreload 12520 15728 Watching for file changes with StatReloader
+INFO 2025-08-21 20:38:20,747 autoreload 8952 320 Watching for file changes with StatReloader
+INFO 2025-08-21 20:38:20,768 autoreload 5280 8652 Watching for file changes with StatReloader
+INFO 2025-08-21 20:40:08,526 autoreload 8952 320 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 20:40:08,545 autoreload 16492 11220 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 20:40:08,569 autoreload 12520 15728 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 20:40:08,576 autoreload 5280 8652 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\urls.py changed, reloading.
+INFO 2025-08-21 20:40:09,193 autoreload 9004 3140 Watching for file changes with StatReloader
+INFO 2025-08-21 20:40:09,214 autoreload 2196 5712 Watching for file changes with StatReloader
+INFO 2025-08-21 20:40:09,217 autoreload 4144 11208 Watching for file changes with StatReloader
+INFO 2025-08-21 20:44:58,174 autoreload 14512 7320 Watching for file changes with StatReloader
+INFO 2025-08-21 20:45:23,300 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50688
+INFO 2025-08-21 20:45:25,531 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:25,760 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+WARNING 2025-08-21 20:45:32,564 log 9004 8308 Forbidden (CSRF token from POST incorrect.): /book-lesson/
+WARNING 2025-08-21 20:45:32,600 basehttp 9004 8308 "POST /book-lesson/ HTTP/1.1" 403 11473
+WARNING 2025-08-21 20:45:36,138 log 9004 8308 Forbidden (CSRF token from POST incorrect.): /book-lesson/
+WARNING 2025-08-21 20:45:36,162 basehttp 9004 8308 "POST /book-lesson/ HTTP/1.1" 403 11473
+INFO 2025-08-21 20:45:40,412 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:41,499 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:41,655 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:41,805 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:41,962 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:42,147 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:42,417 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:42,550 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:45:42,758 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:46:07,834 basehttp 9004 8308 "GET / HTTP/1.1" 200 21112
+INFO 2025-08-21 20:46:11,239 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 50687
+INFO 2025-08-21 20:46:20,471 basehttp 9004 8308 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:46:20,519 basehttp 9004 8308 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 20:46:22,070 basehttp 9004 8308 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 20:46:27,390 basehttp 9004 8308 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:46:27,518 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 25709
+INFO 2025-08-21 20:46:54,893 basehttp 9004 8308 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:46:54,926 basehttp 9004 8308 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 20:46:56,702 basehttp 9004 8308 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 20:47:01,810 basehttp 9004 8308 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:47:01,961 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 29692
+INFO 2025-08-21 20:47:05,211 lesson_views 9004 8308 Generated 0 lessons for the week
+INFO 2025-08-21 20:47:05,424 basehttp 9004 8308 "POST /generate-timetable/ HTTP/1.1" 302 0
+INFO 2025-08-21 20:47:05,498 basehttp 9004 8308 "GET /dashboard/ HTTP/1.1" 200 30261
+INFO 2025-08-21 21:01:16,077 autoreload 204 15388 Watching for file changes with StatReloader
+INFO 2025-08-21 21:01:21,900 basehttp 9004 6228 "GET / HTTP/1.1" 200 21124
+INFO 2025-08-21 21:01:24,048 basehttp 9004 6228 "GET /dashboard/ HTTP/1.1" 200 29691
+INFO 2025-08-21 21:01:33,252 basehttp 9004 6228 "GET /admin/ HTTP/1.1" 200 20312
+INFO 2025-08-21 21:01:33,286 basehttp 9004 9952 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:33,287 basehttp 9004 6228 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:33,291 basehttp 9004 15788 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:33,297 basehttp 9004 8184 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:33,298 basehttp 9004 10216 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:33,299 basehttp 9004 5716 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:33,304 basehttp 9004 15788 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:33,309 basehttp 9004 5716 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:33,311 basehttp 9004 8184 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-08-21 21:01:35,286 basehttp 9004 8184 "POST /admin/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 21:01:35,328 basehttp 9004 8184 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 21:01:36,845 basehttp 9004 8184 "GET /register/ HTTP/1.1" 200 19249
+INFO 2025-08-21 21:01:38,720 basehttp 9004 8184 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 21:01:44,043 basehttp 9004 8184 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 21:01:44,113 basehttp 9004 8184 "GET /dashboard/ HTTP/1.1" 200 25716
+INFO 2025-08-21 21:02:05,331 basehttp 9004 8184 "GET /edit-profile/ HTTP/1.1" 200 20790
+INFO 2025-08-21 21:02:11,934 basehttp 9004 8184 "GET /dashboard/ HTTP/1.1" 200 25716
+INFO 2025-08-21 21:02:16,880 basehttp 9004 8184 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-21 21:02:16,917 basehttp 9004 8184 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-21 21:02:18,640 basehttp 9004 8184 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-21 21:02:24,848 basehttp 9004 8184 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-21 21:02:24,967 basehttp 9004 8184 "GET /dashboard/ HTTP/1.1" 200 50710
+INFO 2025-08-22 18:29:48,176 basehttp 9004 14280 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 18:29:48,291 basehttp 9004 14280 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 18:29:48,356 basehttp 9004 14280 "GET /static/js/main.js HTTP/1.1" 200 5232
+INFO 2025-08-22 18:34:20,698 autoreload 4144 11208 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:21,001 autoreload 14512 7320 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:21,040 autoreload 9004 3140 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:21,040 autoreload 5584 4844 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:21,088 autoreload 2196 5712 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:27,267 autoreload 20112 20268 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:27,268 autoreload 19228 16432 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:27,268 autoreload 16376 11220 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:27,268 autoreload 20944 18528 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:27,269 autoreload 14508 17340 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:49,749 autoreload 19228 16432 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:49,768 autoreload 14508 17340 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:49,815 autoreload 20112 20268 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:49,834 autoreload 20944 18528 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:49,838 autoreload 16376 11220 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:34:51,329 autoreload 17544 6708 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:51,346 autoreload 1604 17900 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:51,368 autoreload 19656 16364 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:51,384 autoreload 18836 14988 Watching for file changes with StatReloader
+INFO 2025-08-22 18:34:51,396 autoreload 13120 20984 Watching for file changes with StatReloader
+INFO 2025-08-22 18:35:32,880 autoreload 18836 14988 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:35:32,958 autoreload 13120 20984 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:35:33,299 autoreload 19656 16364 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:35:33,386 autoreload 17544 6708 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:35:33,387 autoreload 1604 17900 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-08-22 18:35:34,619 autoreload 1740 2428 Watching for file changes with StatReloader
+INFO 2025-08-22 18:35:34,648 autoreload 21420 21432 Watching for file changes with StatReloader
+INFO 2025-08-22 18:35:34,938 autoreload 19840 5816 Watching for file changes with StatReloader
+INFO 2025-08-22 18:35:34,946 autoreload 3976 15688 Watching for file changes with StatReloader
+INFO 2025-08-22 18:35:35,183 autoreload 20016 17980 Watching for file changes with StatReloader
+INFO 2025-08-22 18:38:06,396 autoreload 9636 18932 Watching for file changes with StatReloader
+INFO 2025-08-22 18:38:53,277 basehttp 1740 756 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 18:38:56,290 basehttp 1740 756 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 18:38:56,462 basehttp 1740 756 "GET /dashboard/ HTTP/1.1" 200 49763
+INFO 2025-08-22 18:39:11,923 basehttp 1740 756 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 18:39:11,985 basehttp 1740 756 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 18:39:14,410 basehttp 1740 756 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 18:39:21,525 basehttp 1740 756 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 18:39:23,213 basehttp 1740 18436 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 18:39:23,543 basehttp 1740 18436 "GET /dashboard/ HTTP/1.1" 200 29718
+INFO 2025-08-22 18:39:31,093 basehttp 1740 18436 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 18:39:31,160 basehttp 1740 18436 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 18:39:33,858 basehttp 1740 18436 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 18:39:40,137 basehttp 1740 18436 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 18:39:40,452 basehttp 1740 18436 "GET /dashboard/ HTTP/1.1" 200 25735
+INFO 2025-08-22 18:39:53,491 basehttp 1740 18436 "GET /student/5/progress-detail/ HTTP/1.1" 200 23188
+INFO 2025-08-22 18:40:35,287 basehttp 1740 18436 "GET /student/5/export-report/?format=pdf HTTP/1.1" 200 3872
+INFO 2025-08-22 18:40:39,309 basehttp 1740 18436 "GET /student/5/export-report/?format=csv HTTP/1.1" 200 3530
+INFO 2025-08-22 18:40:45,041 basehttp 1740 18436 "GET /student/5/progress-analysis/ HTTP/1.1" 200 25205
+INFO 2025-08-22 18:41:10,008 basehttp 1740 18436 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 18:41:10,067 basehttp 1740 18436 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 19:03:37,932 basehttp 1740 7188 "GET /register/ HTTP/1.1" 200 19250
+INFO 2025-08-22 19:03:41,014 basehttp 1740 7188 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 19:03:46,013 basehttp 1740 7188 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:03:46,160 basehttp 1740 7188 "GET /dashboard/ HTTP/1.1" 200 25734
+INFO 2025-08-22 19:04:09,632 basehttp 1740 7188 "POST /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:04:09,837 basehttp 1740 7188 "GET /dashboard/ HTTP/1.1" 200 26325
+INFO 2025-08-22 19:04:17,030 basehttp 1740 7188 "GET /student/5/progress-detail/ HTTP/1.1" 200 23187
+INFO 2025-08-22 19:05:32,514 basehttp 1740 7188 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:05:32,825 basehttp 1740 7188 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 12713
+INFO 2025-08-22 19:05:32,896 basehttp 1740 7188 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-08-22 19:05:50,145 basehttp 1740 7188 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:05:50,406 basehttp 1740 7188 "GET /admin/ HTTP/1.1" 200 20312
+INFO 2025-08-22 19:05:54,961 basehttp 1740 7188 "POST /admin/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:05:55,038 basehttp 1740 7188 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 19:05:55,096 basehttp 1740 7188 "GET /static/js/main.js HTTP/1.1" 200 5232
+INFO 2025-08-22 19:05:57,743 basehttp 1740 7188 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 19:06:02,639 basehttp 1740 7188 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:06:02,811 basehttp 1740 7188 "GET /dashboard/ HTTP/1.1" 200 25731
+INFO 2025-08-22 19:06:11,588 basehttp 1740 7188 "GET /student/5/progress-detail/ HTTP/1.1" 200 23187
+INFO 2025-08-22 19:06:19,787 basehttp 1740 7188 "GET /dashboard/ HTTP/1.1" 200 25730
+INFO 2025-08-22 19:06:26,105 basehttp 1740 7188 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:06:26,172 basehttp 1740 7188 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-22 19:06:28,295 basehttp 1740 7188 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-22 19:06:36,571 basehttp 1740 7188 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-22 19:06:36,857 basehttp 1740 7188 "GET /dashboard/ HTTP/1.1" 200 29719
+INFO 2025-08-22 19:06:48,131 basehttp 1740 7188 "GET /admin/ HTTP/1.1" 200 20311
+INFO 2025-08-22 19:06:53,163 basehttp 1740 7188 "GET /admin/core/user/ HTTP/1.1" 200 29921
+INFO 2025-08-22 19:06:53,232 basehttp 1740 3144 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,233 basehttp 1740 6904 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,235 basehttp 1740 7188 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,239 basehttp 1740 1436 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,245 basehttp 1740 17828 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,265 basehttp 1740 6904 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,270 basehttp 1740 3144 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,270 basehttp 1740 7188 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,329 basehttp 1740 21332 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-22 19:06:53,354 basehttp 1740 1436 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,468 basehttp 1740 1436 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,469 basehttp 1740 21332 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,494 basehttp 1740 1436 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,495 basehttp 1740 21332 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,507 basehttp 1740 7188 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,516 basehttp 1740 3144 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:53,517 basehttp 1740 6904 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-08-22 19:06:57,095 basehttp 1740 6904 "GET /admin/core/user/ HTTP/1.1" 200 29921
+INFO 2025-08-22 19:06:57,189 basehttp 1740 6904 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-22 19:07:00,183 basehttp 1740 6904 "GET /admin/core/user/ HTTP/1.1" 200 29921
+INFO 2025-08-22 19:07:00,286 basehttp 1740 6904 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-22 19:07:14,468 basehttp 1740 6904 "GET /media/payment_proofs/welcomePage_PlMjTCF.png HTTP/1.1" 200 519349
+INFO 2025-08-22 19:07:25,039 basehttp 1740 6904 "GET /media/payment_proofs/welcomePage_PlMjTCF.png HTTP/1.1" 304 0
+INFO 2025-08-22 19:07:26,027 basehttp 1740 6904 "GET /media/payment_proofs/welcomePage_PlMjTCF.png HTTP/1.1" 304 0
+INFO 2025-08-22 19:18:44,572 autoreload 3092 12164 Watching for file changes with StatReloader

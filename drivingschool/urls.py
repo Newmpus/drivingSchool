@@ -52,6 +52,7 @@ urlpatterns = [
 
     # Lesson management
     path('book-lesson/', core_views.book_lesson, name='book_lesson'),
+    path('api/book-lesson/', core_views.api_book_lesson, name='api_book_lesson'),
     path('lesson/<int:lesson_id>/', core_views.lesson_detail, name='lesson_detail'),
     path('lesson/<int:lesson_id>/cancel/', core_views.cancel_lesson, name='cancel_lesson'),
     path('lesson/<int:lesson_id>/reschedule/', core_views.reschedule_lesson, name='reschedule_lesson'),
@@ -60,7 +61,7 @@ urlpatterns = [
     path('generate-timetable/', core_views.generate_timetable, name='generate_timetable'),
 
     # Notifications
-    path('notification/read/<int:notification_id>/', core_views.mark_notification_read, name='mark_notification_read'),
+    path('notification/read/<int:notification_id>/', core_views.notification_views.mark_notification_read, name='mark_notification_read'),
 ]
 
 # Add debug toolbar URLs in development

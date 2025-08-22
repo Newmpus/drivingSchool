@@ -1,0 +1,311 @@
+{% extends 'base.html' %}
+
+{% block title %}Progress Detail - {{ student.get_full_name|default:student.username }} - Driving School Management{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Header -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-gradient-primary text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">
+                            <i class="fas fa-user-graduate me-2"></i>Student Progress Detail
+                        </h4>
+                        <div class="text-end">
+                            <h6 class="mb-0">{{ student.get_full_name|default:student.username }}</h6>
+                            <small>Comprehensive Progress View</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- AI Suggestions Card -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">
+                                <i class="fas fa-robot text-primary me-2"></i>AI Suggested Feedback
+                                <small class="text-muted ms-2">(Generated on request, not stored)</small>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info border-0">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-lightbulb fa-2x text-info"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="alert-heading">AI Analysis</h6>
+                                        <p class="mb-0">{{ ai_feedback }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Records -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">
+                                <i class="fas fa-comments text-success me-2"></i>Tutor/Admin Comments
+                            </h5>
+                            <span class="badge bg-success">{{ progress_records.count }} Comments</span>
+                        </div>
+                        <div class="card-body">
+                            {% if progress_records %}
+                                <div class="timeline">
+                                    {% for record in progress_records %}
+                                        <div class="timeline-item mb-4">
+                                            <div class="timeline-marker bg-success"></div>
+                                            <div class="timeline-content">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <div>
+                                                        <h6 class="mb-1">{{ record.lesson.date }} - {{ record.lesson.start_time }}</h6>
+                                                        <small class="text-muted">
+                                                            <i class="fas fa-user me-1"></i>{{ record.lesson.tutor.get_full_name|default:record.lesson.tutor.username }}
+                                                        </small>
+                                                    </div>
+                                                    <small class="text-muted">{{ record.created_at|date:"M d, Y" }}</small>
+                                                </div>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <strong class="text-primary">Skills Covered:</strong>
+                                                        <p class="small mb-2">{{ record.skills_covered }}</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong class="text-success">Instructor Feedback:</strong>
+                                                        <p class="small mb-2">{{ record.instructor_feedback }}</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <strong class="text-info">Progress Notes:</strong>
+                                                        <p class="small mb-2">{{ record.progress_notes }}</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong class="text-warning">Next Focus:</strong>
+                                                        <p class="small mb-2">{{ record.next_lesson_focus }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <div class="text-center py-4">
+                                    <i class="fas fa-comment-slash fa-3x text-muted mb-3"></i>
+                                    <h6>No Progress Comments Yet</h6>
+                                    <p class="text-muted">Tutors and admins can add progress comments for completed lessons.</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Add Comment Form (for tutors/admins) -->
+                    {% if can_add_comments %}
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-plus-circle text-primary me-2"></i>Add Progress Comment
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lesson_id" class="form-label">Select Lesson</label>
+                                            <select name="lesson_id" id="lesson_id" class="form-control" required>
+                                                <option value="">Choose a lesson...</option>
+                                                {% for lesson in lessons %}
+                                                    <option value="{{ lesson.id }}">
+                                                        {{ lesson.date }} - {{ lesson.start_time }} to {{ lesson.end_time }}
+                                                        ({{ lesson.tutor.get_full_name|default:lesson.tutor.username }})
+                                                    </option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <label for="comment" class="form-label">Progress Comment</label>
+                                            <textarea name="comment" id="comment" class="form-control" rows="4" 
+                                                      placeholder="Add your progress comment for this lesson..." required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-save me-2"></i>Save Comment
+                                        </button>
+                                        <small class="text-muted align-self-center">
+                                            Student will be notified when you add a comment
+                                        </small>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Student Info -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">
+                                <i class="fas fa-user text-primary me-2"></i>Student Information
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                {% if student.profile_picture %}
+                                    <img src="{{ student.profile_picture.url }}" alt="Profile" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
+                                {% else %}
+                                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                        <i class="fas fa-user fa-2x"></i>
+                                    </div>
+                                {% endif %}
+                                <h6 class="mt-2 mb-0">{{ student.get_full_name|default:student.username }}</h6>
+                                <small class="text-muted">{{ student.email }}</small>
+                            </div>
+                            {% if student.phone %}
+                                <p class="mb-1"><i class="fas fa-phone text-muted me-2"></i>{{ student.phone }}</p>
+                            {% endif %}
+                            {% if student.address %}
+                                <p class="mb-0"><i class="fas fa-map-marker-alt text-muted me-2"></i>{{ student.address }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">
+                                <i class="fas fa-chart-bar text-info me-2"></i>Quick Statistics
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <div class="border-end">
+                                        <div class="h4 text-primary mb-0">{{ lessons.count }}</div>
+                                        <small class="text-muted">Total Lessons</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="h4 text-success mb-0">{{ progress_records.count }}</div>
+                                    <small class="text-muted">With Comments</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Export Options -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">
+                                <i class="fas fa-download text-warning me-2"></i>Export Report
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="small text-muted mb-3">Generate comprehensive progress report including AI insights and all comments.</p>
+                            <div class="d-grid gap-2">
+                                <a href="{% url 'export_progress_report' student.id %}?format=pdf" class="btn btn-outline-danger btn-sm">
+                                    <i class="fas fa-file-pdf me-2"></i>Download PDF
+                                </a>
+                                <a href="{% url 'export_progress_report' student.id %}?format=csv" class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-file-csv me-2"></i>Download CSV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0">
+                                <i class="fas fa-tools text-primary me-2"></i>Actions
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-grid gap-2">
+                                <a href="{% url 'student_progress_analysis' student.id %}" class="btn btn-outline-info btn-sm">
+                                    <i class="fas fa-chart-line me-2"></i>Detailed Analysis
+                                </a>
+                                {% if can_add_comments %}
+                                    <a href="{% url 'add_progress_comment' lessons.first.id %}" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-plus me-2"></i>Add Detailed Comment
+                                    </a>
+                                {% endif %}
+                                <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary btn-sm">
+                                    <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #dee2e6;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -37px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #dee2e6;
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #28a745;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.alert-info {
+    background-color: #e3f2fd;
+    border-color: #bbdefb;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+</style>
+{% endblock %}

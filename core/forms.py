@@ -9,7 +9,7 @@ from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 from django.utils import timezone
 
-from .models import User, Lesson # Import your custom User model
+from .models import User, Lesson, StudentProgress # Import your custom User model
 
 class UserRegistrationForm(forms.ModelForm):
     """Form for user registration with enhanced validation."""
@@ -358,3 +358,94 @@ class LessonBookingForm(forms.ModelForm):
                 raise ValidationError('Lessons must be between 8:00 AM and 6:00 PM.')
         
         return cleaned_data
+
+class ProgressCommentForm(forms.ModelForm):
+    """Form for tutors to add progress comments for students."""
+    
+    progress_notes = forms.CharField(
+        widget=forms.Textarea(attrs={
+            'class': 'form-control',
+            'rows': 4,
+            'placeholder': 'Enter detailed progress notes about the lesson...'
+        }),
+        help_text='Describe what was covered in this lesson and how the student performed.'
+    )
+    
+    skills_covered = forms.CharField(
+        widget=forms.Textarea(attrs={
+            'class': 'form-control',
+            'rows': 3,
+            'placeholder': 'List the specific skills practiced in this lesson...'
+        }),
+        help_text='List the driving skills and techniques covered during this lesson.'
+    )
+    
+    instructor_feedback = forms.CharField(
+        widget=forms.Textarea(attrs={
+            'class': 'form-control',
+            'rows': 3,
+            'placeholder': 'Provide constructive feedback for the student...'
+        }),
+        help_text='Give encouraging feedback and areas for improvement.'
+    )
+    
+    next_lesson_focus = forms.CharField(
+        widget=forms.Textarea(attrs={
+            'class': 'form-control',
+            'rows': 3,
+            'placeholder': 'What should be the focus for the next lesson?'
+        }),
+        help_text='Suggest what the student should focus on in their next lesson.'
+    )
+
+    class Meta:
+        model = StudentProgress
+        fields = ['progress_notes', 'skills_covered', 'instructor_feedback', 'next_lesson_focus']
+
+    def __init__(self, *args, **kwargs):
+        lesson = kwargs.pop('lesson', None)
+        super().__init__(*args, **kwargs)
+        
+        if lesson:
+            # Use AI to generate suggested content
+            from .ai_helper import ai_helper
+            suggested_comment = ai_helper.generate_progress_comment_suggestion(lesson.id)
+            
+            # Pre-populate fields with AI suggestions as placeholders
+            self.fields['progress_notes'].widget.attrs['placeholder'] = f"AI Suggestion: {suggested_comment}"
+            
+            # Add lesson context to help text
+            self.fields['progress_notes'].help_text += f" (Lesson: {lesson.date} {lesson.start_time}-{lesson.end_time})"
+
+class QuickProgressForm(forms.Form):
+    """Quick form for adding basic progress comments."""
+    
+    RATING_CHOICES = [
+        ('excellent', 'Excellent Progress'),
+        ('good', 'Good Progress'),
+        ('satisfactory', 'Satisfactory Progress'),
+        ('needs_improvement', 'Needs Improvement'),
+    ]
+    
+    overall_rating = forms.ChoiceField(
+        choices=RATING_CHOICES,
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Overall Performance'
+    )
+    
+    quick_notes = forms.CharField(
+        widget=forms.Textarea(attrs={
+            'class': 'form-control',
+            'rows': 3,
+            'placeholder': 'Quick notes about this lesson...'
+        }),
+        max_length=500,
+        label='Quick Notes'
+    )
+    
+    send_email = forms.BooleanField(
+        required=False,
+        initial=True,
+        widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+        label='Send progress email to student'
+    )

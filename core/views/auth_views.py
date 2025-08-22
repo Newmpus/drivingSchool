@@ -113,7 +113,22 @@ def dashboard(request: HttpRequest) -> HttpResponse:
             lessons = user_profile.student_lessons.filter(
                 date__gte=current_date
             ).select_related('tutor').order_by('date', 'start_time') # tutor__user is not needed if tutor is a User object
-            context['lessons'] = lessons
+            
+            # Add progress tracking
+            from core.models import StudentProgress
+            progress = StudentProgress.objects.filter(
+                student=user_profile
+            ).select_related('lesson').order_by('-created_at')
+            
+            # Add AI analysis for student progress
+            from core.ai_helper import ai_helper
+            ai_analysis = ai_helper.analyze_student_progress(user_profile.id)
+            
+            context.update({
+                'lessons': lessons,
+                'progress': progress,
+                'ai_analysis': ai_analysis,
+            })
         elif user_profile.role == 'tutor':
             lessons = user_profile.tutor_lessons.filter(
                 date__gte=current_date
@@ -122,9 +137,13 @@ def dashboard(request: HttpRequest) -> HttpResponse:
                 role='student',
                 student_lessons__tutor=user_profile
             ).distinct()
+            
+            # Add AI insights for tutor dashboard
+            from core.ai_helper import ai_helper
             context.update({
                 'lessons': lessons,
-                'students': students
+                'students': students,
+                'ai_helper': ai_helper
             })
         elif user_profile.role == 'admin':
             user_count = User.objects.count()
@@ -134,75 +153,18 @@ def dashboard(request: HttpRequest) -> HttpResponse:
                 'student', # Changed from student__user
                 'tutor' # Changed from tutor__user
             ).order_by('-date', '-start_time')[:10]
+            
+            # Add AI vehicle utilization report for admin
+            from core.ai_helper import ai_helper
+            vehicle_report = ai_helper.get_vehicle_utilization_report()
+            
             context.update({
                 'user_count': user_count,
                 'student_count': student_count,
                 'tutor_count': tutor_count,
                 'lesson_count': Lesson.objects.count(),
                 'recent_lessons': all_lessons,
-            })
-
-    return render(request, 'dashboard.html', context)
-
-from django.urls import reverse
-
-@login_required
-def dashboard(request: HttpRequest) -> HttpResponse:
-    """
-    Display the user's dashboard.
-
-    Args:
-        request (HttpRequest): The HTTP request object.
-
-    Returns:
-        HttpResponse: The rendered dashboard template.
-    """
-    user_profile = get_user_profile(request.user) # This will now return the User object
-    context: Dict[str, Any] = {'user_profile': user_profile}
-
-    # Get unread notifications
-    notifications = Notification.objects.filter(
-        user=request.user,
-        is_read=False
-    ).order_by('-created_at')
-    context['notifications'] = notifications
-
-    # Add upload_payment_proof URL to context for template usage
-    context['upload_payment_proof_url'] = reverse('upload_payment_proof')
-
-    if user_profile: # user_profile is now the User object
-        current_date = timezone.now().date()
-        if user_profile.role == 'student':
-            lessons = user_profile.student_lessons.filter(
-                date__gte=current_date
-            ).select_related('tutor').order_by('date', 'start_time') # tutor__user is not needed if tutor is a User object
-            context['lessons'] = lessons
-        elif user_profile.role == 'tutor':
-            lessons = user_profile.tutor_lessons.filter(
-                date__gte=current_date
-            ).select_related('student').order_by('date', 'start_time') # student__user is not needed if student is a User object
-            students = User.objects.filter( # Changed from UserProfile.objects.filter
-                role='student',
-                student_lessons__tutor=user_profile
-            ).distinct()
-            context.update({
-                'lessons': lessons,
-                'students': students
-            })
-        elif user_profile.role == 'admin':
-            user_count = User.objects.count()
-            student_count = User.objects.filter(role='student').count() # Changed from UserProfile.objects.filter
-            tutor_count = User.objects.filter(role='tutor').count() # Changed from UserProfile.objects.filter
-            all_lessons = Lesson.objects.select_related(
-                'student', # Changed from student__user
-                'tutor' # Changed from tutor__user
-            ).order_by('-date', '-start_time')[:10]
-            context.update({
-                'user_count': user_count,
-                'student_count': student_count,
-                'tutor_count': tutor_count,
-                'lesson_count': Lesson.objects.count(),
-                'recent_lessons': all_lessons,
+                'vehicle_report': vehicle_report,
             })
 
     return render(request, 'dashboard.html', context)
