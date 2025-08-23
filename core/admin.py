@@ -6,7 +6,7 @@ from django.contrib.auth.admin import UserAdmin
 #from django.contrib.auth.models import User
 from django.utils.html import format_html
 
-from .models import User, Lesson, Notification
+from .models import User, Lesson, Notification, Vehicle
 
 class CustomUserAdmin(UserAdmin):
     """Custom User admin."""
@@ -40,6 +40,14 @@ class NotificationAdmin(admin.ModelAdmin):
     list_filter = ('is_read', 'created_at')
     search_fields = ('user__username', 'message')
     readonly_fields = ('created_at',)
+
+# Register the Vehicle model
+@admin.register(Vehicle)
+class VehicleAdmin(admin.ModelAdmin):
+    """Admin for Vehicle model."""
+    list_display = ('registration_number', 'make', 'model', 'year', 'vehicle_class', 'is_available')
+    list_filter = ('vehicle_class', 'is_available')
+    search_fields = ('registration_number', 'make', 'model')
 
 # Register the custom User model with CustomUserAdmin
 admin.site.register(User, CustomUserAdmin)

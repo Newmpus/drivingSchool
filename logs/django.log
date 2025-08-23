@@ -5826,3 +5826,155 @@ INFO 2025-08-22 19:28:24,573 basehttp 3092 11932 "GET /accounts/login/ HTTP/1.1"
 INFO 2025-08-22 19:28:30,200 basehttp 3092 11932 "POST /accounts/login/ HTTP/1.1" 302 0
 INFO 2025-08-22 19:28:30,472 basehttp 3092 11932 "GET /dashboard/ HTTP/1.1" 200 31900
 INFO 2025-08-22 19:28:57,514 basehttp 3092 11932 "GET /student/5/progress-detail/ HTTP/1.1" 200 25863
+INFO 2025-08-23 15:46:56,354 autoreload 21640 19716 Watching for file changes with StatReloader
+INFO 2025-08-23 15:47:02,337 basehttp 3092 6480 "GET / HTTP/1.1" 200 20317
+INFO 2025-08-23 15:47:02,393 basehttp 3092 6480 "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-08-23 15:50:12,481 basehttp 3092 6480 "GET /register/ HTTP/1.1" 200 19249
+INFO 2025-08-23 15:50:18,069 basehttp 3092 6480 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 15:50:28,493 basehttp 3092 6480 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:50:28,690 basehttp 3092 6480 "GET /dashboard/ HTTP/1.1" 200 29718
+INFO 2025-08-23 15:50:39,676 lesson_views 3092 6480 Email notification sent to tinex@gmail.com
+INFO 2025-08-23 15:50:43,396 lesson_views 3092 6480 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-08-23 15:50:46,878 lesson_views 3092 6480 Email notification sent to tinex@gmail.com
+INFO 2025-08-23 15:50:50,795 lesson_views 3092 6480 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-08-23 15:50:50,814 lesson_views 3092 6480 Generated 2 lessons for the week
+INFO 2025-08-23 15:50:50,973 basehttp 3092 6480 "POST /generate-timetable/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:50:51,051 basehttp 3092 6480 "GET /dashboard/ HTTP/1.1" 200 30287
+INFO 2025-08-23 15:50:57,012 basehttp 3092 6480 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:50:57,042 basehttp 3092 6480 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 15:50:58,992 basehttp 3092 6480 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 15:51:04,702 basehttp 3092 6480 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:51:04,865 basehttp 3092 6480 "GET /dashboard/ HTTP/1.1" 200 33845
+INFO 2025-08-23 15:51:12,307 basehttp 3092 6480 "GET /media/payment_proofs/welcomePage_PlMjTCF.png HTTP/1.1" 304 0
+INFO 2025-08-23 15:51:56,701 basehttp 3092 6480 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:51:56,737 basehttp 3092 6480 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 15:51:58,378 basehttp 3092 6480 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 15:52:04,658 basehttp 3092 6480 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:52:04,744 basehttp 3092 6480 "GET /dashboard/ HTTP/1.1" 200 29717
+INFO 2025-08-23 15:52:07,652 basehttp 3092 6480 "GET /admin/ HTTP/1.1" 200 20312
+INFO 2025-08-23 15:52:35,837 basehttp 3092 6480 "GET /admin/core/user/ HTTP/1.1" 200 29921
+INFO 2025-08-23 15:52:35,924 basehttp 3092 6480 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 15:53:07,432 basehttp 3092 6480 "GET / HTTP/1.1" 200 21149
+INFO 2025-08-23 15:53:13,285 basehttp 3092 6480 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:53:13,329 basehttp 3092 6480 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 15:53:15,491 basehttp 3092 6480 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 15:54:25,480 basehttp 3092 6480 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:54:25,582 basehttp 3092 6480 "GET /dashboard/ HTTP/1.1" 200 33844
+INFO 2025-08-23 15:54:33,785 basehttp 3092 6480 "GET /student/5/progress-detail/ HTTP/1.1" 200 25862
+INFO 2025-08-23 15:55:37,151 basehttp 3092 6480 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:55:37,184 basehttp 3092 6480 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 15:56:04,465 basehttp 3092 6480 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 15:56:10,416 basehttp 3092 6480 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 15:56:10,501 basehttp 3092 6480 "GET /dashboard/ HTTP/1.1" 200 29717
+INFO 2025-08-23 17:18:20,958 basehttp 3092 21776 "GET / HTTP/1.1" 200 20317
+INFO 2025-08-23 17:18:43,658 basehttp 3092 21776 "GET /register/ HTTP/1.1" 200 19249
+INFO 2025-08-23 17:18:52,411 basehttp 3092 21776 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 17:19:02,127 basehttp 3092 21776 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 17:19:02,218 basehttp 3092 21776 "GET /dashboard/ HTTP/1.1" 200 29717
+INFO 2025-08-23 17:19:19,004 basehttp 3092 21776 "GET /admin/ HTTP/1.1" 200 20311
+INFO 2025-08-23 17:19:33,356 basehttp 3092 21776 "GET /admin/core/lesson/ HTTP/1.1" 200 37744
+INFO 2025-08-23 17:19:33,414 basehttp 3092 21776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:19:53,017 basehttp 3092 21776 "GET /admin/core/notification/ HTTP/1.1" 200 56752
+INFO 2025-08-23 17:19:53,079 basehttp 3092 21776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:20:04,634 basehttp 3092 21776 "GET /admin/core/user/ HTTP/1.1" 200 29920
+INFO 2025-08-23 17:20:04,688 basehttp 3092 21776 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:27:46,452 basehttp 3092 20848 "GET /admin/core/lesson/ HTTP/1.1" 200 37744
+INFO 2025-08-23 17:27:46,515 basehttp 3092 20848 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:27:52,546 basehttp 3092 20848 "GET /admin/core/user/ HTTP/1.1" 200 29920
+INFO 2025-08-23 17:27:52,602 basehttp 3092 20848 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:28:03,390 basehttp 3092 20848 "GET /admin/core/user/?_facets=True HTTP/1.1" 200 30842
+INFO 2025-08-23 17:28:03,451 basehttp 3092 20848 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:28:03,484 basehttp 3092 20848 "GET /static/admin/img/icon-hidelink.svg HTTP/1.1" 200 784
+INFO 2025-08-23 17:28:29,015 basehttp 3092 20848 "GET /admin/core/user/?_facets=True HTTP/1.1" 200 30841
+INFO 2025-08-23 17:28:29,071 basehttp 3092 20848 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:28:38,696 basehttp 3092 20848 "GET /admin/core/user/?_facets=True&is_approved__exact=1 HTTP/1.1" 200 31113
+INFO 2025-08-23 17:28:38,747 basehttp 3092 20848 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:28:43,295 basehttp 3092 20848 "GET /admin/core/user/?_facets=True HTTP/1.1" 200 30842
+INFO 2025-08-23 17:28:48,484 basehttp 3092 20848 "GET /admin/password_change/ HTTP/1.1" 200 17788
+INFO 2025-08-23 17:28:48,515 basehttp 3092 20848 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-08-23 17:28:48,528 basehttp 3092 20848 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-08-23 17:29:06,806 basehttp 3092 20848 "GET /admin/core/user/ HTTP/1.1" 200 29920
+INFO 2025-08-23 17:29:06,863 basehttp 3092 20848 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 17:29:09,176 basehttp 3092 20848 "GET / HTTP/1.1" 200 21149
+INFO 2025-08-23 17:29:16,785 basehttp 3092 20848 "GET /book-lesson/ HTTP/1.1" 302 0
+INFO 2025-08-23 17:29:16,865 basehttp 3092 20848 "GET /dashboard/ HTTP/1.1" 200 30283
+INFO 2025-08-23 17:29:26,042 basehttp 3092 20848 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 17:29:26,071 basehttp 3092 20848 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 17:29:27,792 basehttp 3092 20848 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 17:29:32,435 basehttp 3092 20848 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 17:29:32,736 basehttp 3092 20848 "GET /dashboard/ HTTP/1.1" 200 33861
+INFO 2025-08-23 17:29:51,407 basehttp 3092 20848 "POST /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-23 17:29:51,507 basehttp 3092 20848 "GET /dashboard/ HTTP/1.1" 200 34435
+INFO 2025-08-23 17:30:06,437 basehttp 3092 20848 "GET /book-lesson/ HTTP/1.1" 200 22113
+INFO 2025-08-23 17:30:11,882 basehttp 3092 20848 "GET /dashboard/ HTTP/1.1" 200 33839
+INFO 2025-08-23 17:30:32,759 basehttp 3092 20848 "GET /student/5/progress-detail/ HTTP/1.1" 200 25862
+INFO 2025-08-23 17:30:42,995 basehttp 3092 20848 "GET /student/5/export-report/?format=pdf HTTP/1.1" 200 3955
+INFO 2025-08-23 17:30:46,416 basehttp 3092 20848 "GET /student/5/export-report/?format=csv HTTP/1.1" 200 3913
+INFO 2025-08-23 17:31:55,327 basehttp 3092 20848 "GET /dashboard/ HTTP/1.1" 200 33839
+INFO 2025-08-23 17:32:03,377 basehttp 3092 20848 "GET / HTTP/1.1" 200 21138
+INFO 2025-08-23 17:32:12,449 basehttp 3092 20848 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 17:32:12,479 basehttp 3092 20848 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 17:32:14,561 basehttp 3092 20848 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 17:32:19,765 basehttp 3092 20848 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 17:32:19,877 basehttp 3092 20848 "GET /dashboard/ HTTP/1.1" 200 50728
+INFO 2025-08-23 17:32:29,270 basehttp 3092 20848 "GET /lesson/28/ HTTP/1.1" 200 21258
+INFO 2025-08-23 19:22:04,513 autoreload 21640 19716 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:22:04,536 autoreload 3092 12164 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:22:06,264 autoreload 15248 20652 Watching for file changes with StatReloader
+INFO 2025-08-23 19:22:06,264 autoreload 2560 12656 Watching for file changes with StatReloader
+INFO 2025-08-23 19:22:23,966 autoreload 2560 12656 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 19:22:23,976 autoreload 15248 20652 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 19:22:24,387 autoreload 20320 24472 Watching for file changes with StatReloader
+INFO 2025-08-23 19:22:24,388 autoreload 18628 3988 Watching for file changes with StatReloader
+INFO 2025-08-23 19:24:20,998 autoreload 20320 24472 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 19:24:20,999 autoreload 18628 3988 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 19:24:21,466 autoreload 19928 3060 Watching for file changes with StatReloader
+INFO 2025-08-23 19:24:21,492 autoreload 21996 24468 Watching for file changes with StatReloader
+INFO 2025-08-23 19:28:13,007 autoreload 19928 3060 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 19:28:13,021 autoreload 21996 24468 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 19:28:13,558 autoreload 20632 19612 Watching for file changes with StatReloader
+INFO 2025-08-23 19:28:13,558 autoreload 24092 22652 Watching for file changes with StatReloader
+INFO 2025-08-23 19:31:38,509 autoreload 21164 23352 Watching for file changes with StatReloader
+INFO 2025-08-23 19:36:14,146 autoreload 24092 22652 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:36:14,147 autoreload 21164 23352 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:36:14,158 autoreload 20632 19612 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:36:14,700 autoreload 24524 23748 Watching for file changes with StatReloader
+INFO 2025-08-23 19:36:14,701 autoreload 13316 8124 Watching for file changes with StatReloader
+INFO 2025-08-23 19:36:14,702 autoreload 7344 19816 Watching for file changes with StatReloader
+INFO 2025-08-23 19:36:42,919 autoreload 13316 8124 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:36:42,922 autoreload 24524 23748 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:36:42,930 autoreload 7344 19816 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:36:43,461 autoreload 21704 5728 Watching for file changes with StatReloader
+INFO 2025-08-23 19:36:43,462 autoreload 2168 23668 Watching for file changes with StatReloader
+INFO 2025-08-23 19:36:43,476 autoreload 15752 16524 Watching for file changes with StatReloader
+INFO 2025-08-23 19:38:12,397 autoreload 2168 23668 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:38:12,402 autoreload 21704 5728 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:38:12,409 autoreload 15752 16524 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:38:12,882 autoreload 11112 20900 Watching for file changes with StatReloader
+INFO 2025-08-23 19:38:12,903 autoreload 21608 17656 Watching for file changes with StatReloader
+INFO 2025-08-23 19:38:12,921 autoreload 2312 10300 Watching for file changes with StatReloader
+INFO 2025-08-23 19:38:56,580 autoreload 2312 10300 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:38:56,597 autoreload 11112 20900 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:38:56,599 autoreload 21608 17656 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-08-23 19:38:57,129 autoreload 18732 21380 Watching for file changes with StatReloader
+INFO 2025-08-23 19:38:57,148 autoreload 19844 21412 Watching for file changes with StatReloader
+INFO 2025-08-23 19:38:57,159 autoreload 23616 14816 Watching for file changes with StatReloader
+INFO 2025-08-23 19:42:51,779 basehttp 18732 5096 "GET /admin HTTP/1.1" 301 0
+INFO 2025-08-23 19:42:51,794 basehttp 18732 772 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:42:51,902 basehttp 18732 772 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 13200
+INFO 2025-08-23 19:42:51,972 basehttp 18732 772 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-08-23 19:42:51,997 basehttp 18732 20884 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-08-23 19:42:52,002 basehttp 18732 23280 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-08-23 19:42:52,005 basehttp 18732 20284 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-08-23 19:42:52,006 basehttp 18732 23736 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-08-23 19:42:52,007 basehttp 18732 22112 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 19:42:52,025 basehttp 18732 772 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-08-23 19:42:52,045 basehttp 18732 20884 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 19:42:52,060 basehttp 18732 19620 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 19:42:52,064 basehttp 18732 9788 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-08-23 19:42:52,091 basehttp 18732 19620 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 19:42:52,161 log 18732 19620 Not Found: /favicon.ico
+WARNING 2025-08-23 19:42:52,162 basehttp 18732 19620 "GET /favicon.ico HTTP/1.1" 404 18134
+INFO 2025-08-23 19:44:23,148 autoreload 11676 2504 Watching for file changes with StatReloader
+INFO 2025-08-23 19:44:32,385 basehttp 18732 4632 "GET / HTTP/1.1" 200 20318
+INFO 2025-08-23 19:44:34,116 basehttp 18732 4632 "GET /accounts/login/ HTTP/1.1" 200 15352

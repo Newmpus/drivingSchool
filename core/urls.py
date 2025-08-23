@@ -2,7 +2,7 @@
 URL patterns for the core app.
 """
 from django.urls import path
-from .views import payment_views, lesson_views
+from .views import payment_views, lesson_views, vehicle_views
 
 urlpatterns = [
     # Payment URLs
@@ -22,4 +22,10 @@ urlpatterns = [
     # New enhanced progress URLs
     path('student/<int:student_id>/progress-detail/', lesson_views.student_progress_detail, name='student_progress_detail'),
     path('student/<int:student_id>/export-report/', lesson_views.export_progress_report, name='export_progress_report'),
+
+    # Vehicle management URLs
+    path('admin/vehicles/', vehicle_views.vehicle_list, name='vehicle_list'),
+    path('admin/vehicles/add/', vehicle_views.add_vehicle, name='add_vehicle'),
+    path('admin/vehicles/<int:vehicle_id>/edit/', vehicle_views.edit_vehicle, name='edit_vehicle'),
+    path('admin/vehicles/<int:vehicle_id>/delete/', vehicle_views.delete_vehicle, name='delete_vehicle'),
 ]
