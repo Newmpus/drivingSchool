@@ -1,0 +1,26 @@
+/* Basic styles for the Driving School application */
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #64748b;
+    --text-color: #64748b;
+    --background-light: #faf8fc;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.navbar-custom {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+}
+
+/* Additional styles can be added here */

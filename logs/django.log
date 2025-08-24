@@ -5978,3 +5978,302 @@ WARNING 2025-08-23 19:42:52,162 basehttp 18732 19620 "GET /favicon.ico HTTP/1.1"
 INFO 2025-08-23 19:44:23,148 autoreload 11676 2504 Watching for file changes with StatReloader
 INFO 2025-08-23 19:44:32,385 basehttp 18732 4632 "GET / HTTP/1.1" 200 20318
 INFO 2025-08-23 19:44:34,116 basehttp 18732 4632 "GET /accounts/login/ HTTP/1.1" 200 15352
+INFO 2025-08-23 19:44:38,736 basehttp 18732 4632 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:44:38,895 basehttp 18732 4632 "GET /dashboard/ HTTP/1.1" 200 50728
+INFO 2025-08-23 19:44:46,831 basehttp 18732 4632 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:44:46,884 basehttp 18732 4632 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 19:44:48,570 basehttp 18732 4632 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 19:44:52,992 basehttp 18732 4632 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:44:53,172 basehttp 18732 4632 "GET /dashboard/ HTTP/1.1" 200 33797
+INFO 2025-08-23 19:45:02,806 basehttp 18732 4632 "GET /book-lesson/ HTTP/1.1" 200 22113
+INFO 2025-08-23 19:45:14,106 basehttp 18732 4632 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:45:14,140 basehttp 18732 4632 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 19:45:15,755 basehttp 18732 4632 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 19:45:24,819 basehttp 18732 4632 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:45:25,034 basehttp 18732 4632 "GET /dashboard/ HTTP/1.1" 200 29718
+INFO 2025-08-23 19:45:35,344 basehttp 18732 4632 "GET /dashboard/ HTTP/1.1" 200 29717
+INFO 2025-08-23 19:45:43,721 basehttp 18732 4632 "GET /admin/ HTTP/1.1" 200 20897
+INFO 2025-08-23 19:45:49,635 basehttp 18732 4632 "GET /admin/core/vehicle/ HTTP/1.1" 200 25574
+INFO 2025-08-23 19:45:49,724 basehttp 18732 4632 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 19:46:33,519 basehttp 18732 4632 "GET /admin/core/vehicle/add/ HTTP/1.1" 200 23899
+INFO 2025-08-23 19:46:33,575 basehttp 18732 3092 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-08-23 19:46:33,599 basehttp 18732 3092 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-08-23 19:46:33,625 basehttp 18732 4632 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 19:47:07,115 basehttp 18732 4632 "GET /admin/core/vehicle/ HTTP/1.1" 200 25573
+INFO 2025-08-23 19:47:11,327 basehttp 18732 4632 "POST /admin/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:47:11,367 basehttp 18732 4632 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 19:47:13,153 basehttp 18732 4632 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 19:47:17,587 basehttp 18732 4632 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:47:17,706 basehttp 18732 4632 "GET /dashboard/ HTTP/1.1" 200 33796
+INFO 2025-08-23 19:47:23,696 basehttp 18732 4632 "GET /book-lesson/ HTTP/1.1" 200 22113
+INFO 2025-08-23 19:53:19,026 basehttp 18732 20204 "GET /accounts/login/ HTTP/1.1" 200 15352
+INFO 2025-08-23 19:53:19,083 basehttp 18732 20204 "GET /static/css/style.css HTTP/1.1" 200 3817
+INFO 2025-08-23 19:53:19,089 basehttp 18732 15512 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 19:53:19,090 basehttp 18732 13932 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 19:53:19,090 basehttp 18732 6220 "GET /static/js/main.js HTTP/1.1" 200 5232
+INFO 2025-08-23 19:53:19,846 basehttp 18732 22856 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 19:53:19,851 basehttp 18732 9732 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 19:53:20,174 log 18732 9732 Not Found: /favicon.ico
+WARNING 2025-08-23 19:53:20,175 basehttp 18732 9732 "GET /favicon.ico HTTP/1.1" 404 18133
+INFO 2025-08-23 19:54:10,313 basehttp 18732 14340 "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:54:10,331 basehttp 18732 14340 "GET /accounts/login/?next=/dashboard/ HTTP/1.1" 200 15369
+INFO 2025-08-23 19:54:10,386 basehttp 18732 14340 "GET /static/css/style.css HTTP/1.1" 200 3817
+INFO 2025-08-23 19:54:10,388 basehttp 18732 13208 "GET /static/js/main.js HTTP/1.1" 200 5232
+INFO 2025-08-23 19:54:10,396 basehttp 18732 14340 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 19:54:10,399 basehttp 18732 13208 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 19:54:11,463 basehttp 18732 6652 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 19:54:11,469 basehttp 18732 20532 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 19:54:11,766 log 18732 20532 Not Found: /favicon.ico
+WARNING 2025-08-23 19:54:11,766 basehttp 18732 20532 "GET /favicon.ico HTTP/1.1" 404 18134
+INFO 2025-08-23 19:54:38,185 basehttp 18732 15636 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:54:38,209 basehttp 18732 15636 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 13199
+INFO 2025-08-23 19:54:38,248 basehttp 18732 15636 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-08-23 19:54:38,256 basehttp 18732 15636 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-08-23 19:54:38,261 basehttp 18732 23572 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-08-23 19:54:38,264 basehttp 18732 15636 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-08-23 19:54:38,268 basehttp 18732 17296 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-08-23 19:54:38,268 basehttp 18732 23408 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 19:54:38,269 basehttp 18732 1004 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-08-23 19:54:38,270 basehttp 18732 760 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 19:54:38,297 basehttp 18732 760 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-08-23 19:54:38,302 basehttp 18732 23408 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 19:54:38,333 basehttp 18732 23408 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 19:54:38,372 log 18732 23408 Not Found: /favicon.ico
+WARNING 2025-08-23 19:54:38,372 basehttp 18732 23408 "GET /favicon.ico HTTP/1.1" 404 18133
+INFO 2025-08-23 19:57:07,297 basehttp 18732 21600 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:57:07,332 basehttp 18732 21600 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 19:57:08,919 basehttp 18732 21600 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 19:57:14,367 basehttp 18732 21600 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:57:14,459 basehttp 18732 21600 "GET /dashboard/ HTTP/1.1" 200 29717
+INFO 2025-08-23 19:57:22,756 basehttp 18732 21600 "GET /admin/ HTTP/1.1" 200 20896
+INFO 2025-08-23 19:57:25,498 basehttp 18732 21600 "GET /admin/core/vehicle/ HTTP/1.1" 200 25573
+INFO 2025-08-23 19:57:25,567 basehttp 18732 21600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 19:57:28,895 basehttp 18732 21600 "GET /admin/core/vehicle/add/ HTTP/1.1" 200 23898
+INFO 2025-08-23 19:57:28,958 basehttp 18732 21600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 19:58:28,756 basehttp 18732 21600 "POST /admin/core/vehicle/add/ HTTP/1.1" 200 24205
+INFO 2025-08-23 19:58:28,852 basehttp 18732 21600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 19:58:43,257 basehttp 18732 21600 "POST /admin/core/vehicle/add/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:58:43,368 basehttp 18732 21600 "GET /admin/core/vehicle/ HTTP/1.1" 200 26398
+INFO 2025-08-23 19:58:43,433 basehttp 18732 21600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-08-23 19:58:54,819 basehttp 18732 21600 "POST /admin/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:58:54,859 basehttp 18732 21600 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 19:58:56,544 basehttp 18732 21600 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 19:59:02,964 basehttp 18732 21600 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:59:03,043 basehttp 18732 21600 "GET /dashboard/ HTTP/1.1" 200 33784
+INFO 2025-08-23 19:59:09,939 basehttp 18732 21600 "GET /book-lesson/ HTTP/1.1" 200 22113
+INFO 2025-08-23 19:59:35,807 ai_helper 18732 21600 Found 7 vehicle suggestions for 2025-08-24 14:59:00-15:59:00
+INFO 2025-08-23 19:59:35,816 lesson_views 18732 21600 AI-suggested vehicle 04994aq allocated to lesson 32 (confidence: 95%)
+INFO 2025-08-23 19:59:39,785 lesson_views 18732 21600 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-08-23 19:59:43,618 lesson_views 18732 21600 Email notification sent to tinex@gmail.com
+INFO 2025-08-23 19:59:43,619 lesson_views 18732 21600 Lesson booked: Tinex with Cleo on 2025-08-24
+INFO 2025-08-23 19:59:43,742 basehttp 18732 21600 "POST /book-lesson/ HTTP/1.1" 302 0
+INFO 2025-08-23 19:59:43,821 basehttp 18732 21600 "GET /dashboard/ HTTP/1.1" 200 36350
+INFO 2025-08-23 20:00:03,497 autoreload 11676 2504 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 20:00:03,605 autoreload 23616 14816 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 20:00:03,676 autoreload 19844 21412 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 20:00:03,718 autoreload 18732 21380 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-08-23 20:00:04,430 autoreload 7028 5948 Watching for file changes with StatReloader
+INFO 2025-08-23 20:00:04,516 autoreload 24524 20364 Watching for file changes with StatReloader
+INFO 2025-08-23 20:00:04,534 autoreload 16972 10764 Watching for file changes with StatReloader
+INFO 2025-08-23 20:00:04,668 autoreload 21036 9688 Watching for file changes with StatReloader
+INFO 2025-08-23 20:17:23,266 autoreload 10292 21256 Watching for file changes with StatReloader
+INFO 2025-08-23 20:18:55,744 basehttp 7028 24172 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 20:18:55,809 basehttp 7028 24172 "GET /static/css/style.css HTTP/1.1" 200 3817
+INFO 2025-08-23 20:18:55,819 basehttp 7028 24172 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 20:18:55,820 basehttp 7028 22496 "GET /static/js/main.js HTTP/1.1" 200 5232
+INFO 2025-08-23 20:18:55,821 basehttp 7028 13564 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 20:18:56,943 basehttp 7028 24228 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 20:18:56,946 basehttp 7028 20256 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 20:18:57,316 log 7028 20256 Not Found: /favicon.ico
+WARNING 2025-08-23 20:18:57,316 basehttp 7028 20256 "GET /favicon.ico HTTP/1.1" 404 18133
+INFO 2025-08-23 20:19:58,314 basehttp 7028 11296 "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:19:58,332 basehttp 7028 11296 "GET /accounts/login/?next=/dashboard/ HTTP/1.1" 200 15369
+INFO 2025-08-23 20:19:58,389 basehttp 7028 11296 "GET /static/css/style.css HTTP/1.1" 200 3817
+INFO 2025-08-23 20:19:58,400 basehttp 7028 11296 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 20:19:58,402 basehttp 7028 23608 "GET /static/js/main.js HTTP/1.1" 200 5232
+INFO 2025-08-23 20:19:58,403 basehttp 7028 19668 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 20:19:59,192 basehttp 7028 22328 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 20:19:59,205 basehttp 7028 22328 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 20:19:59,695 log 7028 22328 Not Found: /favicon.ico
+WARNING 2025-08-23 20:19:59,696 basehttp 7028 22328 "GET /favicon.ico HTTP/1.1" 404 18133
+INFO 2025-08-23 20:20:14,385 basehttp 7028 23668 "GET /static/css/style.css HTTP/1.1" 200 3817
+WARNING 2025-08-23 20:20:14,441 log 7028 23668 Not Found: /favicon.ico
+WARNING 2025-08-23 20:20:14,442 basehttp 7028 23668 "GET /favicon.ico HTTP/1.1" 404 18133
+INFO 2025-08-23 20:20:38,380 basehttp 7028 15192 "GET /register/ HTTP/1.1" 200 19249
+INFO 2025-08-23 20:20:38,432 basehttp 7028 15192 "GET /static/css/style.css HTTP/1.1" 200 3817
+INFO 2025-08-23 20:20:38,438 basehttp 7028 22780 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 20:20:38,438 basehttp 7028 17924 "GET /static/js/main.js HTTP/1.1" 200 5232
+INFO 2025-08-23 20:20:38,438 basehttp 7028 8584 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 20:20:39,285 basehttp 7028 22052 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 20:20:39,288 basehttp 7028 15640 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 20:20:39,656 log 7028 15640 Not Found: /favicon.ico
+WARNING 2025-08-23 20:20:39,657 basehttp 7028 15640 "GET /favicon.ico HTTP/1.1" 404 18133
+INFO 2025-08-23 20:22:27,552 basehttp 7028 21416 "GET / HTTP/1.1" 200 20320
+INFO 2025-08-23 20:22:27,614 basehttp 7028 21416 "GET /static/css/style.css HTTP/1.1" 200 608
+INFO 2025-08-23 20:22:27,622 basehttp 7028 7596 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 20:22:27,623 basehttp 7028 23608 "GET /static/js/main.js HTTP/1.1" 200 5232
+INFO 2025-08-23 20:22:27,624 basehttp 7028 1816 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 20:22:28,227 basehttp 7028 21184 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 20:22:28,234 basehttp 7028 22020 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 20:22:28,692 log 7028 22020 Not Found: /favicon.ico
+WARNING 2025-08-23 20:22:28,693 basehttp 7028 22020 "GET /favicon.ico HTTP/1.1" 404 18134
+INFO 2025-08-23 20:23:25,166 basehttp 7028 20524 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 20:23:25,221 basehttp 7028 20524 "GET /static/css/style.css HTTP/1.1" 200 608
+INFO 2025-08-23 20:23:25,226 basehttp 7028 23512 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 20:23:25,226 basehttp 7028 4244 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 20:23:25,232 basehttp 7028 6488 "GET /static/js/main.js HTTP/1.1" 200 190
+INFO 2025-08-23 20:23:26,271 basehttp 7028 21184 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 20:23:26,278 basehttp 7028 3952 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 20:23:26,507 log 7028 3952 Not Found: /favicon.ico
+WARNING 2025-08-23 20:23:26,508 basehttp 7028 3952 "GET /favicon.ico HTTP/1.1" 404 18134
+INFO 2025-08-23 20:23:41,580 basehttp 7028 9832 "GET / HTTP/1.1" 200 20320
+INFO 2025-08-23 20:23:41,636 basehttp 7028 9832 "GET /static/css/style.css HTTP/1.1" 200 608
+INFO 2025-08-23 20:23:41,639 basehttp 7028 17216 "GET /static/js/main.js HTTP/1.1" 200 190
+INFO 2025-08-23 20:23:41,640 basehttp 7028 22856 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 20:23:41,641 basehttp 7028 16524 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 20:23:42,644 basehttp 7028 7412 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 20:23:42,648 basehttp 7028 20820 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 20:23:42,948 log 7028 20820 Not Found: /favicon.ico
+WARNING 2025-08-23 20:23:42,949 basehttp 7028 20820 "GET /favicon.ico HTTP/1.1" 404 18134
+INFO 2025-08-23 20:24:03,892 basehttp 7028 22820 "GET / HTTP/1.1" 200 20320
+INFO 2025-08-23 20:24:03,958 basehttp 7028 22820 "GET /static/css/style.css HTTP/1.1" 200 608
+INFO 2025-08-23 20:24:03,962 basehttp 7028 7684 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 20:24:03,975 basehttp 7028 2716 "GET /static/js/main.js HTTP/1.1" 200 190
+INFO 2025-08-23 20:24:03,975 basehttp 7028 20424 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 20:24:04,727 basehttp 7028 15216 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 20:24:04,730 basehttp 7028 23800 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 20:24:05,050 log 7028 23800 Not Found: /favicon.ico
+WARNING 2025-08-23 20:24:05,051 basehttp 7028 23800 "GET /favicon.ico HTTP/1.1" 404 18134
+INFO 2025-08-23 20:24:36,397 basehttp 7028 11940 "GET / HTTP/1.1" 200 20320
+INFO 2025-08-23 20:24:36,452 basehttp 7028 11940 "GET /static/css/style.css HTTP/1.1" 200 608
+INFO 2025-08-23 20:24:36,461 basehttp 7028 11940 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-08-23 20:24:36,464 basehttp 7028 11080 "GET /static/js/main.js HTTP/1.1" 200 190
+INFO 2025-08-23 20:24:36,464 basehttp 7028 15732 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-08-23 20:24:37,228 basehttp 7028 20740 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-08-23 20:24:37,232 basehttp 7028 18912 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-08-23 20:24:37,639 log 7028 18912 Not Found: /favicon.ico
+WARNING 2025-08-23 20:24:37,640 basehttp 7028 18912 "GET /favicon.ico HTTP/1.1" 404 18134
+INFO 2025-08-23 20:24:54,551 basehttp 7028 21772 "GET /dashboard/ HTTP/1.1" 200 35734
+INFO 2025-08-23 20:25:02,731 basehttp 7028 21772 "GET /media/payment_proofs/admPanel.png HTTP/1.1" 200 207458
+INFO 2025-08-23 20:25:31,660 basehttp 7028 21772 "GET /edit-profile/ HTTP/1.1" 200 20815
+INFO 2025-08-23 20:25:47,691 basehttp 7028 21772 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:25:47,726 basehttp 7028 21772 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 20:25:50,485 basehttp 7028 21772 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 20:25:55,638 basehttp 7028 21772 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:25:55,768 basehttp 7028 21772 "GET /dashboard/ HTTP/1.1" 200 52653
+INFO 2025-08-23 20:26:08,063 basehttp 7028 21772 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:26:08,099 basehttp 7028 21772 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 20:26:10,414 basehttp 7028 21772 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 20:26:15,211 basehttp 7028 21772 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:26:15,302 basehttp 7028 21772 "GET /dashboard/ HTTP/1.1" 200 35723
+INFO 2025-08-23 20:26:20,158 basehttp 7028 21772 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:26:20,201 basehttp 7028 21772 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-23 20:26:21,745 basehttp 7028 21772 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-23 20:26:27,336 basehttp 7028 21772 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-23 20:26:27,569 basehttp 7028 21772 "GET /dashboard/ HTTP/1.1" 200 29709
+INFO 2025-08-23 20:26:34,779 basehttp 7028 21772 "GET /admin/ HTTP/1.1" 200 20948
+INFO 2025-08-23 20:37:39,263 autoreload 7028 5948 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:37:39,263 autoreload 24524 20364 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:37:39,263 autoreload 16972 10764 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:37:39,271 autoreload 10292 21256 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:37:39,411 autoreload 21036 9688 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:37:40,041 autoreload 20960 22988 Watching for file changes with StatReloader
+INFO 2025-08-23 20:37:40,062 autoreload 20984 24116 Watching for file changes with StatReloader
+INFO 2025-08-23 20:37:40,069 autoreload 22268 11260 Watching for file changes with StatReloader
+INFO 2025-08-23 20:37:40,074 autoreload 22864 20164 Watching for file changes with StatReloader
+INFO 2025-08-23 20:37:40,143 autoreload 15640 13564 Watching for file changes with StatReloader
+INFO 2025-08-23 20:50:03,239 autoreload 20960 22988 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:50:03,247 autoreload 22268 11260 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:50:03,333 autoreload 15640 13564 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:50:03,357 autoreload 20984 24116 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:50:03,381 autoreload 22864 20164 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:50:04,341 autoreload 23276 7080 Watching for file changes with StatReloader
+
+INFO 2025-08-23 20:50:04,354 autoreload 18384 20344 Watching for file changes with StatReloader
+INFO 2025-08-23 20:50:04,374 autoreload 21920 13884 Watching for file changes with StatReloader
+INFO 2025-08-23 20:50:04,377 autoreload 15172 20864 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:03,370 autoreload 18384 20344 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:03,376 autoreload 21920 13884 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:03,379 autoreload 23276 7080 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:03,406 autoreload 15172 20864 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:03,409 autoreload 23252 24136 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:04,286 autoreload 18896 13380 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:04,323 autoreload 19232 8540 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:04,328 autoreload 23456 11760 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:04,330 autoreload 10148 19660 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:04,343 autoreload 20380 6480 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:15,023 autoreload 18896 13380 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:15,062 autoreload 19232 8540 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:15,066 autoreload 10148 19660 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:15,070 autoreload 23456 11760 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:15,078 autoreload 20380 6480 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 20:57:15,645 autoreload 17680 8508 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:15,689 autoreload 8368 20884 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:15,702 autoreload 1500 1968 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:15,728 autoreload 3508 22468 Watching for file changes with StatReloader
+INFO 2025-08-23 20:57:15,740 autoreload 11952 19440 Watching for file changes with StatReloader
+INFO 2025-08-23 21:00:04,766 autoreload 3508 22468 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:00:04,772 autoreload 1500 1968 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:00:04,775 autoreload 17680 8508 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:00:04,785 autoreload 11952 19440 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:00:04,797 autoreload 8368 20884 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:00:05,421 autoreload 8404 11668 Watching for file changes with StatReloader
+INFO 2025-08-23 21:00:05,424 autoreload 14780 4244 Watching for file changes with StatReloader
+INFO 2025-08-23 21:00:05,430 autoreload 17624 20988 Watching for file changes with StatReloader
+INFO 2025-08-23 21:00:05,436 autoreload 11228 22308 Watching for file changes with StatReloader
+INFO 2025-08-23 21:00:05,450 autoreload 5456 22144 Watching for file changes with StatReloader
+INFO 2025-08-23 21:17:18,087 autoreload 5456 22144 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:17:18,091 autoreload 17624 20988 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:17:18,352 autoreload 14780 4244 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:17:18,854 autoreload 11228 22308 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:17:19,113 autoreload 8404 11668 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-23 21:17:19,607 autoreload 20048 1844 Watching for file changes with StatReloader
+INFO 2025-08-23 21:17:19,621 autoreload 23868 11200 Watching for file changes with StatReloader
+INFO 2025-08-23 21:17:19,628 autoreload 2944 22980 Watching for file changes with StatReloader
+INFO 2025-08-23 21:17:19,631 autoreload 6580 9256 Watching for file changes with StatReloader
+INFO 2025-08-23 21:17:19,712 autoreload 15900 21820 Watching for file changes with StatReloader
+INFO 2025-08-24 10:27:31,139 autoreload 15900 21820 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:27:31,142 autoreload 6580 9256 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:27:31,143 autoreload 20048 1844 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:27:31,168 autoreload 2944 22980 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:27:31,196 autoreload 23868 11200 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:27:33,549 autoreload 4016 19208 Watching for file changes with StatReloader
+INFO 2025-08-24 10:27:33,549 autoreload 17808 7912 Watching for file changes with StatReloader
+INFO 2025-08-24 10:27:33,550 autoreload 15100 23432 Watching for file changes with StatReloader
+INFO 2025-08-24 10:27:33,550 autoreload 19924 21404 Watching for file changes with StatReloader
+INFO 2025-08-24 10:34:07,588 autoreload 19924 21404 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:34:07,599 autoreload 17808 7912 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:34:07,618 autoreload 4016 19208 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:34:07,622 autoreload 15100 23432 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:34:07,638 autoreload 12896 16600 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\settings.py changed, reloading.
+INFO 2025-08-24 10:34:08,238 autoreload 21168 15476 Watching for file changes with StatReloader
+INFO 2025-08-24 10:34:08,255 autoreload 8584 6692 Watching for file changes with StatReloader
+INFO 2025-08-24 10:34:08,269 autoreload 19696 19504 Watching for file changes with StatReloader
+INFO 2025-08-24 10:34:08,271 autoreload 23656 7344 Watching for file changes with StatReloader
+INFO 2025-08-24 10:34:08,281 autoreload 7480 14880 Watching for file changes with StatReloader
+INFO 2025-08-24 11:11:15,595 basehttp 21168 17328 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-24 11:11:15,657 basehttp 21168 17328 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-24 11:11:15,697 basehttp 21168 9956 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-08-24 11:11:15,700 basehttp 21168 5764 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-08-24 11:11:15,704 basehttp 21168 23044 "GET /static/css/style.css HTTP/1.1" 200 608
+INFO 2025-08-24 11:11:15,705 basehttp 21168 17328 "GET /static/js/main.js HTTP/1.1" 200 190
+INFO 2025-08-24 11:11:15,722 basehttp 21168 17328 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-08-24 11:11:15,722 basehttp 21168 23044 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-08-24 11:11:17,322 basehttp 21168 23044 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-24 11:11:22,512 basehttp 21168 23044 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-24 11:11:22,763 basehttp 21168 23044 "GET /dashboard/ HTTP/1.1" 200 34851
+INFO 2025-08-24 11:34:20,313 basehttp 21168 25400 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-24 11:34:20,347 basehttp 21168 25400 "GET / HTTP/1.1" 200 20321
+INFO 2025-08-24 11:34:22,400 basehttp 21168 25400 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-08-24 11:34:29,116 basehttp 21168 25400 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-24 11:34:29,283 basehttp 21168 25400 "GET /dashboard/ HTTP/1.1" 200 29724
+INFO 2025-08-24 11:34:35,787 basehttp 21168 25400 "GET /admin/ HTTP/1.1" 200 20949
+INFO 2025-08-24 11:34:35,818 basehttp 21168 3096 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-08-24 11:34:35,818 basehttp 21168 12188 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-08-24 11:34:35,819 basehttp 21168 7180 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-08-24 11:34:35,820 basehttp 21168 25400 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-08-24 11:34:35,820 basehttp 21168 22916 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-08-24 11:34:35,821 basehttp 21168 24728 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-08-24 11:34:35,836 basehttp 21168 22916 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-08-24 11:34:35,847 basehttp 21168 24728 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-08-24 11:34:35,847 basehttp 21168 3096 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0

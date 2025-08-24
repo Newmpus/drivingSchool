@@ -150,12 +150,11 @@ ADMIN_LOGOUT_URL = '/'
 
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'nyumbucy@gmail.com'
-EMAIL_HOST_PASSWORD = 'Painash@6'  # Replace with actual password or use environment variables for security
-DEFAULT_FROM_EMAIL = 'nyumbucy@gmail.com'
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = 'cc9bf0a4d3c0a0'  # Mailtrap username
+EMAIL_HOST_PASSWORD = '****79ad'  # Mailtrap password
+DEFAULT_FROM_EMAIL = 'test@example.com'
 
 # Security Settings
 if not DEBUG:

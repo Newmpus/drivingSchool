@@ -35,7 +35,7 @@ def test_email_notifications():
     student, created = User.objects.get_or_create(
         username='test_student',
         defaults={
-            'email': 'test@example.com',
+            'email': 'valid_student@example.com',
             'first_name': 'Test',
             'last_name': 'Student',
             'role': 'student'
