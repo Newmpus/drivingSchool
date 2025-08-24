@@ -96,7 +96,37 @@ class PaymentProofUploadForm(forms.ModelForm):
         file = self.cleaned_data.get('payment_proof')
         if not file:
             raise ValidationError('Please select a file to upload.')
-        # Additional validation logic...
+        
+        # File size validation (5MB max)
+        max_size = 5 * 1024 * 1024  # 5MB
+        if file.size > max_size:
+            raise ValidationError(f'File size must be under 5MB. Your file is {file.size / (1024*1024):.1f}MB.')
+        
+        # File type validation
+        allowed_types = [
+            'image/jpeg', 'image/png', 'image/gif', 'image/bmp',
+            'application/pdf', 
+            'application/msword', 
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'text/plain'
+        ]
+        allowed_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.pdf', '.doc', '.docx', '.txt']
+        
+        # Check content type
+        if file.content_type not in allowed_types:
+            raise ValidationError('Invalid file type. Please upload images (JPG, PNG, GIF, BMP), PDF, Word documents, or text files.')
+        
+        # Check file extension
+        import os
+        file_extension = os.path.splitext(file.name)[1].lower()
+        if file_extension not in allowed_extensions:
+            raise ValidationError('Invalid file extension. Please upload files with extensions: .jpg, .jpeg, .png, .gif, .bmp, .pdf, .doc, .docx, .txt.')
+        
+        # Check for executable files
+        executable_extensions = ['.exe', '.bat', '.cmd', '.sh', '.msi', '.dll']
+        if file_extension in executable_extensions:
+            raise ValidationError('Executable files are not allowed for security reasons.')
+        
         return file
 
 class LessonBookingForm(forms.ModelForm):

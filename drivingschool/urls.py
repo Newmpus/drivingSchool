@@ -18,6 +18,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from core.views.admin_views import student_status_dashboard, export_student_status
 from django.views.generic import TemplateView
 from django_ratelimit.decorators import ratelimit
 from django.contrib.auth import views as auth_views
@@ -36,14 +37,18 @@ def custom_logout_view(request):
     return redirect('home')
 
 urlpatterns = [
+    # Custom admin URLs must come before the Django admin pattern
+    path('admin/student-status/', student_status_dashboard, name='student_status_dashboard'),
+    path('admin/student-status/export/', export_student_status, name='export_student_status'),
+    
+    # Include core app URLs for admin vehicle management (must come before admin.site.urls)
+    path('admin/', include('core.urls')),
+    
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('register/', core_views.register, name='register'),
     path('dashboard/', core_views.dashboard, name='dashboard'),
     path('edit-profile/', core_views.edit_profile, name='edit_profile'),
-
-    # Include core app URLs for payment and other features
-    path('', include('core.urls')),
 
     # Authentication URLs with rate limiting
     path('accounts/login/', login_view, name='login'),

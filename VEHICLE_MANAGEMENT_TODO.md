@@ -24,11 +24,11 @@
 - [x] Create `core/templates/vehicle_confirm_delete.html`
 
 ### 6. Update Navigation
-- [ ] Add vehicle management links to appropriate templates
+- [x] Add vehicle management links to appropriate templates
 
 ## 📋 Pending Tasks
 - [ ] Test the vehicle management functionality
-- [ ] Add navigation links to the admin dashboard
+- [x] Add navigation links to the admin dashboard
 - [ ] Verify permissions work correctly
 
 ## Implementation Status

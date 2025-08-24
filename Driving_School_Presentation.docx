@@ -1,0 +1,30 @@
+# Overview of the Driving School Management System
+
+## 1. Introduction
+This project is a Driving School Management System built using Django. It aims to streamline the management of driving lessons, student registrations, and notifications.
+
+## 2. Project Structure
+- **Core Directory**: Contains the main application logic.
+  - **models.py**: Defines the database schema and relationships.
+  - **views.py**: Handles the business logic and interacts with the templates.
+  - **forms.py**: Manages user input and validation.
+  - **admin.py**: Configures the Django admin interface for managing models.
+  - **ai_helper.py**: Contains AI-related functionalities.
+
+## 3. Database Interaction
+Django ORM is used to interact with the database. Models defined in `models.py` represent the data structure, allowing for easy CRUD operations.
+
+## 4. Forms and User Input
+Forms in `forms.py` are rendered in templates and validated to ensure correct user input. Submissions are processed in views.
+
+## 5. Views and Templates
+Views in `views.py` connect to templates, managing the request-response cycle and passing data for rendering.
+
+## 6. AI Helper Functionality
+The `ai_helper.py` file provides AI functionalities that integrate with the main application logic.
+
+## 7. Navigation Through the Project
+To run the project locally, use `manage.py runserver`. The main URLs are defined in `urls.py`, allowing access to various parts of the application.
+
+## 8. Conclusion
+This document summarizes the key aspects of the Driving School Management System, highlighting its structure and functionalities.

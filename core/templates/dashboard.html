@@ -353,9 +353,14 @@
                             <h5 class="fw-bold mb-0">
                                 <i class="fas fa-history text-info me-2"></i>Recent Lessons
                             </h5>
-                            <a href="/admin/" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-cog me-2"></i>Admin Panel
-                            </a>
+                            <div class="btn-group">
+                                <a href="/admin/" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-cog me-2"></i>Admin Panel
+                                </a>
+                                <a href="{% url 'student_status_dashboard' %}" class="btn btn-outline-info btn-sm">
+                                    <i class="fas fa-users me-2"></i>Student Status
+                                </a>
+                            </div>
                         </div>
                         
                         {% if recent_lessons %}
@@ -388,6 +393,78 @@
                         {% endif %}
                     </div>
                 </div>
+
+                <!-- Vehicle Utilization Report -->
+                {% if vehicle_report and vehicle_report.vehicles %}
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-car text-info me-2"></i>Vehicle Utilization Report
+                            </h5>
+                            <span class="badge bg-info">
+                                Avg: {{ vehicle_report.average_utilization }}% Utilization
+                            </span>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-sm table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Vehicle</th>
+                                        <th>Class</th>
+                                        <th>Recent Lessons</th>
+                                        <th>Utilization</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for vehicle_data in vehicle_report.vehicles|slice:":5" %}
+                                    <tr>
+                                        <td>
+                                            <strong>{{ vehicle_data.vehicle.registration_number }}</strong>
+                                            <br>
+                                            <small class="text-muted">{{ vehicle_data.vehicle.make }} {{ vehicle_data.vehicle.model }}</small>
+                                        </td>
+                                        <td>{{ vehicle_data.vehicle.get_vehicle_class_display }}</td>
+                                        <td>{{ vehicle_data.recent_lessons }}</td>
+                                        <td>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar {% if vehicle_data.utilization_percentage > 50 %}bg-success{% elif vehicle_data.utilization_percentage > 20 %}bg-warning{% else %}bg-info{% endif %}" 
+                                                     role="progressbar" 
+                                                     style="width: {{ vehicle_data.utilization_percentage }}%"
+                                                     aria-valuenow="{{ vehicle_data.utilization_percentage }}" 
+                                                     aria-valuemin="0" 
+                                                     aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <small>{{ vehicle_data.utilization_percentage }}%</small>
+                                        </td>
+                                        <td>
+                                            <span class="badge {% if vehicle_data.status == 'High' %}bg-success{% elif vehicle_data.status == 'Medium' %}bg-warning{% else %}bg-info{% endif %}">
+                                                {{ vehicle_data.status }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        {% if vehicle_report.vehicles|length > 5 %}
+                        <div class="text-center mt-3">
+                            <small class="text-muted">Showing top 5 vehicles. View all in vehicle management.</small>
+                        </div>
+                        {% endif %}
+                        
+                        <div class="d-grid gap-2 mt-3">
+                            <a href="{% url 'vehicle_list' %}" class="btn btn-outline-primary">
+                                <i class="fas fa-cog me-2"></i>Manage Vehicles
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
 
                 <!-- Timetable Generation -->
                 <div class="card border-0 shadow-sm">

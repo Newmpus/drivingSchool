@@ -25,7 +25,7 @@ def upload_payment_proof(request):
         return redirect('dashboard')
     
     if request.method == 'POST':
-        form = PaymentProofUploadForm(request.POST, request.FILES, user=request.user)
+        form = PaymentProofUploadForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             try:
                 # Get the uploaded file
@@ -88,7 +88,7 @@ def upload_payment_proof(request):
                     f'File upload error: {form.errors["payment_proof"][0]}'
                 )
     else:
-        form = PaymentProofUploadForm(user=request.user)
+        form = PaymentProofUploadForm(instance=request.user)
     
     context = {
         'form': form,

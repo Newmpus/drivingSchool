@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Status Dashboard - Driving School Management{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h3 mb-0">
+                    <i class="fas fa-users text-primary me-2"></i>Student Status Dashboard
+                </h1>
+                <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                </a>
+            </div>
+            <p class="text-muted">Aggregated view of all students' statuses and progress</p>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="stats-card bg-primary text-white">
+                <div class="stats-icon">
+                    <i class="fas fa-user-graduate fa-2x"></i>
+                </div>
+                <div class="stats-content">
+                    <h3>Total Students</h3>
+                    <div class="number stats-number">{{ student_count }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stats-card bg-success text-white">
+                <div class="stats-icon">
+                    <i class="fas fa-book fa-2x"></i>
+                </div>
+                <div class="stats-content">
+                    <h3>Total Lessons</h3>
+                    <div class="number stats-number">{{ lesson_count }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stats-card bg-info text-white">
+                <div class="stats-icon">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                </div>
+                                <div class="stats-content">
+                                    <h3>Average Progress</h3>
+                                    <div class="number stats-number">
+                                        {% if student_count > 0 %}
+                                            {% with total=0 %}
+                                                {% for count in student_progress.values %}
+                                                    {% with total=total|add:count %}
+                                                    {% endwith %}
+                                                {% endfor %}
+                                                {{ total|floatformat:0 }}%
+                                            {% endwith %}
+                                        {% else %}
+                                            0%
+                                        {% endif %}
+                                    </div>
+                                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Progress Table -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="fw-bold mb-0">
+                    <i class="fas fa-list text-secondary me-2"></i>Student Progress Overview
+                </h5>
+                <div class="btn-group">
+                    <a href="{% url 'export_student_status' %}" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-download me-2"></i>Export CSV
+                    </a>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Student</th>
+                            <th>Progress Records</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for student, progress_count in student_progress.items %}
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                        <i class="fas fa-user text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <strong>{{ student }}</strong>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge bg-primary rounded-pill">{{ progress_count }}</span>
+                            </td>
+                            <td>
+                                {% if progress_count > 5 %}
+                                    <span class="badge bg-success">Advanced</span>
+                                {% elif progress_count > 2 %}
+                                    <span class="badge bg-warning">Intermediate</span>
+                                {% else %}
+                                    <span class="badge bg-info">Beginner</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-outline-primary">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4" class="text-center py-4">
+                                <i class="fas fa-users fa-3x text-muted mb-3"></i>
+                                <h6>No Students Found</h6>
+                                <p class="text-muted">No students are currently registered in the system.</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Charts or Visualizations can be added here -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-4">
+                        <i class="fas fa-chart-pie text-warning me-2"></i>Progress Distribution
+                    </h5>
+                    <div class="text-center py-4">
+                        <i class="fas fa-chart-pie fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">Progress distribution chart will be displayed here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-4">
+                        <i class="fas fa-chart-bar text-info me-2"></i>Lesson Frequency
+                    </h5>
+                    <div class="text-center py-4">
+                        <i class="fas fa-chart-bar fa-3x text-muted mb-3"></i>
+                        <p class="text-muted">Lesson frequency chart will be displayed here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.stats-card {
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stats-icon {
+    flex-shrink: 0;
+}
+
+.stats-content h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.stats-number {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+</style>
+{% endblock %}
