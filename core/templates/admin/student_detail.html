@@ -13,6 +13,40 @@
     <p><strong>Level:</strong> {{ student.get_level }}</p>
     <p><strong>Instructor Approved:</strong> {{ student.instructor_approved }}</p>
     <p><strong>Eligible for Video:</strong> {{ student.eligible_for_vid }}</p>
+    <p><strong>Payment Status:</strong>
+        {% if student.payment_status == 'approved' %}
+            <span class="badge badge-success">{{ student.payment_status|title }}</span>
+        {% elif student.payment_status == 'pending' %}
+            <span class="badge badge-warning">{{ student.payment_status|title }}</span>
+        {% elif student.payment_status == 'rejected' %}
+            <span class="badge badge-danger">{{ student.payment_status|title }}</span>
+        {% endif %}
+    </p>
+    <p><strong>Payment Verified:</strong>
+        {% if student.payment_verified %}
+            <i class="fas fa-check text-success"></i> Verified
+        {% else %}
+            <i class="fas fa-times text-danger"></i> Not Verified
+        {% endif %}
+    </p>
+
+    {% if student.payment_proof %}
+    <div class="alert alert-info">
+        <h5><i class="fas fa-file-invoice-dollar me-2"></i>Payment Proof</h5>
+        <p>A payment proof has been uploaded by this student.</p>
+        <a href="{{ student.payment_proof.url }}" target="_blank" class="btn btn-primary">
+            <i class="fas fa-eye me-1"></i>View Payment Proof
+        </a>
+        <a href="{{ student.payment_proof.url }}" download class="btn btn-outline-secondary ms-2">
+            <i class="fas fa-download me-1"></i>Download
+        </a>
+    </div>
+    {% else %}
+    <div class="alert alert-warning">
+        <h5><i class="fas fa-exclamation-triangle me-2"></i>No Payment Proof</h5>
+        <p>This student has not uploaded a payment proof yet.</p>
+    </div>
+    {% endif %}
 
     <h2>Progress Records</h2>
     <ul>

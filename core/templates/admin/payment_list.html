@@ -31,6 +31,8 @@
                                     <td>
                                         {% if student.payment_status == 'pending' %}
                                             <span class="badge badge-warning">Pending</span>
+                                        {% elif student.payment_status == 'approved' %}
+                                            <span class="badge badge-success">Approved</span>
                                         {% elif student.payment_status == 'rejected' %}
                                             <span class="badge badge-danger">Rejected</span>
                                         {% endif %}

@@ -10,8 +10,8 @@ from .models import User, Lesson, Notification, Vehicle
 
 class CustomUserAdmin(UserAdmin):
     """Custom User admin."""
-    list_display = ('username', 'role', 'total_lessons', 'get_level', 'instructor_approved', 'eligible_for_vid')
-    list_filter = ('role', 'is_staff', 'is_superuser', 'is_active', 'is_approved')
+    list_display = ('username', 'email', 'first_name', 'last_name', 'role', 'is_staff', 'is_approved', 'payment_status', 'payment_verified', 'payment_proof_display', 'total_lessons', 'get_level', 'instructor_approved', 'eligible_for_vid')
+    list_filter = ('role', 'is_staff', 'is_superuser', 'is_active', 'is_approved', 'payment_status', 'payment_verified')
     actions = ['approve_users', 'mark_instructor_approved']
 
     def payment_proof_display(self, obj):
@@ -21,8 +21,15 @@ class CustomUserAdmin(UserAdmin):
     payment_proof_display.short_description = 'Payment Proof'
 
     def approve_users(self, request, queryset):
-        updated = queryset.update(is_approved=True, is_active=True)
-        self.message_user(request, f"{updated} user(s) successfully approved.")
+        from django.utils import timezone
+        updated = queryset.update(
+            is_approved=True,
+            is_active=True,
+            payment_status='approved',
+            payment_verified=True,
+            payment_approved_at=timezone.now()
+        )
+        self.message_user(request, f"{updated} user(s) successfully approved with payment verified.")
     approve_users.short_description = "Approve selected users"
 
     def mark_instructor_approved(self, request, queryset):
