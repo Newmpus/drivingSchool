@@ -18,7 +18,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from core.views.admin_views import student_status_dashboard, export_student_status
+from core.views.admin_views import student_status_dashboard, export_student_status, student_detail, student_edit
 from django.views.generic import TemplateView
 from django_ratelimit.decorators import ratelimit
 from django.contrib.auth import views as auth_views
@@ -40,6 +40,8 @@ urlpatterns = [
     # Custom admin URLs must come before the Django admin pattern
     path('admin/student-status/', student_status_dashboard, name='student_status_dashboard'),
     path('admin/student-status/export/', export_student_status, name='export_student_status'),
+    path('admin/student/<str:username>/', student_detail, name='student_detail'),
+    path('admin/student/<str:username>/edit/', student_edit, name='student_edit'),
     
     # Include core app URLs for admin vehicle management (must come before admin.site.urls)
     path('admin/', include('core.urls')),
@@ -76,6 +78,7 @@ if settings.DEBUG:
         path('__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
 
-# Serve media files during development
+# Serve media and static files during development
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

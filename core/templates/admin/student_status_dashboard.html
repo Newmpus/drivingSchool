@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Student Status Dashboard - Driving School Management{% endblock %}
 
@@ -14,9 +15,11 @@
                     <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
                 </a>
             </div>
-            <p class="text-muted">Aggregated view of all students' statuses and progress</p>
+    <p class="text-muted">Aggregated view of all students' statuses and progress</p>
         </div>
     </div>
+
+
 
     <!-- Statistics Cards -->
     <div class="row g-4 mb-4">
@@ -118,12 +121,12 @@
                             </td>
                             <td>
                                 <div class="btn-group btn-group-sm">
-                                    <button type="button" class="btn btn-outline-primary">
+                                    <a href="{% url 'student_detail' student %}" class="btn btn-outline-primary" title="View Details">
                                         <i class="fas fa-eye"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-outline-secondary">
+                                    </a>
+                                    <a href="{% url 'student_edit' student %}" class="btn btn-outline-secondary" title="Edit Student">
                                         <i class="fas fa-edit"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </td>
                         </tr>
@@ -142,7 +145,7 @@
         </div>
     </div>
 
-    <!-- Additional Charts or Visualizations can be added here -->
+    <!-- Charts Section -->
     <div class="row mt-4">
         <div class="col-md-6">
             <div class="card border-0 shadow-sm">
@@ -150,9 +153,9 @@
                     <h5 class="fw-bold mb-4">
                         <i class="fas fa-chart-pie text-warning me-2"></i>Progress Distribution
                     </h5>
-                    <div class="text-center py-4">
-                        <i class="fas fa-chart-pie fa-3x text-muted mb-3"></i>
-                        <p class="text-muted">Progress distribution chart will be displayed here.</p>
+                    <div class="chart-container">
+                        <canvas id="progressDistributionChart" width="400" height="300"></canvas>
+                        <div id="progress-chart-error" style="color: red; display: none;"></div>
                     </div>
                 </div>
             </div>
@@ -163,9 +166,9 @@
                     <h5 class="fw-bold mb-4">
                         <i class="fas fa-chart-bar text-info me-2"></i>Lesson Frequency
                     </h5>
-                    <div class="text-center py-4">
-                        <i class="fas fa-chart-bar fa-3x text-muted mb-3"></i>
-                        <p class="text-muted">Lesson frequency chart will be displayed here.</p>
+                    <div class="chart-container">
+                        <canvas id="lessonFrequencyChart" width="400" height="300"></canvas>
+                        <div id="lesson-chart-error" style="color: red; display: none;"></div>
                     </div>
                 </div>
             </div>
@@ -197,5 +200,32 @@
     font-weight: bold;
     line-height: 1;
 }
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
 </style>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Custom Charts JS -->
+<script src="{% static 'js/progress_charts.js' %}"></script>
+
+<script>
+    // Pass data from Django context to JavaScript
+    const progressData = {{ progress_distribution|safe }};
+    const lessonData = {{ lesson_frequency|safe }};
+
+    console.log('Progress data:', progressData);
+    console.log('Lesson data:', lessonData);
+
+    // Store data in global variables for the charts script
+    window.progressDistributionData = progressData;
+    window.lessonFrequencyData = lessonData;
+</script>
 {% endblock %}

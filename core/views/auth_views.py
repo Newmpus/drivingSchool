@@ -137,12 +137,21 @@ def dashboard(request: HttpRequest) -> HttpResponse:
                 role='student',
                 student_lessons__tutor=user_profile
             ).distinct()
-            
+
+            # Get lessons without progress comments for this tutor
+            from core.models import StudentProgress
+            lessons_without_progress = user_profile.tutor_lessons.filter(
+                date__lte=current_date
+            ).exclude(
+                id__in=StudentProgress.objects.values_list('lesson_id', flat=True)
+            ).select_related('student').order_by('-date')[:10]
+
             # Add AI insights for tutor dashboard
             from core.ai_helper import ai_helper
             context.update({
                 'lessons': lessons,
                 'students': students,
+                'lessons_without_progress': lessons_without_progress,
                 'ai_helper': ai_helper
             })
         elif user_profile.role == 'admin':

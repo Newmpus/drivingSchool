@@ -6277,3 +6277,1025 @@ INFO 2025-08-24 11:34:35,821 basehttp 21168 24728 "GET /static/admin/css/dark_mo
 INFO 2025-08-24 11:34:35,836 basehttp 21168 22916 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
 INFO 2025-08-24 11:34:35,847 basehttp 21168 24728 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
 INFO 2025-08-24 11:34:35,847 basehttp 21168 3096 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-09-02 08:56:00,053 autoreload 8748 23572 Watching for file changes with StatReloader
+INFO 2025-09-02 08:56:22,625 basehttp 8748 5928 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 08:56:22,700 basehttp 8748 5928 "GET /static/css/style.css HTTP/1.1" 200 608
+INFO 2025-09-02 08:56:22,702 basehttp 8748 15944 "GET /static/js/main.js HTTP/1.1" 200 190
+INFO 2025-09-02 08:56:22,704 basehttp 8748 18616 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-09-02 08:56:22,705 basehttp 8748 23676 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-09-02 08:56:22,751 basehttp 8748 15944 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-09-02 08:56:22,862 basehttp 8748 15944 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2025-09-02 08:56:22,933 log 8748 15944 Not Found: /favicon.ico
+WARNING 2025-09-02 08:56:22,934 basehttp 8748 15944 "GET /favicon.ico HTTP/1.1" 404 14599
+INFO 2025-09-02 08:56:24,668 basehttp 8748 15944 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 08:56:30,700 basehttp 8748 15944 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 08:56:31,089 basehttp 8748 15944 "GET /dashboard/ HTTP/1.1" 200 40195
+INFO 2025-09-02 08:58:23,054 autoreload 8748 23572 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 08:58:23,581 autoreload 4680 12396 Watching for file changes with StatReloader
+INFO 2025-09-02 08:58:32,026 autoreload 4680 12396 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-09-02 08:58:32,470 autoreload 9780 1968 Watching for file changes with StatReloader
+INFO 2025-09-02 08:58:44,002 autoreload 9780 1968 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-09-02 08:58:44,495 autoreload 15012 1684 Watching for file changes with StatReloader
+INFO 2025-09-02 08:58:50,881 autoreload 15012 1684 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-09-02 08:58:51,334 autoreload 14780 1848 Watching for file changes with StatReloader
+INFO 2025-09-02 09:01:01,382 basehttp 14780 13124 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 09:01:04,900 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 40299
+INFO 2025-09-02 09:01:12,557 basehttp 14780 13124 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:01:12,597 basehttp 14780 13124 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 09:01:14,105 basehttp 14780 13124 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 09:01:18,504 basehttp 14780 13124 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:01:18,627 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 48224
+INFO 2025-09-02 09:01:44,125 basehttp 14780 13124 "GET /edit-profile/ HTTP/1.1" 200 20852
+INFO 2025-09-02 09:01:55,328 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 48224
+INFO 2025-09-02 09:02:04,052 notification_views 14780 13124 Notification 15 marked as read by Cleo
+INFO 2025-09-02 09:02:04,094 basehttp 14780 13124 "GET /notification/read/15/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:04,182 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 47261
+INFO 2025-09-02 09:02:07,695 notification_views 14780 13124 Notification 66 marked as read by Cleo
+INFO 2025-09-02 09:02:07,733 basehttp 14780 13124 "GET /notification/read/66/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:07,799 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 46300
+INFO 2025-09-02 09:02:09,634 notification_views 14780 13124 Notification 58 marked as read by Cleo
+INFO 2025-09-02 09:02:09,671 basehttp 14780 13124 "GET /notification/read/58/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:09,739 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 45299
+INFO 2025-09-02 09:02:11,486 notification_views 14780 13124 Notification 57 marked as read by Cleo
+INFO 2025-09-02 09:02:11,519 basehttp 14780 13124 "GET /notification/read/57/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:11,584 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 44338
+INFO 2025-09-02 09:02:15,022 notification_views 14780 13124 Notification 68 marked as read by Cleo
+INFO 2025-09-02 09:02:15,059 basehttp 14780 13124 "GET /notification/read/68/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:15,121 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 43377
+INFO 2025-09-02 09:02:16,614 notification_views 14780 13124 Notification 69 marked as read by Cleo
+INFO 2025-09-02 09:02:16,649 basehttp 14780 13124 "GET /notification/read/69/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:16,713 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 42361
+INFO 2025-09-02 09:02:21,414 notification_views 14780 13124 Notification 24 marked as read by Cleo
+INFO 2025-09-02 09:02:21,451 basehttp 14780 13124 "GET /notification/read/24/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:21,514 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 41408
+INFO 2025-09-02 09:02:26,298 notification_views 14780 13124 Notification 6 marked as read by Cleo
+INFO 2025-09-02 09:02:26,332 basehttp 14780 13124 "GET /notification/read/6/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:26,403 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 40462
+INFO 2025-09-02 09:02:32,484 basehttp 14780 13124 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:32,519 basehttp 14780 13124 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 09:02:36,119 basehttp 14780 13124 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 09:02:41,637 basehttp 14780 13124 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:02:41,919 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 31383
+INFO 2025-09-02 09:02:52,693 basehttp 14780 13124 "GET /book-lesson/ HTTP/1.1" 200 22120
+INFO 2025-09-02 09:03:03,657 basehttp 14780 13124 "GET /admin/student/5/progress-detail/ HTTP/1.1" 200 25886
+INFO 2025-09-02 09:03:16,843 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 31382
+ERROR 2025-09-02 09:03:43,595 log 14780 13124 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py", line 97, in dashboard
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\forms\forms.py", line 337, in full_clean
+    self._clean_fields()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\forms\forms.py", line 347, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py", line 116, in clean_payment_proof
+    if file.content_type not in allowed_types:
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'FieldFile' object has no attribute 'content_type'
+ERROR 2025-09-02 09:03:43,674 basehttp 14780 13124 "POST /dashboard/ HTTP/1.1" 500 106980
+INFO 2025-09-02 09:03:59,253 basehttp 14780 13124 "POST /dashboard/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:03:59,502 basehttp 14780 13124 "GET /dashboard/ HTTP/1.1" 200 31976
+ERROR 2025-09-02 09:04:05,738 log 14780 13124 Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py", line 97, in dashboard
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\forms\forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\forms\forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\forms\forms.py", line 337, in full_clean
+    self._clean_fields()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\forms\forms.py", line 347, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py", line 116, in clean_payment_proof
+    if file.content_type not in allowed_types:
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'FieldFile' object has no attribute 'content_type'
+ERROR 2025-09-02 09:04:05,797 basehttp 14780 13124 "POST /dashboard/ HTTP/1.1" 500 106979
+INFO 2025-09-02 09:04:57,272 autoreload 14780 1848 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\forms.py changed, reloading.
+INFO 2025-09-02 09:04:57,820 autoreload 11952 24184 Watching for file changes with StatReloader
+INFO 2025-09-02 09:05:07,369 basehttp 11952 16240 "GET /dashboard/ HTTP/1.1" 200 31381
+INFO 2025-09-02 09:05:09,675 basehttp 11952 16240 "POST /dashboard/ HTTP/1.1" 200 32148
+INFO 2025-09-02 09:05:15,566 basehttp 11952 16240 "POST /dashboard/ HTTP/1.1" 200 32149
+INFO 2025-09-02 09:05:34,857 basehttp 11952 16240 "POST /dashboard/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:05:35,071 basehttp 11952 16240 "GET /dashboard/ HTTP/1.1" 200 31994
+INFO 2025-09-02 09:05:40,904 basehttp 11952 16240 "GET /media/payment_proofs/theoryof_System.docx HTTP/1.1" 200 29131
+INFO 2025-09-02 09:05:49,048 basehttp 11952 16240 "GET /dashboard/ HTTP/1.1" 200 31398
+INFO 2025-09-02 09:05:53,104 basehttp 11952 16240 "GET /book-lesson/ HTTP/1.1" 200 22119
+INFO 2025-09-02 09:06:24,237 ai_helper 11952 16240 Found 7 vehicle suggestions for 2025-09-04 10:06:00-11:06:00
+INFO 2025-09-02 09:06:24,246 lesson_views 11952 16240 AI-suggested vehicle 04994aq allocated to lesson 34 (confidence: 95%)
+INFO 2025-09-02 09:06:28,925 lesson_views 11952 16240 Email notification sent to thenewmpuspanashe@gmail.com
+INFO 2025-09-02 09:06:31,464 lesson_views 11952 16240 Email notification sent to tinex@gmail.com
+INFO 2025-09-02 09:06:31,465 lesson_views 11952 16240 Lesson booked: Tinex with Cleo on 2025-09-04
+INFO 2025-09-02 09:06:31,596 basehttp 11952 16240 "POST /book-lesson/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:06:31,683 basehttp 11952 16240 "GET /dashboard/ HTTP/1.1" 200 33655
+INFO 2025-09-02 09:06:59,148 basehttp 11952 16240 "GET /admin/student/5/progress-detail/ HTTP/1.1" 200 25886
+INFO 2025-09-02 09:32:48,902 autoreload 11952 24184 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:32:49,444 autoreload 16256 7492 Watching for file changes with StatReloader
+INFO 2025-09-02 09:32:55,841 autoreload 16256 7492 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:32:56,344 autoreload 23780 7772 Watching for file changes with StatReloader
+INFO 2025-09-02 09:33:13,049 autoreload 23780 7772 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:33:13,579 autoreload 3572 18616 Watching for file changes with StatReloader
+INFO 2025-09-02 09:33:28,225 autoreload 3572 18616 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-09-02 09:33:28,672 autoreload 16784 17280 Watching for file changes with StatReloader
+INFO 2025-09-02 09:34:34,358 autoreload 24276 2276 Watching for file changes with StatReloader
+INFO 2025-09-02 09:35:56,796 basehttp 16784 16120 "GET / HTTP/1.1" 200 21139
+INFO 2025-09-02 09:35:59,456 basehttp 16784 16120 "GET /dashboard/ HTTP/1.1" 200 33036
+INFO 2025-09-02 09:36:26,978 basehttp 16784 16120 "GET /admin/student/5/export-report/?format=pdf HTTP/1.1" 200 3955
+INFO 2025-09-02 09:36:29,337 basehttp 16784 16120 "GET /admin/student/5/export-report/?format=csv HTTP/1.1" 200 4095
+INFO 2025-09-02 09:36:34,183 basehttp 16784 16120 "GET /admin/student/5/progress-detail/ HTTP/1.1" 200 25886
+INFO 2025-09-02 09:37:09,564 basehttp 16784 16120 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:37:09,611 basehttp 16784 16120 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 09:37:13,671 basehttp 16784 16120 "GET /register/ HTTP/1.1" 200 19254
+INFO 2025-09-02 09:37:17,749 basehttp 16784 16120 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 09:37:23,025 basehttp 16784 16120 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:37:23,229 basehttp 16784 16120 "GET /dashboard/ HTTP/1.1" 200 40293
+INFO 2025-09-02 09:37:40,314 basehttp 16784 16120 "GET /admin/student-status/ HTTP/1.1" 200 35558
+INFO 2025-09-02 09:38:44,115 basehttp 16784 16120 "GET /admin/student-status/export/ HTTP/1.1" 200 410
+INFO 2025-09-02 09:39:17,274 basehttp 16784 16120 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 09:39:24,016 basehttp 16784 16120 "GET /admin/admin/vehicles/ HTTP/1.1" 200 26420
+INFO 2025-09-02 09:39:36,302 basehttp 16784 16120 "GET /lesson/30/ HTTP/1.1" 200 21301
+INFO 2025-09-02 09:39:50,932 basehttp 16784 16120 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 09:39:53,286 basehttp 16784 16120 "GET /admin/ HTTP/1.1" 200 20949
+INFO 2025-09-02 09:39:53,335 basehttp 16784 23448 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-09-02 09:39:53,336 basehttp 16784 16120 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-02 09:39:53,336 basehttp 16784 904 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-09-02 09:39:53,338 basehttp 16784 15316 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-09-02 09:39:53,341 basehttp 16784 3532 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-09-02 09:39:53,345 basehttp 16784 19896 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-02 09:39:53,387 basehttp 16784 19896 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-02 09:39:53,392 basehttp 16784 3532 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-09-02 09:39:53,393 basehttp 16784 15316 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-09-02 09:40:10,507 basehttp 16784 15316 "GET /admin/student-status/ HTTP/1.1" 200 35557
+INFO 2025-09-02 09:53:53,131 autoreload 24276 2276 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:53:54,754 autoreload 16784 17280 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:53:55,816 autoreload 11320 21380 Watching for file changes with StatReloader
+INFO 2025-09-02 09:53:55,816 autoreload 17740 14780 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:02,299 autoreload 11320 21380 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:02,300 autoreload 17740 14780 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:02,813 autoreload 8020 23652 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:02,814 autoreload 24364 7876 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:13,396 autoreload 24364 7876 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:13,400 autoreload 8020 23652 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:13,854 autoreload 20628 23848 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:13,854 autoreload 9288 18568 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:28,521 autoreload 20628 23848 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:28,532 autoreload 9288 18568 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:28,987 autoreload 13036 18248 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:28,999 autoreload 2932 11596 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:35,456 autoreload 2932 11596 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:35,458 autoreload 13036 18248 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:35,968 autoreload 21512 14812 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:35,978 autoreload 22256 9576 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:44,435 autoreload 21512 14812 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:44,451 autoreload 22256 9576 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\models.py changed, reloading.
+INFO 2025-09-02 09:54:44,878 autoreload 3824 4104 Watching for file changes with StatReloader
+INFO 2025-09-02 09:54:44,883 autoreload 13688 22028 Watching for file changes with StatReloader
+INFO 2025-09-02 09:55:04,746 autoreload 3824 4104 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-09-02 09:55:04,747 autoreload 13688 22028 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-09-02 09:55:05,208 autoreload 23784 18596 Watching for file changes with StatReloader
+INFO 2025-09-02 09:55:05,214 autoreload 22360 22932 Watching for file changes with StatReloader
+INFO 2025-09-02 09:55:15,818 autoreload 22360 22932 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-09-02 09:55:15,829 autoreload 23784 18596 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\admin.py changed, reloading.
+INFO 2025-09-02 09:55:16,286 autoreload 21856 15308 Watching for file changes with StatReloader
+INFO 2025-09-02 09:55:16,291 autoreload 11252 11516 Watching for file changes with StatReloader
+INFO 2025-09-02 09:56:59,101 autoreload 19644 18588 Watching for file changes with StatReloader
+INFO 2025-09-02 09:57:12,133 basehttp 21856 16016 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 09:57:16,329 basehttp 21856 16016 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 09:57:18,720 basehttp 21856 16016 "GET /admin/student-status/ HTTP/1.1" 200 35557
+INFO 2025-09-02 09:57:46,019 basehttp 21856 16016 "GET /admin/student-status/ HTTP/1.1" 200 35557
+INFO 2025-09-02 09:57:47,478 basehttp 21856 16016 "GET /admin/student-status/ HTTP/1.1" 200 35557
+INFO 2025-09-02 09:58:39,160 basehttp 21856 7068 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-02 09:58:39,274 basehttp 21856 7068 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 13200
+INFO 2025-09-02 09:58:39,330 basehttp 21856 7068 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-09-02 09:58:39,355 basehttp 21856 7068 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-09-02 09:58:39,364 basehttp 21856 18880 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-09-02 09:58:39,367 basehttp 21856 11624 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-09-02 09:58:39,368 basehttp 21856 9468 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-09-02 09:58:39,371 basehttp 21856 23372 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2025-09-02 09:58:39,381 basehttp 21856 19280 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-09-02 09:58:39,393 basehttp 21856 7068 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2025-09-02 09:58:39,411 basehttp 21856 9468 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-09-02 09:58:39,419 basehttp 21856 19280 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-09-02 09:58:39,442 basehttp 21856 9468 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+WARNING 2025-09-02 09:58:39,488 log 21856 9468 Not Found: /favicon.ico
+WARNING 2025-09-02 09:58:39,489 basehttp 21856 9468 "GET /favicon.ico HTTP/1.1" 404 14599
+INFO 2025-09-02 10:01:33,875 autoreload 6620 17040 Watching for file changes with StatReloader
+INFO 2025-09-02 10:02:32,375 basehttp 6620 8108 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 10:02:34,191 basehttp 6620 8108 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 10:02:35,808 basehttp 6620 8108 "GET /admin/student-status/ HTTP/1.1" 200 35557
+INFO 2025-09-02 10:07:11,016 autoreload 6620 17040 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 10:07:11,430 autoreload 12284 22672 Watching for file changes with StatReloader
+INFO 2025-09-02 10:07:49,721 autoreload 12284 22672 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 10:07:50,114 autoreload 9688 23804 Watching for file changes with StatReloader
+INFO 2025-09-02 10:08:36,830 basehttp 9688 14960 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 10:08:37,029 basehttp 9688 14960 "GET / HTTP/1.1" 200 21149
+INFO 2025-09-02 10:08:39,723 basehttp 9688 14960 "GET /dashboard/ HTTP/1.1" 200 40292
+ERROR 2025-09-02 10:08:41,332 log 9688 14960 Internal Server Error: /admin/student-status/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py", line 29, in student_status_dashboard
+    return render(request, 'admin/student_status_dashboard.html', context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'student_detail' not found. 'student_detail' is not a valid view function or pattern name.
+ERROR 2025-09-02 10:08:41,356 basehttp 9688 14960 "GET /admin/student-status/ HTTP/1.1" 500 202764
+INFO 2025-09-02 10:09:10,242 autoreload 9688 23804 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-09-02 10:09:10,723 autoreload 18124 8052 Watching for file changes with StatReloader
+INFO 2025-09-02 10:09:21,316 autoreload 18124 8052 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-09-02 10:09:21,776 autoreload 3364 15436 Watching for file changes with StatReloader
+INFO 2025-09-02 10:10:06,387 basehttp 3364 5468 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 10:10:14,318 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 40293
+INFO 2025-09-02 10:10:15,927 basehttp 3364 5468 "GET /admin/student-status/ HTTP/1.1" 200 36086
+INFO 2025-09-02 10:10:22,709 basehttp 3364 5468 "GET /admin/student/Tinex/ HTTP/1.1" 200 14795
+INFO 2025-09-02 10:10:38,075 basehttp 3364 5468 "GET /admin/student/Tinex/edit/ HTTP/1.1" 200 15295
+INFO 2025-09-02 10:10:49,939 basehttp 3364 5468 "GET /admin/student/Tinex/ HTTP/1.1" 200 14795
+INFO 2025-09-02 10:10:56,899 basehttp 3364 5468 "GET /admin/student-status/ HTTP/1.1" 200 36086
+INFO 2025-09-02 10:11:00,696 basehttp 3364 5468 "GET /admin/student/Tinex/ HTTP/1.1" 200 14795
+INFO 2025-09-02 10:11:03,500 basehttp 3364 5468 "GET /admin/student-status/ HTTP/1.1" 200 36086
+INFO 2025-09-02 10:11:05,102 basehttp 3364 5468 "GET /admin/student/Tinex/edit/ HTTP/1.1" 200 15295
+INFO 2025-09-02 10:11:12,096 basehttp 3364 5468 "GET /admin/student/Tinex/ HTTP/1.1" 200 14795
+INFO 2025-09-02 10:11:14,782 basehttp 3364 5468 "GET /admin/student-status/ HTTP/1.1" 200 36086
+INFO 2025-09-02 10:11:20,681 basehttp 3364 5468 "GET /admin/student/Tinex/ HTTP/1.1" 200 14795
+INFO 2025-09-02 10:11:23,622 basehttp 3364 5468 "GET /admin/student/Tinex/edit/ HTTP/1.1" 200 15295
+INFO 2025-09-02 10:11:26,378 basehttp 3364 5468 "GET /admin/student/Tinex/ HTTP/1.1" 200 14795
+INFO 2025-09-02 10:11:34,874 basehttp 3364 5468 "GET /admin/student-status/ HTTP/1.1" 200 36086
+INFO 2025-09-02 10:11:43,495 basehttp 3364 5468 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:11:43,534 basehttp 3364 5468 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 10:11:44,832 basehttp 3364 5468 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 10:11:53,354 basehttp 3364 5468 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:11:53,523 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 42109
+INFO 2025-09-02 10:12:11,484 basehttp 3364 5468 "GET /lesson/34/ HTTP/1.1" 200 21680
+INFO 2025-09-02 10:12:23,371 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 42108
+INFO 2025-09-02 10:12:31,829 basehttp 3364 5468 "GET /lesson/34/ HTTP/1.1" 200 21680
+INFO 2025-09-02 10:12:46,965 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 42108
+INFO 2025-09-02 10:12:49,184 notification_views 3364 5468 Notification 72 marked as read by Cleo
+INFO 2025-09-02 10:12:49,218 basehttp 3364 5468 "GET /notification/read/72/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:12:49,285 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 41089
+INFO 2025-09-02 10:12:56,151 basehttp 3364 5468 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:12:56,187 basehttp 3364 5468 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 10:12:57,587 basehttp 3364 5468 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 10:13:02,582 basehttp 3364 5468 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:13:02,715 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 33045
+INFO 2025-09-02 10:13:17,911 basehttp 3364 5468 "GET /admin/student/5/progress-detail/ HTTP/1.1" 200 25886
+INFO 2025-09-02 10:13:57,830 basehttp 3364 5468 "GET /admin/student/5/progress-analysis/ HTTP/1.1" 200 26619
+INFO 2025-09-02 10:14:29,537 basehttp 3364 5468 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:14:29,571 basehttp 3364 5468 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 10:14:31,030 basehttp 3364 5468 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 10:14:36,332 basehttp 3364 5468 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:14:36,401 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 41089
+INFO 2025-09-02 10:14:48,168 basehttp 3364 5468 "GET /lesson/34/ HTTP/1.1" 200 21680
+INFO 2025-09-02 10:14:59,394 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 41089
+INFO 2025-09-02 10:15:24,330 basehttp 3364 5468 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:15:24,367 basehttp 3364 5468 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 10:15:25,905 basehttp 3364 5468 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 10:15:29,857 basehttp 3364 5468 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:15:30,102 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 40293
+INFO 2025-09-02 10:15:37,559 basehttp 3364 5468 "GET /lesson/31/ HTTP/1.1" 200 21301
+INFO 2025-09-02 10:15:49,041 basehttp 3364 5468 "GET /lesson/33/ HTTP/1.1" 200 21316
+INFO 2025-09-02 10:15:55,274 basehttp 3364 5468 "GET /admin/lesson/33/quick-progress/ HTTP/1.1" 200 20080
+INFO 2025-09-02 10:16:13,310 basehttp 3364 5468 "POST /admin/lesson/33/quick-progress/ HTTP/1.1" 200 20080
+INFO 2025-09-02 10:16:17,439 basehttp 3364 5468 "POST /admin/lesson/33/quick-progress/ HTTP/1.1" 200 20080
+INFO 2025-09-02 10:16:26,501 basehttp 3364 5468 "GET /admin/lesson/33/quick-progress/ HTTP/1.1" 200 20080
+INFO 2025-09-02 10:16:29,282 basehttp 3364 5468 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 10:24:41,382 autoreload 3364 15436 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\auth_views.py changed, reloading.
+INFO 2025-09-02 10:24:42,470 autoreload 11664 23432 Watching for file changes with StatReloader
+INFO 2025-09-02 10:34:03,324 basehttp 11664 9980 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 10:35:07,210 basehttp 11664 9980 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:35:07,243 basehttp 11664 9980 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 10:35:10,377 basehttp 11664 9980 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 10:35:16,017 basehttp 11664 9980 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 10:35:16,245 basehttp 11664 9980 "GET /dashboard/ HTTP/1.1" 200 57613
+INFO 2025-09-02 10:35:32,200 basehttp 11664 9980 "GET /admin/lesson/31/quick-progress/ HTTP/1.1" 200 20061
+ERROR 2025-09-02 10:35:37,250 log 11664 9980 Internal Server Error: /admin/lesson/31/add-progress/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py", line 762, in add_progress_comment
+    form = ProgressCommentForm(instance=existing_progress, lesson=lesson)
+TypeError: BaseModelForm.__init__() got an unexpected keyword argument 'lesson'
+ERROR 2025-09-02 10:35:37,281 basehttp 11664 9980 "GET /admin/lesson/31/add-progress/ HTTP/1.1" 500 84587
+INFO 2025-09-02 10:36:39,946 autoreload 11664 23432 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-09-02 10:36:40,489 autoreload 8108 15080 Watching for file changes with StatReloader
+INFO 2025-09-02 10:37:07,342 autoreload 8108 15080 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-09-02 10:37:07,781 autoreload 7768 3032 Watching for file changes with StatReloader
+INFO 2025-09-02 10:38:26,341 basehttp 7768 5276 "GET /admin/lesson/31/add-progress/ HTTP/1.1" 200 20010
+INFO 2025-09-02 10:38:44,803 basehttp 7768 5276 "GET /dashboard/ HTTP/1.1" 200 57613
+INFO 2025-09-02 10:38:49,854 basehttp 7768 5276 "GET /admin/lesson/31/quick-progress/ HTTP/1.1" 200 20061
+INFO 2025-09-02 10:38:54,397 basehttp 7768 5276 "POST /admin/lesson/31/quick-progress/ HTTP/1.1" 200 20061
+INFO 2025-09-02 10:53:08,680 autoreload 14880 9544 Watching for file changes with StatReloader
+INFO 2025-09-02 10:53:17,130 basehttp 14880 8204 "GET / HTTP/1.1" 200 21138
+INFO 2025-09-02 10:53:25,152 basehttp 14880 8204 "GET /dashboard/ HTTP/1.1" 200 77453
+INFO 2025-09-02 10:53:33,508 basehttp 14880 8204 "GET /admin/lesson/31/add-progress/ HTTP/1.1" 200 20824
+INFO 2025-09-02 10:53:39,652 basehttp 14880 8204 "GET /lesson/31/ HTTP/1.1" 200 21289
+INFO 2025-09-02 10:53:46,943 basehttp 14880 8204 "GET /dashboard/ HTTP/1.1" 200 77452
+INFO 2025-09-02 11:06:36,862 lesson_views 14880 5848 Quick progress comment added for lesson 31 by Cleo
+INFO 2025-09-02 11:06:36,917 basehttp 14880 5848 "POST /admin/lesson/31/quick-progress/ HTTP/1.1" 302 0
+INFO 2025-09-02 11:06:37,013 basehttp 14880 5848 "GET /lesson/31/ HTTP/1.1" 200 21868
+INFO 2025-09-02 11:06:42,639 basehttp 14880 5848 "GET /dashboard/ HTTP/1.1" 200 77452
+INFO 2025-09-02 11:06:52,920 basehttp 14880 5848 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 11:06:52,960 basehttp 14880 5848 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 11:06:54,391 basehttp 14880 5848 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 11:06:59,127 basehttp 14880 5848 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 11:06:59,312 basehttp 14880 5848 "GET /dashboard/ HTTP/1.1" 200 34089
+INFO 2025-09-02 11:07:09,210 basehttp 14880 5848 "GET /admin/student/5/progress-detail/ HTTP/1.1" 200 28620
+INFO 2025-09-02 11:10:03,150 basehttp 14880 5848 "GET /admin/student/5/export-report/?format=pdf HTTP/1.1" 200 3869
+INFO 2025-09-02 13:40:44,959 basehttp 14880 9496 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:40:45,003 basehttp 14880 9496 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 13:40:46,515 basehttp 14880 9496 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 13:40:51,733 basehttp 14880 9496 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:40:51,905 basehttp 14880 9496 "GET /dashboard/ HTTP/1.1" 200 77453
+INFO 2025-09-02 13:40:58,706 notification_views 14880 9496 Notification 47 marked as read by Cleo
+INFO 2025-09-02 13:40:58,746 basehttp 14880 9496 "GET /notification/read/47/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:40:58,850 basehttp 14880 9496 "GET /dashboard/ HTTP/1.1" 200 76490
+INFO 2025-09-02 13:41:21,655 notification_views 14880 9496 Notification 39 marked as read by Cleo
+INFO 2025-09-02 13:41:21,696 basehttp 14880 9496 "GET /notification/read/39/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:41:21,791 basehttp 14880 9496 "GET /dashboard/ HTTP/1.1" 200 75537
+INFO 2025-09-02 13:41:29,888 notification_views 14880 9496 Notification 11 marked as read by Cleo
+INFO 2025-09-02 13:41:29,934 basehttp 14880 9496 "GET /notification/read/11/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:41:30,056 basehttp 14880 9496 "GET /dashboard/ HTTP/1.1" 200 74574
+ERROR 2025-09-02 13:42:10,584 lesson_views 14880 9496 Failed to send progress email to tinex@gmail.com: Connection unexpectedly closed
+INFO 2025-09-02 13:42:14,270 lesson_views 14880 9496 Email notification sent to tinex@gmail.com
+INFO 2025-09-02 13:42:14,271 lesson_views 14880 9496 Quick progress comment added for lesson 30 by Cleo
+INFO 2025-09-02 13:42:14,355 basehttp 14880 9496 "POST /admin/lesson/30/quick-progress/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:42:14,439 basehttp 14880 9496 "GET /lesson/30/ HTTP/1.1" 200 21891
+INFO 2025-09-02 13:42:29,117 basehttp 14880 9496 "GET /dashboard/ HTTP/1.1" 200 74574
+INFO 2025-09-02 13:42:57,364 lesson_views 14880 9496 Quick progress comment added for lesson 20 by Cleo
+INFO 2025-09-02 13:42:57,421 basehttp 14880 9496 "POST /admin/lesson/20/quick-progress/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:42:57,515 basehttp 14880 9496 "GET /lesson/20/ HTTP/1.1" 200 21868
+INFO 2025-09-02 13:43:03,232 basehttp 14880 9496 "GET /admin/lesson/20/quick-progress/ HTTP/1.1" 200 20667
+INFO 2025-09-02 13:43:26,335 lesson_views 14880 9496 Quick progress comment added for lesson 20 by Cleo
+INFO 2025-09-02 13:43:26,362 basehttp 14880 9496 "POST /admin/lesson/20/quick-progress/ HTTP/1.1" 302 0
+INFO 2025-09-02 13:43:26,422 basehttp 14880 9496 "GET /lesson/20/ HTTP/1.1" 200 21868
+INFO 2025-09-02 13:43:31,354 basehttp 14880 9496 "GET /admin/lesson/20/add-progress/ HTTP/1.1" 200 21327
+ERROR 2025-09-02 13:44:22,821 log 14880 9496 Internal Server Error: /admin/lesson/20/add-progress/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py", line 736, in add_progress_comment
+    form = ProgressCommentForm(request.POST, instance=existing_progress, lesson=lesson)
+TypeError: BaseModelForm.__init__() got an unexpected keyword argument 'lesson'
+ERROR 2025-09-02 13:44:22,858 basehttp 14880 9496 "POST /admin/lesson/20/add-progress/ HTTP/1.1" 500 85875
+INFO 2025-09-02 14:25:11,900 autoreload 14880 9544 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\lesson_views.py changed, reloading.
+INFO 2025-09-02 14:25:14,183 autoreload 6536 18180 Watching for file changes with StatReloader
+INFO 2025-09-02 14:25:23,097 basehttp 6536 21620 "GET / HTTP/1.1" 200 21138
+INFO 2025-09-02 14:25:25,547 basehttp 6536 21620 "GET /dashboard/ HTTP/1.1" 200 74573
+INFO 2025-09-02 14:25:30,880 basehttp 6536 21620 "GET /admin/lesson/27/add-progress/ HTTP/1.1" 200 20823
+ERROR 2025-09-02 14:26:41,459 lesson_views 6536 21620 Failed to send progress email to tinex@gmail.com: Connection unexpectedly closed
+INFO 2025-09-02 14:26:43,178 lesson_views 6536 21620 Email notification sent to tinex@gmail.com
+INFO 2025-09-02 14:26:43,179 lesson_views 6536 21620 Progress comment added for lesson 27 by Cleo
+INFO 2025-09-02 14:26:43,225 basehttp 6536 21620 "POST /admin/lesson/27/add-progress/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:26:43,337 basehttp 6536 21620 "GET /lesson/27/ HTTP/1.1" 200 21888
+INFO 2025-09-02 14:26:53,705 basehttp 6536 21620 "GET /dashboard/ HTTP/1.1" 200 74572
+INFO 2025-09-02 14:27:09,640 basehttp 6536 21620 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:27:09,672 basehttp 6536 21620 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 14:27:11,387 basehttp 6536 21620 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 14:27:16,641 basehttp 6536 21620 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:27:16,883 basehttp 6536 21620 "GET /dashboard/ HTTP/1.1" 200 40293
+INFO 2025-09-02 14:27:22,328 basehttp 6536 21620 "GET /admin/admin/vehicles/ HTTP/1.1" 200 26420
+INFO 2025-09-02 14:27:26,649 basehttp 6536 21620 "GET /admin/admin/vehicles/1/edit/ HTTP/1.1" 200 17192
+INFO 2025-09-02 14:27:33,053 basehttp 6536 21620 "GET /admin/admin/vehicles/add/ HTTP/1.1" 200 17078
+INFO 2025-09-02 14:27:47,042 basehttp 6536 21620 "GET /admin/student-status/ HTTP/1.1" 200 36093
+INFO 2025-09-02 14:28:08,042 basehttp 6536 21620 "GET /admin/student/Tinex/ HTTP/1.1" 200 16338
+INFO 2025-09-02 14:28:19,258 basehttp 6536 21620 "GET /admin/lesson/29/add-progress/ HTTP/1.1" 200 21403
+ERROR 2025-09-02 14:28:29,288 lesson_views 6536 21620 Failed to send progress email to tinex@gmail.com: Connection unexpectedly closed
+INFO 2025-09-02 14:28:31,030 lesson_views 6536 21620 Email notification sent to tinex@gmail.com
+INFO 2025-09-02 14:28:31,031 lesson_views 6536 21620 Progress comment added for lesson 29 by Adminstrator
+INFO 2025-09-02 14:28:31,069 basehttp 6536 21620 "POST /admin/lesson/29/add-progress/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:28:31,141 basehttp 6536 21620 "GET /lesson/29/ HTTP/1.1" 200 22292
+INFO 2025-09-02 14:28:41,689 basehttp 6536 21620 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 14:28:52,819 basehttp 6536 21620 "GET /admin/student-status/ HTTP/1.1" 200 36093
+INFO 2025-09-02 14:28:58,266 basehttp 6536 21620 "GET /admin/student/Panashe/edit/ HTTP/1.1" 200 15306
+INFO 2025-09-02 14:29:01,689 basehttp 6536 21620 "GET /admin/student/Panashe/ HTTP/1.1" 200 14959
+INFO 2025-09-02 14:29:04,036 basehttp 6536 21620 "GET /admin/student-status/ HTTP/1.1" 200 36093
+INFO 2025-09-02 14:31:32,401 autoreload 6536 18180 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 14:31:32,897 autoreload 18572 21632 Watching for file changes with StatReloader
+INFO 2025-09-02 14:32:53,092 autoreload 356 11316 Watching for file changes with StatReloader
+ERROR 2025-09-02 14:33:05,724 log 18572 6284 Internal Server Error: /admin/student-status/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py", line 63, in student_status_dashboard
+    return render(request, 'admin/student_status_dashboard.html', context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 211: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-09-02 14:33:06,003 basehttp 18572 6284 "GET /admin/student-status/ HTTP/1.1" 500 224986
+ERROR 2025-09-02 14:33:17,049 log 18572 6284 Internal Server Error: /admin/student-status/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py", line 63, in student_status_dashboard
+    return render(request, 'admin/student_status_dashboard.html', context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 211: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2025-09-02 14:33:17,131 basehttp 18572 6284 "GET /admin/student-status/ HTTP/1.1" 500 224849
+ERROR 2025-09-02 14:34:24,732 log 18572 6284 Internal Server Error: /admin/student-status/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py", line 63, in student_status_dashboard
+    return render(request, 'admin/student_status_dashboard.html', context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 6: 'block'. Looking for one of: endblock.
+ERROR 2025-09-02 14:34:24,757 basehttp 18572 6284 "GET /admin/student-status/ HTTP/1.1" 500 200062
+ERROR 2025-09-02 14:34:26,407 log 18572 6284 Internal Server Error: /admin/student-status/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py", line 63, in student_status_dashboard
+    return render(request, 'admin/student_status_dashboard.html', context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 6: 'block'. Looking for one of: endblock.
+ERROR 2025-09-02 14:34:26,430 basehttp 18572 6284 "GET /admin/student-status/ HTTP/1.1" 500 200062
+ERROR 2025-09-02 14:34:29,492 log 18572 6284 Internal Server Error: /admin/student-status/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py", line 63, in student_status_dashboard
+    return render(request, 'admin/student_status_dashboard.html', context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 6: 'block'. Looking for one of: endblock.
+ERROR 2025-09-02 14:34:29,563 basehttp 18572 6284 "GET /admin/student-status/ HTTP/1.1" 500 199927
+ERROR 2025-09-02 14:34:31,897 log 18572 6284 Internal Server Error: /admin/student-status/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py", line 63, in student_status_dashboard
+    return render(request, 'admin/student_status_dashboard.html', context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 6: 'block'. Looking for one of: endblock.
+ERROR 2025-09-02 14:34:31,960 basehttp 18572 6284 "GET /admin/student-status/ HTTP/1.1" 500 200064
+INFO 2025-09-02 14:34:35,360 basehttp 18572 6284 "GET /dashboard/ HTTP/1.1" 200 40293
+ERROR 2025-09-02 14:34:38,074 log 18572 6284 Internal Server Error: /admin/student-status/
+Traceback (most recent call last):
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py", line 63, in student_status_dashboard
+    return render(request, 'admin/student_status_dashboard.html', context)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lalfa\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\template\base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 6: 'block'. Looking for one of: endblock.
+ERROR 2025-09-02 14:34:38,139 basehttp 18572 6284 "GET /admin/student-status/ HTTP/1.1" 500 199915
+INFO 2025-09-02 14:38:28,746 basehttp 18572 6284 "GET /admin/student-status/ HTTP/1.1" 200 36627
+INFO 2025-09-02 14:38:28,778 basehttp 18572 6284 "GET /static/js/progress_charts.js HTTP/1.1" 200 2895
+INFO 2025-09-02 14:44:07,763 autoreload 356 11316 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 14:44:07,779 autoreload 18572 21632 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 14:44:08,271 autoreload 472 22968 Watching for file changes with StatReloader
+INFO 2025-09-02 14:44:08,336 autoreload 20424 20984 Watching for file changes with StatReloader
+INFO 2025-09-02 14:44:16,967 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37157
+INFO 2025-09-02 14:44:16,999 basehttp 472 17904 "GET /static/js/progress_charts.js HTTP/1.1" 200 3644
+INFO 2025-09-02 14:44:20,507 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37156
+INFO 2025-09-02 14:44:20,558 basehttp 472 17904 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 14:45:04,288 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37156
+INFO 2025-09-02 14:45:04,322 basehttp 472 17904 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 14:45:08,119 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37156
+INFO 2025-09-02 14:48:04,099 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37355
+INFO 2025-09-02 14:48:04,135 basehttp 472 17904 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 14:48:06,885 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37355
+INFO 2025-09-02 14:48:10,729 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37355
+INFO 2025-09-02 14:49:58,143 autoreload 6976 18824 Watching for file changes with StatReloader
+INFO 2025-09-02 14:50:02,616 basehttp 472 17904 "GET / HTTP/1.1" 200 21149
+INFO 2025-09-02 14:50:05,287 basehttp 472 17904 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 14:50:06,847 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37355
+INFO 2025-09-02 14:50:06,881 basehttp 472 17904 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 14:51:30,956 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37547
+INFO 2025-09-02 14:51:30,983 basehttp 472 17904 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 14:51:35,616 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37547
+INFO 2025-09-02 14:51:48,644 basehttp 472 17904 "GET /admin/ HTTP/1.1" 200 20949
+INFO 2025-09-02 14:51:57,543 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37547
+INFO 2025-09-02 14:52:00,253 basehttp 472 17904 "GET /admin/student-status/ HTTP/1.1" 200 37547
+INFO 2025-09-02 14:52:28,705 autoreload 472 22968 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-09-02 14:52:29,327 autoreload 24264 21160 Watching for file changes with StatReloader
+INFO 2025-09-02 14:52:29,690 autoreload 20424 20984 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-09-02 14:52:29,691 autoreload 6976 18824 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\drivingschool\urls.py changed, reloading.
+INFO 2025-09-02 14:52:30,206 autoreload 17380 8832 Watching for file changes with StatReloader
+INFO 2025-09-02 14:52:30,209 autoreload 3556 7272 Watching for file changes with StatReloader
+INFO 2025-09-02 14:54:01,909 basehttp 24264 9904 "GET /admin/student-status/ HTTP/1.1" 200 36992
+INFO 2025-09-02 14:54:01,945 basehttp 24264 9904 "GET /static/js/progress_charts.js HTTP/1.1" 200 3536
+INFO 2025-09-02 14:55:29,629 basehttp 24264 9904 "GET / HTTP/1.1" 200 21149
+INFO 2025-09-02 14:55:31,167 basehttp 24264 9904 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 14:55:33,011 basehttp 24264 9904 "GET /admin/student-status/ HTTP/1.1" 200 36844
+INFO 2025-09-02 14:55:33,045 basehttp 24264 9904 "GET /static/js/progress_charts.js HTTP/1.1" 200 3560
+INFO 2025-09-02 14:56:18,963 basehttp 24264 9904 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 14:56:23,018 basehttp 24264 9904 "GET /admin/admin/vehicles/ HTTP/1.1" 200 26420
+INFO 2025-09-02 14:56:33,281 basehttp 24264 9904 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:56:33,317 basehttp 24264 9904 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 14:56:34,702 basehttp 24264 9904 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 14:56:39,273 basehttp 24264 9904 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:56:39,461 basehttp 24264 9904 "GET /dashboard/ HTTP/1.1" 200 38111
+INFO 2025-09-02 14:56:54,849 basehttp 24264 9904 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:56:54,882 basehttp 24264 9904 "GET / HTTP/1.1" 200 20321
+INFO 2025-09-02 14:56:56,284 basehttp 24264 9904 "GET /accounts/login/ HTTP/1.1" 200 15353
+INFO 2025-09-02 14:57:02,161 basehttp 24264 9904 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-02 14:57:02,243 basehttp 24264 9904 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 14:57:07,124 basehttp 24264 9904 "GET /admin/student-status/ HTTP/1.1" 200 36844
+INFO 2025-09-02 14:57:07,162 basehttp 24264 9904 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 14:57:09,811 basehttp 24264 9904 "GET /admin/student-status/export/ HTTP/1.1" 200 414
+INFO 2025-09-02 14:58:54,156 autoreload 24264 21160 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 14:58:54,427 autoreload 17380 8832 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 14:58:54,793 autoreload 8920 14380 Watching for file changes with StatReloader
+INFO 2025-09-02 14:58:54,915 autoreload 16052 13652 Watching for file changes with StatReloader
+INFO 2025-09-02 14:58:55,021 autoreload 3556 7272 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 14:58:55,427 autoreload 19936 11068 Watching for file changes with StatReloader
+INFO 2025-09-02 14:59:00,730 basehttp 8920 11884 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 14:59:02,917 basehttp 8920 11884 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 14:59:05,597 basehttp 8920 11884 "GET /admin/student-status/ HTTP/1.1" 200 36844
+INFO 2025-09-02 14:59:05,629 basehttp 8920 11884 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 14:59:07,072 basehttp 8920 11884 "GET /admin/student-status/export/ HTTP/1.1" 200 417
+INFO 2025-09-02 15:00:42,236 autoreload 16052 13652 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:00:42,239 autoreload 8920 14380 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:00:42,784 autoreload 10416 8784 Watching for file changes with StatReloader
+INFO 2025-09-02 15:00:42,785 autoreload 12208 13692 Watching for file changes with StatReloader
+INFO 2025-09-02 15:00:42,795 autoreload 19936 11068 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:00:43,251 autoreload 16040 19864 Watching for file changes with StatReloader
+INFO 2025-09-02 15:02:12,825 basehttp 10416 2716 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 15:02:15,108 basehttp 10416 2716 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 15:02:16,680 basehttp 10416 2716 "GET /admin/student-status/ HTTP/1.1" 200 36844
+INFO 2025-09-02 15:02:16,716 basehttp 10416 2716 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 15:02:18,170 basehttp 10416 2716 "GET /admin/student-status/export/ HTTP/1.1" 200 417
+INFO 2025-09-02 15:04:41,627 autoreload 12208 13692 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:04:42,008 autoreload 16040 19864 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:04:42,011 autoreload 10416 8784 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:04:42,177 autoreload 8268 18804 Watching for file changes with StatReloader
+INFO 2025-09-02 15:04:42,540 autoreload 6228 11596 Watching for file changes with StatReloader
+INFO 2025-09-02 15:04:42,541 autoreload 9020 6620 Watching for file changes with StatReloader
+INFO 2025-09-02 15:04:59,473 basehttp 8268 24168 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 15:05:00,979 basehttp 8268 24168 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 15:05:02,768 basehttp 8268 24168 "GET /admin/student-status/ HTTP/1.1" 200 36844
+INFO 2025-09-02 15:05:02,803 basehttp 8268 24168 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 15:05:04,745 basehttp 8268 24168 "GET /admin/student-status/export/ HTTP/1.1" 200 471
+INFO 2025-09-02 15:05:50,734 autoreload 8268 18804 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:05:51,259 autoreload 4044 2352 Watching for file changes with StatReloader
+INFO 2025-09-02 15:05:51,306 autoreload 9020 6620 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:05:51,309 autoreload 6228 11596 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:05:51,801 autoreload 23588 21808 Watching for file changes with StatReloader
+INFO 2025-09-02 15:05:51,801 autoreload 17248 17896 Watching for file changes with StatReloader
+INFO 2025-09-02 15:05:55,207 basehttp 4044 7216 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 15:05:56,735 basehttp 4044 7216 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 15:05:58,708 basehttp 4044 7216 "GET /admin/student-status/ HTTP/1.1" 200 36844
+INFO 2025-09-02 15:06:02,197 basehttp 4044 7216 "GET /admin/student-status/export/ HTTP/1.1" 200 417
+INFO 2025-09-02 15:06:14,642 basehttp 4044 7216 "GET /admin/student-status/export/ HTTP/1.1" 200 417
+INFO 2025-09-02 15:07:13,682 autoreload 4044 2352 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:07:14,051 autoreload 17248 17896 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:07:14,068 autoreload 23588 21808 C:\Users\lalfa\OneDrive\Desktop\drivingSchool\core\views\admin_views.py changed, reloading.
+INFO 2025-09-02 15:07:14,276 autoreload 18340 22236 Watching for file changes with StatReloader
+INFO 2025-09-02 15:07:14,578 autoreload 15056 15092 Watching for file changes with StatReloader
+INFO 2025-09-02 15:07:14,604 autoreload 20636 8784 Watching for file changes with StatReloader
+INFO 2025-09-02 15:07:18,433 basehttp 18340 2764 "GET / HTTP/1.1" 200 21150
+INFO 2025-09-02 15:07:19,993 basehttp 18340 2764 "GET /dashboard/ HTTP/1.1" 200 40292
+INFO 2025-09-02 15:07:22,298 basehttp 18340 2764 "GET /admin/student-status/ HTTP/1.1" 200 36844
+INFO 2025-09-02 15:07:22,326 basehttp 18340 2764 "GET /static/js/progress_charts.js HTTP/1.1" 304 0
+INFO 2025-09-02 15:07:24,587 basehttp 18340 2764 "GET /admin/student-status/export/ HTTP/1.1" 200 471

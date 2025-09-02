@@ -36,3 +36,10 @@ htmlcov/
 
 # Test cache
 .pytest_cache/
+
+# Database files
+*.sqlite3
+db.sqlite3
+
+# Logs
+logs/*.log

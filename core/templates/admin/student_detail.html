@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Detail - {{ student.username }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Student Detail: {{ student.username }}</h1>
+    <p><strong>Role:</strong> {{ student.role }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Phone:</strong> {{ student.phone }}</p>
+    <p><strong>Address:</strong> {{ student.address }}</p>
+    <p><strong>Lessons Taken:</strong> {{ student.total_lessons }}</p>
+    <p><strong>Level:</strong> {{ student.get_level }}</p>
+    <p><strong>Instructor Approved:</strong> {{ student.instructor_approved }}</p>
+    <p><strong>Eligible for Video:</strong> {{ student.eligible_for_vid }}</p>
+
+    <h2>Progress Records</h2>
+    <ul>
+        {% for record in progress_records %}
+        <li>{{ record.lesson.date }} - {{ record.progress_notes }}
+            <a href="{% url 'add_progress_comment' record.lesson.id %}" class="btn btn-sm btn-outline-primary ms-2">Edit Comment</a>
+            <a href="{% url 'quick_progress_comment' record.lesson.id %}" class="btn btn-sm btn-outline-success ms-1">Quick Update</a>
+        </li>
+        {% empty %}
+        <li>No progress records found.</li>
+        {% endfor %}
+    </ul>
+
+    <h3 class="mt-4">Lessons Without Progress Comments</h3>
+    {% if student.lesson_set.all %}
+        <div class="alert alert-warning">
+            <h6><i class="fas fa-exclamation-triangle me-2"></i>Lessons Missing Progress Records</h6>
+            <p>The following lessons don't have progress comments yet. Adding comments helps track student improvement over time.</p>
+        </div>
+        <ul class="list-group mb-3">
+            {% for lesson in student.lesson_set.all %}
+                {% if not lesson.studentprogress_set.exists %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>{{ lesson.date }}</strong> - {{ lesson.start_time }} to {{ lesson.end_time }}
+                        <br><small class="text-muted">Tutor: {{ lesson.tutor.get_full_name|default:lesson.tutor.username }}</small>
+                    </div>
+                    <div>
+                        <a href="{% url 'quick_progress_comment' lesson.id %}" class="btn btn-sm btn-warning me-2">
+                            <i class="fas fa-plus me-1"></i>Quick Comment
+                        </a>
+                        <a href="{% url 'add_progress_comment' lesson.id %}" class="btn btn-sm btn-primary">
+                            <i class="fas fa-edit me-1"></i>Detailed Comment
+                        </a>
+                    </div>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-muted">No lessons found for this student.</p>
+    {% endif %}
+
+    <a href="{% url 'student_edit' student.username %}" class="btn btn-primary">Edit Student</a>
+    <a href="{% url 'student_status_dashboard' %}" class="btn btn-secondary">Back to Dashboard</a>
+</div>
+{% endblock %}

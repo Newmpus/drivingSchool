@@ -733,7 +733,7 @@ def add_progress_comment(request: HttpRequest, lesson_id: int) -> HttpResponse:
     existing_progress = StudentProgress.objects.filter(lesson=lesson).first()
     
     if request.method == 'POST':
-        form = ProgressCommentForm(request.POST, instance=existing_progress, lesson=lesson)
+        form = ProgressCommentForm(request.POST, instance=existing_progress)
         if form.is_valid():
             progress = form.save(commit=False)
             progress.lesson = lesson
@@ -759,7 +759,7 @@ def add_progress_comment(request: HttpRequest, lesson_id: int) -> HttpResponse:
             logger.info(f"Progress comment added for lesson {lesson.id} by {user_profile.username}")
             return redirect(reverse('lesson_detail', args=[lesson.id]))
     else:
-        form = ProgressCommentForm(instance=existing_progress, lesson=lesson)
+        form = ProgressCommentForm(instance=existing_progress)
     
     context = {
         'form': form,

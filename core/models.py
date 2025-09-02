@@ -1,11 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
+from django.core.exceptions import ValidationError
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
 
 class User(AbstractUser):
     ROLE_CHOICES = (
         ('student', 'Student'),
-        ('tutor', 'Tutor'),
+        ('tutor', 'Instructor'),
         ('admin', 'Admin'),
     )
     
@@ -27,6 +30,8 @@ class User(AbstractUser):
     payment_submitted_at = models.DateTimeField(blank=True, null=True)
     payment_approved_at = models.DateTimeField(blank=True, null=True)
     profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
+    lessons_taken = models.IntegerField(default=0)
+    instructor_approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.username
@@ -34,6 +39,32 @@ class User(AbstractUser):
     def can_access_services(self):
         """Check if user can access driving school services."""
         return self.role == 'student' and self.payment_status == 'approved'
+
+    def get_level(self):
+        lessons = self.student_lessons.count()
+        if lessons < 10:
+            return "Not eligible"
+        elif 10 <= lessons <= 14:
+            return "Advanced"
+        elif 15 <= lessons <= 19:
+            return "Intermediate"
+        elif 20 <= lessons <= 30:
+            return "Beginner"
+        else:
+            return "Exceeded maximum lessons"
+
+    @property
+    def eligible_for_vid(self):
+        return self.student_lessons.count() >= 10 and self.instructor_approved
+
+    @property
+    def total_lessons(self):
+        return self.student_lessons.count()
+
+    def clean(self):
+        super().clean()
+        if self.student_lessons.count() > 30:
+            raise ValidationError("Exceeded maximum lessons: cannot have more than 30 lessons taken.")
 
 class Lesson(models.Model):
     student = models.ForeignKey(User, related_name='student_lessons', on_delete=models.CASCADE)
@@ -117,3 +148,13 @@ class StudentProgress(models.Model):
     
     def __str__(self):
         return f"Progress for {self.student.username} - {self.lesson.date}"
+
+@receiver(post_save, sender=Lesson)
+def update_lessons_taken_on_save(sender, instance, **kwargs):
+    instance.student.lessons_taken = instance.student.student_lessons.count()
+    instance.student.save(update_fields=['lessons_taken'])
+
+@receiver(post_delete, sender=Lesson)
+def update_lessons_taken_on_delete(sender, instance, **kwargs):
+    instance.student.lessons_taken = instance.student.student_lessons.count()
+    instance.student.save(update_fields=['lessons_taken'])

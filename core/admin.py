@@ -10,9 +10,9 @@ from .models import User, Lesson, Notification, Vehicle
 
 class CustomUserAdmin(UserAdmin):
     """Custom User admin."""
-    list_display = ('username', 'email', 'first_name', 'last_name', 'role', 'is_staff', 'is_active', 'is_approved', 'payment_proof_display')
+    list_display = ('username', 'role', 'total_lessons', 'get_level', 'instructor_approved', 'eligible_for_vid')
     list_filter = ('role', 'is_staff', 'is_superuser', 'is_active', 'is_approved')
-    actions = ['approve_users']
+    actions = ['approve_users', 'mark_instructor_approved']
 
     def payment_proof_display(self, obj):
         if obj.payment_proof:
@@ -24,6 +24,11 @@ class CustomUserAdmin(UserAdmin):
         updated = queryset.update(is_approved=True, is_active=True)
         self.message_user(request, f"{updated} user(s) successfully approved.")
     approve_users.short_description = "Approve selected users"
+
+    def mark_instructor_approved(self, request, queryset):
+        updated = queryset.update(instructor_approved=True)
+        self.message_user(request, f"{updated} user(s) marked as instructor-approved.")
+    mark_instructor_approved.short_description = "Mark selected students as instructor-approved"
 
 @admin.register(Lesson)
 class LessonAdmin(admin.ModelAdmin):

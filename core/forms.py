@@ -14,7 +14,7 @@ class UserRegistrationForm(forms.ModelForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter email address'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Enter password'}))
     password_confirm = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Confirm password'}), label='Confirm Password')
-    role = forms.ChoiceField(choices=[('student', 'Student'), ('tutor', 'Tutor'), ('admin', 'Admin')], widget=forms.Select(attrs={'class': 'form-control'}))
+    role = forms.ChoiceField(choices=[('student', 'Student'), ('tutor', 'Instructor'), ('admin', 'Admin')], widget=forms.Select(attrs={'class': 'form-control'}))
     phone = forms.CharField(max_length=20, required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter phone number'}))
     address = forms.CharField(max_length=255, required=False, widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Enter address'}))
     invitation_code = forms.CharField(max_length=64, required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter invitation code if you have one'}))
@@ -96,42 +96,46 @@ class PaymentProofUploadForm(forms.ModelForm):
         file = self.cleaned_data.get('payment_proof')
         if not file:
             raise ValidationError('Please select a file to upload.')
-        
+
+        # Check if file has content_type attribute (for uploaded files)
+        if not hasattr(file, 'content_type') or not file.content_type:
+            raise ValidationError('Invalid file. Please upload a valid file.')
+
         # File size validation (5MB max)
         max_size = 5 * 1024 * 1024  # 5MB
         if file.size > max_size:
             raise ValidationError(f'File size must be under 5MB. Your file is {file.size / (1024*1024):.1f}MB.')
-        
+
         # File type validation
         allowed_types = [
             'image/jpeg', 'image/png', 'image/gif', 'image/bmp',
-            'application/pdf', 
-            'application/msword', 
+            'application/pdf',
+            'application/msword',
             'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
             'text/plain'
         ]
         allowed_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.pdf', '.doc', '.docx', '.txt']
-        
+
         # Check content type
         if file.content_type not in allowed_types:
             raise ValidationError('Invalid file type. Please upload images (JPG, PNG, GIF, BMP), PDF, Word documents, or text files.')
-        
+
         # Check file extension
         import os
         file_extension = os.path.splitext(file.name)[1].lower()
         if file_extension not in allowed_extensions:
             raise ValidationError('Invalid file extension. Please upload files with extensions: .jpg, .jpeg, .png, .gif, .bmp, .pdf, .doc, .docx, .txt.')
-        
+
         # Check for executable files
         executable_extensions = ['.exe', '.bat', '.cmd', '.sh', '.msi', '.dll']
         if file_extension in executable_extensions:
             raise ValidationError('Executable files are not allowed for security reasons.')
-        
+
         return file
 
 class LessonBookingForm(forms.ModelForm):
     """Form for booking lessons with enhanced validation."""
-    tutor = forms.ModelChoiceField(queryset=User.objects.filter(role='tutor'), widget=forms.Select(attrs={'class': 'form-control'}), empty_label="Select a tutor")
+    tutor = forms.ModelChoiceField(queryset=User.objects.filter(role='tutor'), widget=forms.Select(attrs={'class': 'form-control'}), empty_label="Select an instructor")
     date = forms.DateField(widget=forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}))
     start_time = forms.TimeField(widget=forms.TimeInput(attrs={'class': 'form-control', 'type': 'time'}))
     end_time = forms.TimeField(widget=forms.TimeInput(attrs={'class': 'form-control', 'type': 'time'}))
@@ -177,20 +181,23 @@ class LessonBookingForm(forms.ModelForm):
         return cleaned_data
 
 class ProgressCommentForm(forms.ModelForm):
-    """Form for tutors to add progress comments for students."""
-    comment = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 4, 'placeholder': 'Enter detailed progress comment...'}))
-    rating = forms.ChoiceField(choices=[(1, '1 - Needs Improvement'), (2, '2 - Below Average'), (3, '3 - Average'), (4, '4 - Good'), (5, '5 - Excellent')], widget=forms.Select(attrs={'class': 'form-control'}))
-    skills_improved = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Skills improved (comma separated)'}))
-    areas_to_work_on = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Areas to work on (comma separated)'}))
+    """Form for instructors to add progress comments for students."""
 
     class Meta:
         model = StudentProgress
-        fields = ['comment', 'rating', 'skills_improved', 'areas_to_work_on']
+        fields = ['progress_notes', 'skills_covered', 'instructor_feedback', 'next_lesson_focus']
+        widgets = {
+            'progress_notes': forms.Textarea(attrs={'class': 'form-control', 'rows': 4, 'placeholder': 'Enter detailed progress notes...'}),
+            'skills_covered': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Enter skills covered in this lesson...'}),
+            'instructor_feedback': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Enter instructor feedback...'}),
+            'next_lesson_focus': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Enter focus areas for next lesson...'}),
+        }
 
 class QuickProgressForm(forms.Form):
     """Quick form for adding basic progress comments."""
-    comment = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Enter quick progress note...'}))
-    rating = forms.ChoiceField(choices=[(1, '1 - Poor'), (2, '2 - Fair'), (3, '3 - Good'), (4, '4 - Very Good'), (5, '5 - Excellent')], widget=forms.Select(attrs={'class': 'form-control'}))
+    quick_notes = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Enter quick progress note...'}))
+    overall_rating = forms.ChoiceField(choices=[(1, '1 - Poor'), (2, '2 - Fair'), (3, '3 - Good'), (4, '4 - Very Good'), (5, '5 - Excellent')], widget=forms.Select(attrs={'class': 'form-control'}))
+    send_email = forms.BooleanField(required=False, widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
 
 class VehicleForm(forms.ModelForm):
     """Form for adding and editing vehicles."""

@@ -124,7 +124,7 @@
                                 <a href="/lesson/{{ lesson.id }}/" class="list-group-item list-group-item-action border-0 px-0 py-3">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
-                                            <h6 class="mb-1">Lesson with {{ lesson.tutor.get_full_name|default:lesson.tutor.username }}</h6>
+                                            <h6 class="mb-1">Lesson with Instructor {{ lesson.tutor.get_full_name|default:lesson.tutor.username }}</h6>
                                             <p class="text-muted mb-0">
                                                 <i class="fas fa-clock me-1"></i>{{ lesson.start_time }} - {{ lesson.end_time }}
                                                 <i class="fas fa-map-marker-alt ms-3 me-1"></i>{{ lesson.location }}
@@ -246,7 +246,7 @@
                 </div>
 
             {% elif user_profile.role == 'tutor' %}
-                <!-- Tutor Dashboard -->
+                <!-- Instructor Dashboard -->
                 <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body p-4">
                         <h5 class="fw-bold mb-4">
@@ -281,13 +281,80 @@
                     </div>
                 </div>
 
+                <!-- Lessons Without Progress Comments -->
+                {% if lessons_without_progress %}
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-exclamation-triangle text-warning me-2"></i>Lessons Needing Progress Comments
+                            </h5>
+                            <span class="badge bg-warning text-dark">{{ lessons_without_progress|length }}</span>
+                        </div>
+
+                        <div class="alert alert-warning border-0 mb-3">
+                            <i class="fas fa-info-circle me-2"></i>
+                            These lessons don't have progress comments yet. Adding comments helps track student improvement over time.
+                        </div>
+
+                        <div class="list-group list-group-flush">
+                            {% for lesson in lessons_without_progress %}
+                            <div class="list-group-item border-0 px-0 py-3">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="me-3 flex-grow-1">
+                                        <h6 class="mb-1">
+                                            <i class="fas fa-calendar-day text-primary me-2"></i>
+                                            {{ lesson.date }} - {{ lesson.student.get_full_name|default:lesson.student.username }}
+                                        </h6>
+                                        <p class="text-muted mb-2">
+                                            <i class="fas fa-clock me-1"></i>{{ lesson.start_time }} - {{ lesson.end_time }}
+                                            <i class="fas fa-map-marker-alt ms-3 me-1"></i>{{ lesson.location }}
+                                        </p>
+                                        <!-- Quick Comment Form -->
+                                        <form method="post" action="{% url 'quick_progress_comment' lesson.id %}" class="mb-2">
+                                            {% csrf_token %}
+                                            <div class="input-group input-group-sm">
+                                                <textarea name="quick_notes" class="form-control" rows="2" placeholder="Add quick progress note..." required></textarea>
+                                                <select name="overall_rating" class="form-select" required>
+                                                    <option value="">Rating</option>
+                                                    <option value="1">1 - Poor</option>
+                                                    <option value="2">2 - Fair</option>
+                                                    <option value="3">3 - Good</option>
+                                                    <option value="4">4 - Very Good</option>
+                                                    <option value="5">5 - Excellent</option>
+                                                </select>
+                                                <button type="submit" class="btn btn-success btn-sm">
+                                                    <i class="fas fa-save me-1"></i>Save
+                                                </button>
+                                            </div>
+                                            <div class="form-check form-check-inline mt-1">
+                                                <input class="form-check-input" type="checkbox" name="send_email" id="send_email_{{ lesson.id }}">
+                                                <label class="form-check-label small" for="send_email_{{ lesson.id }}">
+                                                    Send email to student
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="btn-group btn-group-sm flex-shrink-0">
+                                        <a href="{% url 'add_progress_comment' lesson.id %}" class="btn btn-primary" title="Detailed Progress">
+                                            <i class="fas fa-edit me-1"></i>Detailed
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
                 <!-- Students List -->
                 <div class="card border-0 shadow-sm">
                     <div class="card-body p-4">
                         <h5 class="fw-bold mb-4">
                             <i class="fas fa-users text-success me-2"></i>Your Students
                         </h5>
-                        
+
                         {% if students %}
                             <div class="list-group list-group-flush">
                                 {% for student in students %}
@@ -308,7 +375,7 @@
                             </div>
                         {% else %}
                             <div class="text-center py-4">
-                                <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@1.68.0/icons/users-off.svg" 
+                                <img src="https://cdn.jsdelivr.net/npm/@tabler/icons@1.68.0/icons/users-off.svg"
                                      class="mb-3" width="48" height="48" alt="No students">
                                 <h6>No Students Yet</h6>
                                 <p class="text-muted">Students will appear here once assigned.</p>
@@ -334,7 +401,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="stats-card">
-                            <h3>Tutors</h3>
+                            <h3>Instructors</h3>
                             <div class="number stats-number">{{ tutor_count }}</div>
                         </div>
                     </div>
@@ -370,7 +437,7 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h6 class="mb-1">
-                                                {{ lesson.student.get_full_name|default:lesson.student.username }} with 
+                                                {{ lesson.student.get_full_name|default:lesson.student.username }} with Instructor
                                                 {{ lesson.tutor.get_full_name|default:lesson.tutor.username }}
                                             </h6>
                                             <p class="text-muted mb-0">
