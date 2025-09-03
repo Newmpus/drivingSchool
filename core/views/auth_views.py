@@ -179,6 +179,44 @@ def dashboard(request: HttpRequest) -> HttpResponse:
     return render(request, 'dashboard.html', context)
 
 @login_required
+def mark_instructor_approved(request: HttpRequest, student_id: int) -> HttpResponse:
+    """
+    Toggle instructor approval status for a student.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        student_id (int): The ID of the student to approve/unapprove.
+
+    Returns:
+        HttpResponse: Redirect back to the dashboard.
+    """
+    if request.user.role != 'tutor':
+        messages.error(request, 'Only instructors can approve students.')
+        return redirect('dashboard')
+
+    try:
+        student = User.objects.get(id=student_id, role='student')
+    except User.DoesNotExist:
+        messages.error(request, 'Student not found.')
+        return redirect('dashboard')
+
+    # Check if this instructor has taught this student
+    if not student.student_lessons.filter(tutor=request.user).exists():
+        messages.error(request, 'You can only approve students you have taught.')
+        return redirect('dashboard')
+
+    # Toggle the approval status
+    student.instructor_approved = not student.instructor_approved
+    student.save()
+
+    if student.instructor_approved:
+        messages.success(request, f'{student.get_full_name() or student.username} has been marked as instructor-approved for VID eligibility.')
+    else:
+        messages.info(request, f'{student.get_full_name() or student.username} is no longer instructor-approved.')
+
+    return redirect('dashboard')
+
+@login_required
 def edit_profile(request: HttpRequest) -> HttpResponse:
     """
     Handle user profile editing.

@@ -11,3 +11,20 @@
 - [x] Update core/admin.py: Add 'mark_instructor_approved' action
 - [x] Update core/admin.py: Update list_display to ('username', 'role', 'total_lessons', 'get_level', 'instructor_approved', 'eligible_for_vid')
 - [ ] Test the changes in Django admin
+
+# TODO: Create System Functionality Test for Documentation Evidence
+
+## Steps to Complete
+
+- [x] Create core/tests/test_system_functionality.py with test for user registration, login, and dashboard access
+- [x] Run the test to verify it works and provide screenshot evidence
+
+# TODO: Fix Admin Panel Issues
+
+## Steps to Complete
+
+- [x] Restore missing columns in admin users table (email, first_name, last_name, is_staff, is_approved, payment_status, payment_verified, payment_proof)
+- [x] Update eligible_for_vid to include admins and instructors (they already have licenses)
+- [x] Add payment_proof_display method to admin list_display
+- [x] Add payment proof display to student detail template
+- [ ] Test admin panel functionality

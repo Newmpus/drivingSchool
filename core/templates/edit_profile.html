@@ -97,9 +97,16 @@
                         
                         <div class="alert alert-secondary">
                             <i class="fas fa-shield-alt me-2"></i>
-                            <strong>Current Role:</strong> {{ user.profile.get_role_display }}
-                            <br>
-                            <small class="text-muted">Contact an administrator to change your role</small>
+                            <strong>Current Role:</strong>
+                            {% if user.role == 'student' %}
+                                Student
+                            {% elif user.role == 'admin' %}
+                                Administrator
+                            {% elif user.role == 'tutor' %}
+                                Instructor
+                            {% else %}
+                                {{ user.profile.get_role_display }}
+                            {% endif %}
                         </div>
                     </div>
                     

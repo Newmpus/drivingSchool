@@ -739,7 +739,16 @@ def add_progress_comment(request: HttpRequest, lesson_id: int) -> HttpResponse:
             progress.lesson = lesson
             progress.student = lesson.student
             progress.save()
-            
+
+            # Handle instructor approval
+            if form.cleaned_data.get('instructor_approval'):
+                lesson.student.instructor_approved = True
+                lesson.student.save()
+                approval_message = " Student marked as instructor-approved for VID eligibility."
+                logger.info(f"Student {lesson.student.username} marked as instructor-approved by {user_profile.username}")
+            else:
+                approval_message = ""
+
             # Send progress email to student
             progress_data = {
                 'skills_covered': progress.skills_covered,
@@ -748,14 +757,14 @@ def add_progress_comment(request: HttpRequest, lesson_id: int) -> HttpResponse:
                 'next_lesson_focus': progress.next_lesson_focus
             }
             send_progress_email(lesson.student, lesson, progress_data)
-            
+
             # Send notification to student
             send_notification(
                 lesson.student,
                 f'Progress report added for your lesson on {lesson.date}. Check your email for details!'
             )
-            
-            messages.success(request, 'Progress comment added successfully and email sent to student!')
+
+            messages.success(request, f'Progress comment added successfully and email sent to student!{approval_message}')
             logger.info(f"Progress comment added for lesson {lesson.id} by {user_profile.username}")
             return redirect(reverse('lesson_detail', args=[lesson.id]))
     else:
@@ -803,13 +812,22 @@ def quick_progress_comment(request: HttpRequest, lesson_id: int) -> HttpResponse
                     'next_lesson_focus': 'Continue practicing and improving'
                 }
             )
-            
+
             if not created:
                 # Update existing record
                 progress.progress_notes = form.cleaned_data['quick_notes']
                 progress.instructor_feedback = f"Overall performance: {form.cleaned_data['overall_rating']}"
                 progress.save()
-            
+
+            # Handle instructor approval
+            if form.cleaned_data.get('instructor_approval'):
+                lesson.student.instructor_approved = True
+                lesson.student.save()
+                approval_message = " Student marked as instructor-approved for VID eligibility."
+                logger.info(f"Student {lesson.student.username} marked as instructor-approved by {user_profile.username}")
+            else:
+                approval_message = ""
+
             # Send email if requested
             if form.cleaned_data['send_email']:
                 progress_data = {
@@ -819,7 +837,7 @@ def quick_progress_comment(request: HttpRequest, lesson_id: int) -> HttpResponse
                     'next_lesson_focus': progress.next_lesson_focus
                 }
                 send_progress_email(lesson.student, lesson, progress_data)
-                
+
                 # Send notification
                 send_notification(
                     lesson.student,
@@ -828,8 +846,8 @@ def quick_progress_comment(request: HttpRequest, lesson_id: int) -> HttpResponse
                 email_message = " Email sent to student."
             else:
                 email_message = ""
-            
-            messages.success(request, f'Quick progress comment added successfully!{email_message}')
+
+            messages.success(request, f'Quick progress comment added successfully!{email_message}{approval_message}')
             logger.info(f"Quick progress comment added for lesson {lesson.id} by {user_profile.username}")
             return redirect(reverse('lesson_detail', args=[lesson.id]))
     else:

@@ -55,6 +55,10 @@ class User(AbstractUser):
 
     @property
     def eligible_for_vid(self):
+        # Admins and instructors are eligible since they already have licenses
+        if self.role in ['admin', 'tutor']:
+            return True
+        # Students need 10+ lessons and instructor approval
         return self.student_lessons.count() >= 10 and self.instructor_approved
 
     @property
@@ -63,7 +67,7 @@ class User(AbstractUser):
 
     def clean(self):
         super().clean()
-        if self.student_lessons.count() > 30:
+        if self.pk and self.student_lessons.count() > 30:
             raise ValidationError("Exceeded maximum lessons: cannot have more than 30 lessons taken.")
 
 class Lesson(models.Model):

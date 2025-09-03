@@ -51,6 +51,7 @@ urlpatterns = [
     path('register/', core_views.register, name='register'),
     path('dashboard/', core_views.dashboard, name='dashboard'),
     path('edit-profile/', core_views.edit_profile, name='edit_profile'),
+    path('mark-instructor-approved/<int:student_id>/', core_views.mark_instructor_approved, name='mark_instructor_approved'),
 
     # Authentication URLs with rate limiting
     path('accounts/login/', login_view, name='login'),
