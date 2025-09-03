@@ -1,0 +1,307 @@
+DRIVING SCHOOL MANAGEMENT SYSTEM - ALGORITHMS DOCUMENTATION
+==========================================================
+
+This document outlines all the key algorithms implemented in the driving school management system.
+
+================================================================================
+1. TIMETABLE_GENERATION_ALGORITHM
+================================================================================
+
+LOCATION: core/views/lesson_views.py - generate_timetable() function
+PURPOSE: Automatically generates weekly lesson schedules for students and tutors
+
+ALGORITHM STEPS:
+1. Identify next 5 weekdays (excluding weekends)
+2. Get all students and tutors from database
+3. For each weekday, iterate through all students
+4. Check if student already has a lesson at the fixed time slot (10 AM - 11 AM)
+5. Find tutors who are not booked at that time slot
+6. Randomly select an available tutor
+7. Create lesson record in database
+8. Send notifications to both student and tutor
+
+KEY CODE SNIPPET:
+```python
+weekdays = [
+    today + timedelta(days=i)
+    for i in range(5)
+    if (today + timedelta(days=i)).weekday() < 5
+]
+
+available_tutors = [
+    t for t in tutors
+    if not Lesson.objects.filter(
+        tutor=t,
+        date=lesson_date,
+        start_time=slot_start
+    ).exists()
+]
+
+if available_tutors:
+    tutor = random.choice(available_tutors)
+    lesson = Lesson.objects.create(...)
+```
+
+================================================================================
+2. LESSON_BOOKING_CONFLICT_PREVENTION_ALGORITHM
+================================================================================
+
+LOCATION: core/views/lesson_views.py - book_lesson() and api_book_lesson() functions
+PURPOSE: Prevents double-booking by checking availability before creating lessons
+
+ALGORITHM STEPS:
+1. Validate lesson date (not in past, not >90 days ahead)
+2. Validate time slot (8 AM - 6 PM, 30 min - 3 hours)
+3. Check tutor availability using overlap query
+4. Check student availability using overlap query
+5. If both available, create lesson
+6. Allocate vehicle using AI suggestions
+7. Send confirmation notifications
+
+KEY CODE SNIPPET:
+```python
+tutor_conflict = Lesson.objects.filter(
+    tutor=lesson.tutor,
+    date=lesson.date,
+    start_time__lt=lesson.end_time,
+    end_time__gt=lesson.start_time
+).exists()
+
+student_conflict = Lesson.objects.filter(
+    student=user_profile,
+    date=lesson.date,
+    start_time__lt=lesson.end_time,
+    end_time__gt=lesson.start_time
+).exists()
+
+if tutor_conflict or student_conflict:
+    # Prevent booking
+    messages.error(request, 'Time slot conflict detected')
+else:
+    # Create lesson
+    lesson.save()
+```
+
+================================================================================
+3. LESSON_FREQUENCY_ANALYSIS_ALGORITHM
+================================================================================
+
+LOCATION: core/ai_helper.py - analyze_student_progress() method
+PURPOSE: Analyzes lesson booking patterns and provides frequency-based recommendations
+
+ALGORITHM STEPS:
+1. Count lessons in last 30 days
+2. Calculate progress score based on frequency
+3. Generate personalized recommendations
+4. Analyze instructor feedback sentiment
+5. Provide skill progression insights
+
+SCORING SYSTEM:
+- 4+ lessons in 30 days: Excellent (+20 points)
+- 2-3 lessons in 30 days: Good (+10 points)
+- 0-1 lessons in 30 days: Needs improvement (-10 points)
+
+KEY CODE SNIPPET:
+```python
+recent_lessons = lessons.filter(
+    date__gte=timezone.now().date() - timedelta(days=30)
+).count()
+
+if recent_lessons >= 4:
+    recommendations.append("Great consistency! Keep up regular practice.")
+    progress_score += 20
+elif recent_lessons >= 2:
+    recommendations.append("Good progress. Consider booking more frequent lessons.")
+    progress_score += 10
+else:
+    recommendations.append("Consider booking more regular lessons for better progress.")
+    progress_score -= 10
+```
+
+================================================================================
+4. PROGRESS_PIECHART_VISUALIZATION_ALGORITHM
+================================================================================
+
+LOCATION: core/views/admin_views.py - student_status_dashboard() function
+PURPOSE: Categorizes students by progress level for dashboard visualization
+
+ALGORITHM STEPS:
+1. Get all students from database
+2. Count progress records for each student
+3. Categorize students based on progress count
+4. Prepare data structure for Chart.js
+5. Render pie chart with color-coded categories
+
+CATEGORIZATION RULES:
+- Beginner: 0-2 progress records (Blue)
+- Intermediate: 3-5 progress records (Yellow)
+- Advanced: 6+ progress records (Green)
+
+KEY CODE SNIPPET:
+```python
+progress_distribution = {
+    'Beginner': 0,
+    'Intermediate': 0,
+    'Advanced': 0
+}
+
+for student in students:
+    progress_count = student.progress_records.count()
+    if progress_count <= 2:
+        progress_distribution['Beginner'] += 1
+    elif progress_count <= 5:
+        progress_distribution['Intermediate'] += 1
+    else:
+        progress_distribution['Advanced'] += 1
+```
+
+================================================================================
+5. VEHICLE_ALLOCATION_ALGORITHM
+================================================================================
+
+LOCATION: core/ai_helper.py - suggest_available_vehicles() method
+PURPOSE: Intelligently allocates vehicles based on student class and availability
+
+ALGORITHM STEPS:
+1. Filter vehicles by student class (class1, class2, etc.)
+2. Exclude vehicles already allocated to overlapping time slots
+3. Calculate confidence scores for each suggestion
+4. Sort by priority and confidence
+5. Return top recommendations with reasoning
+
+KEY CODE SNIPPET:
+```python
+preferred_vehicles = Vehicle.objects.filter(
+    vehicle_class=student_class,
+    is_available=True
+).exclude(
+    vehicleallocation__lesson__date=lesson_date,
+    vehicleallocation__lesson__start_time__lt=end_time,
+    vehicleallocation__lesson__end_time__gt=start_time
+)
+
+for vehicle in preferred_vehicles:
+    suggestions.append({
+        'vehicle': vehicle,
+        'recommendation': 'Perfect Match',
+        'confidence': 95
+    })
+```
+
+================================================================================
+6. PROGRESS_FEEDBACK_GENERATION_ALGORITHM
+================================================================================
+
+LOCATION: core/ai_helper.py - generate_progress_feedback() method
+PURPOSE: Generates personalized progress feedback based on lesson history and instructor comments
+
+ALGORITHM STEPS:
+1. Analyze lesson frequency patterns
+2. Parse instructor feedback for sentiment
+3. Identify skills covered in recent lessons
+4. Generate contextual recommendations
+5. Provide progress milestone insights
+
+KEY CODE SNIPPET:
+```python
+if len(recent_lessons) >= 4:
+    feedback_parts.append("🎯 Excellent lesson frequency! Your consistent practice is key to rapid improvement.")
+elif len(recent_lessons) >= 2:
+    feedback_parts.append("📈 Good progress with regular lessons. Consider booking more frequent sessions for faster improvement.")
+else:
+    feedback_parts.append("⏰ Consider booking more regular lessons. Consistent practice leads to better skill retention.")
+```
+
+================================================================================
+7. LESSON_FREQUENCY_CHART_ALGORITHM
+================================================================================
+
+LOCATION: core/views/admin_views.py - student_status_dashboard() function
+PURPOSE: Analyzes and visualizes lesson distribution across days of the week
+
+ALGORITHM STEPS:
+1. Query all lessons from database
+2. Group lessons by day of week
+3. Count lessons per day
+4. Prepare bar chart data structure
+5. Render Chart.js bar chart
+
+KEY CODE SNIPPET:
+```python
+lesson_frequency = {
+    'Monday': 0, 'Tuesday': 0, 'Wednesday': 0,
+    'Thursday': 0, 'Friday': 0, 'Saturday': 0, 'Sunday': 0
+}
+
+for lesson in lessons:
+    day_name = lesson.date.strftime('%A')
+    lesson_frequency[day_name] += 1
+```
+
+================================================================================
+8. COMPREHENSIVE_REPORT_GENERATION_ALGORITHM
+================================================================================
+
+LOCATION: core/ai_helper.py - generate_comprehensive_report_data() method
+PURPOSE: Generates detailed PDF/CSV reports with AI insights and statistics
+
+ALGORITHM STEPS:
+1. Gather student information and lesson history
+2. Calculate statistics (total hours, completion rate, etc.)
+3. Generate AI analysis and recommendations
+4. Format data for export (PDF or CSV)
+5. Include visualizations and insights
+
+KEY CODE SNIPPET:
+```python
+total_hours = sum(lesson.get_duration() for lesson in lessons) / 60.0
+lessons_with_progress = progress_records.count()
+completion_rate = (lessons_with_progress / lessons.count() * 100) if lessons.count() > 0 else 0
+
+ai_analysis = self.analyze_student_progress(student_id)
+ai_feedback = self.generate_progress_feedback(list(lessons), list(progress_records))
+```
+
+================================================================================
+ALGORITHM INTERDEPENDENCIES
+================================================================================
+
+1. Timetable Generation → Lesson Booking (uses same conflict prevention)
+2. Lesson Booking → Vehicle Allocation (automatic vehicle assignment)
+3. Progress Analysis → Feedback Generation (uses frequency analysis)
+4. Progress Analysis → Pie Chart Visualization (provides categorization data)
+5. All algorithms → Report Generation (consolidates data from multiple sources)
+
+================================================================================
+PERFORMANCE CHARACTERISTICS
+================================================================================
+
+- Conflict Prevention: O(n) queries per booking attempt
+- Progress Analysis: O(m) where m is number of lessons per student
+- Timetable Generation: O(s*t*w) where s=students, t=tutors, w=weekdays
+- Vehicle Allocation: O(v) where v is number of vehicles
+- Chart Generation: O(s) where s is number of students
+
+================================================================================
+ERROR HANDLING PATTERNS
+================================================================================
+
+- Database query failures: Logged and graceful degradation
+- Invalid data: Validation at multiple layers
+- External service failures: Fallback mechanisms
+- Time conflicts: Clear user feedback with suggestions
+- Resource unavailability: Alternative recommendations
+
+================================================================================
+FUTURE ENHANCEMENT OPPORTUNITIES
+================================================================================
+
+1. Machine Learning: Predictive scheduling optimization
+2. Advanced Analytics: Student performance prediction
+3. Dynamic Pricing: Demand-based lesson pricing
+4. Route Optimization: Geographic lesson planning
+5. Automated Rescheduling: Conflict resolution algorithms
+
+================================================================================
+END OF DOCUMENTATION
+================================================================================

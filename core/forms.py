@@ -14,7 +14,7 @@ class UserRegistrationForm(forms.ModelForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter email address'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Enter password'}))
     password_confirm = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Confirm password'}), label='Confirm Password')
-    role = forms.ChoiceField(choices=[('student', 'Student'), ('tutor', 'Instructor'), ('admin', 'Admin')], widget=forms.Select(attrs={'class': 'form-control'}))
+    role = forms.ChoiceField(choices=[('student', 'Student')], widget=forms.Select(attrs={'class': 'form-control'}))
     phone = forms.CharField(max_length=20, required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter phone number'}))
     address = forms.CharField(max_length=255, required=False, widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Enter address'}))
     invitation_code = forms.CharField(max_length=64, required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter invitation code if you have one'}))
@@ -23,6 +23,7 @@ class UserRegistrationForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password', 'role', 'phone', 'address', 'invitation_code', 'payment_proof']
+
 
     def clean_username(self):
         """Validate username."""
@@ -72,11 +73,10 @@ class UserRegistrationForm(forms.ModelForm):
 
 class UserProfileEditForm(forms.ModelForm):
     """Form for editing user profile."""
-    profile_picture = forms.ImageField(required=False, widget=forms.ClearableFileInput(attrs={'class': 'form-control-file'}))
 
     class Meta:
         model = User
-        fields = ['email', 'phone', 'address', 'profile_picture']
+        fields = ['email', 'phone', 'address']
         widgets = {
             'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Enter email address'}),
             'phone': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter phone number'}),
@@ -182,6 +182,12 @@ class LessonBookingForm(forms.ModelForm):
 
 class ProgressCommentForm(forms.ModelForm):
     """Form for instructors to add progress comments for students."""
+    instructor_approval = forms.BooleanField(
+        required=False,
+        widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+        label="Mark student as instructor-approved for VID eligibility",
+        help_text="Check this box if the student has demonstrated sufficient skill and is ready for VID testing."
+    )
 
     class Meta:
         model = StudentProgress
@@ -198,6 +204,12 @@ class QuickProgressForm(forms.Form):
     quick_notes = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Enter quick progress note...'}))
     overall_rating = forms.ChoiceField(choices=[(1, '1 - Poor'), (2, '2 - Fair'), (3, '3 - Good'), (4, '4 - Very Good'), (5, '5 - Excellent')], widget=forms.Select(attrs={'class': 'form-control'}))
     send_email = forms.BooleanField(required=False, widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+    instructor_approval = forms.BooleanField(
+        required=False,
+        widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+        label="Mark student as instructor-approved for VID eligibility",
+        help_text="Check this box if the student has demonstrated sufficient skill and is ready for VID testing."
+    )
 
 class VehicleForm(forms.ModelForm):
     """Form for adding and editing vehicles."""

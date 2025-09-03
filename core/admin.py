@@ -14,6 +14,23 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ('role', 'is_staff', 'is_superuser', 'is_active', 'is_approved', 'payment_status', 'payment_verified')
     actions = ['approve_users', 'mark_instructor_approved']
 
+    # Add fieldsets to include role field in add/change forms
+    fieldsets = UserAdmin.fieldsets + (
+        ('Driving School Info', {
+            'fields': ('role', 'phone', 'address', 'is_approved', 'payment_status',
+                      'payment_verified', 'payment_proof', 'profile_picture',
+                      'lessons_taken', 'instructor_approved')
+        }),
+    )
+
+    # Add fieldsets for add user form
+    add_fieldsets = UserAdmin.add_fieldsets + (
+        ('Driving School Info', {
+            'fields': ('role', 'phone', 'address', 'is_approved', 'payment_status',
+                      'payment_verified', 'payment_proof', 'profile_picture')
+        }),
+    )
+
     def payment_proof_display(self, obj):
         if obj.payment_proof:
             return format_html('<a href="{}" target="_blank">View Proof</a>', obj.payment_proof.url)
